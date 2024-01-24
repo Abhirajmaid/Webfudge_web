@@ -1,0 +1,7 @@
+export { default as Navbar } from "./Navbar";
+export { default as DropDown } from "./DropDown";
+export { default as InfiniteMarquee } from "./InfiniteMarquee";
+export { default as Service } from "./Service";
+export { default as ClientCard } from "./ClientCard";
+export { default as Footer } from "./Footer";
+export { default as PaginationControls } from "./PaginationControls";
