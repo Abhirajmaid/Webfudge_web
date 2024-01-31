@@ -1,12 +1,22 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import { motion, stagger } from "framer-motion";
 
 const Hero = () => {
   return (
     <>
-      <div className="relative h-[550px]">
-        <div className="w-full flex justify-between z-50 absolute ">
+      <motion.div
+        className="relative h-[550px]"
+        variants={{
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 0.5, delay: 0.25 }}
+      >
+        <div className="w-full flex justify-between z-50 absolute overflow-hidden">
           <div>
             <Image
               src="/images/balls.png"
@@ -15,9 +25,19 @@ const Hero = () => {
               alt="Webfudge star"
               className="-mb-[30px] mt-[40px]"
             />
-            <h1 className="!text-[10vw] dark:text-white leading-[180px] tracking-tight p-0">
-              CREATIVE <br /> AGENCY
-            </h1>
+            <motion.h1
+              className="!text-[10vw] dark:text-white leading-[180px] tracking-tight py-2"
+              variants={{
+                hidden: { opacity: 1, y: 200 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 0.5, delay: 0.25 }}
+            >
+              CREATIVE
+              <br /> AGENCY
+            </motion.h1>
           </div>
           <div className="flex-col gap-7 flex-align-center">
             <div className=" w-[80%] max-h-[100px]  rounded-full bg-[#D9D9D9] mt-[85px] p-3 py-[20px] flex items-center overflow-hidden relative">
@@ -57,7 +77,7 @@ const Hero = () => {
               />
             </div>
           </div>
-          <p className="w-[35%] text-justify font-[BelfastMedium] absolute -bottom-2 right-0 text-[1vw] ">
+          <p className="w-[35%] text-justify font-[BelfastMedium] absolute -bottom-2 right-0 text-[1vw] py-2">
             Welcome to{" "}
             <span className=" font-[BelfastGrotesk] text-[1.2vw] ">
               Webfudge
@@ -102,16 +122,25 @@ const Hero = () => {
                 </filter>
               </defs>
             </svg>
-            <div className="gradients-container">
+            <motion.div
+              className="gradients-container"
+              variants={{
+                hidden: { opacity: 0, y: 0 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 0.5, delay: 0.7 }}
+            >
               <div class="g2"></div>
               <div class="g1"></div>
               <div class="g3"></div>
               <div class="g4"></div>
               {/* <div class="interactive"></div> */}
-            </div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

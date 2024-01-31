@@ -17,7 +17,7 @@ export const navLinks = [
   {
     id: 4,
     linkText: "Insight",
-    url: "/insight",
+    url: "/insights",
     subLinks: [
       {
         id: 31,

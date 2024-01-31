@@ -11,13 +11,14 @@ export const clients = [
     },
     {
         id: 2,
-        title: "Tokenology Haus",
+        title: "Tokenology Hausssss",
         img_url: "/images/client1.png",
+        project_imgs: ["/images/client1.png", "/images/client1.png", "/images/client1.png", "/images/client1.png"],
         short_des: "Lorem ipsum dolor sit amet consectetur.",
         services_offered: ["Influencer Marketing", "Paid Social", "Social Growth Strategy"],
         key_highlights: ["68 MILLION IMPRESSIONS", "68 MILLION IMPRESSIONS", "15 campaigns", "INCREASED CTR BY 168%"],
         introduction: "Lorem ipsum dolor sit amet consectetur. Id pharetra sagittis nisl id libero. Volutpat nisl nisl urna eget ante hendrerit. Tortor massa aenean mattis viverra ornare neque varius. Morbi lorem sit volutpat ullamcorper sit diam ultrices proin. Mattis blandit vulputate lectus",
-        solution_offered: "Lorem ipsum dolor sit amet consectetur. Id pharetra sagittis nisl id libero. Volutpat nisl nisl urna eget ante hendrerit. Tortor massa aenean mattis viverra ornare neque varius. Morbi lorem sit volutpat ullamcorper sit"
+        solution_offered: "Lorem ipsum dolor sit amet consectetur. Id pharetra sagittis nisl id libero. Volutpat nisl nisl urna eget ante hendrerit. Tortor massa aenean mattis viverra ornare neque varius. Morbi lorem sit volutpat ullamcorper sit tempus vel est sit sit nec.Viverra iaculis nulla ultrices volutpat tincidunt amet ut.Maecen."
     },
     {
         id: 3,

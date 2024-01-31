@@ -1,0 +1,55 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    width: 1000px;
+    margin: auto;
+    background-color: #171717;
+    color: #dfdfdf;
+}
+
+a {
+    color: #d305b1;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.left img {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.right ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: large;
+    list-style: none;
+}
+
+.right li {
+    cursor: pointer;
+    color: #dedede;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.right button {
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    background-color: black;
+    color: azure;
+    cursor: pointer;
+    font-size: large;
+}

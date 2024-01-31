@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 import Model from "./Model";
+import Link from "next/link";
 
 const Footer = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -96,9 +97,13 @@ const Footer = () => {
           </div>
         </div>
         <div className=" font-[BelfastMedium] flex justify-between text-[1.2vw] mt-[200px] mb-[80px]">
-          <span>TERMS & CONDITION</span>
+          <Link href="/legals/terms-and-conditions.html">
+            <span>TERMS & CONDITION</span>
+          </Link>
           <span>Copyright © 2024 Webfudge Agency. All rights reserved. </span>
-          <span>PRIVACY POLICY</span>
+          <Link href="/legals/privacy-policy.html">
+            <span>PRIVACY POLICY</span>
+          </Link>
         </div>
       </div>
       <Model onClose={handleOnClose} visible={showVideo} />

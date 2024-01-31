@@ -1,10 +1,59 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import useMousePosition from "@src/utils/useMousePosition";
 
 const About = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const { x, y } = useMousePosition();
+  const size = isHovered ? 400 : 40;
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
   return (
     <>
-      <div className=" p-[160px] text-justify leading-[100px] tracking-tight dark:bg-dark-light bg-gray  mt-[100px] font-[BelfastMedium] text-[5vw] ">
+      <motion.div
+        ref={ref}
+        className="p-[160px] text-justify leading-[100px] tracking-tight dark:bg-dark-light bg-gray  mt-[100px] font-[BelfastMedium] text-[5vw] relative"
+        variants={{
+          hidden: { opacity: 0, y: 200 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <motion.div
+          className="absolute top-0 left-0 p-[160px] uppercase mask bg-white cursor-default"
+          animate={{
+            WebkitMaskPosition: `${x - size / 2}px ${y - size / 2}px`,
+            WebkitMaskSize: `${size}px`,
+          }}
+          transition={{ type: "tween", ease: "backOut", duration: 0.5 }}
+        >
+          <h3
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+            }}
+          >
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex ver
+            veritatis voluptatem dolorem rem rem laboriosam voluptate
+          </h3>
+        </motion.div>
         <h3>
           A CREATIVE{" "}
           <Image
@@ -36,7 +85,7 @@ const About = () => {
           />{" "}
           AND AT THE RIGHT TIME
         </h3>
-      </div>
+      </motion.div>
     </>
   );
 };

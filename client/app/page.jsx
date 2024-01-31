@@ -8,7 +8,7 @@ import {
   OurServices,
   ShowSection,
 } from "@src/components/home";
-import { Footer, InfiniteMarquee } from "@src/components/common";
+import { InfiniteMarquee } from "@src/components/common";
 
 const Home = () => {
   return (

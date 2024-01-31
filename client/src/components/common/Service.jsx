@@ -2,15 +2,17 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Service = ({ service }) => {
   const [hover, setHover] = useState(false);
   return (
     <div>
-      <div
+      <motion.div
         className="group flex justify-between p-8 border-t-4 dark:border-y-[#272727] border-y-[#C8C8C8] cursor-pointer dark:hover:bg-[#272727] hover:bg-[#C8C8C8] relative"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
+        whileTap={{ scale: 0.96 }}
       >
         <h3 className="group-hover:font-bold group-hover:scale-105 font-[BelfastMedium] text-[3vw] -mt-3">
           {service}
@@ -19,7 +21,16 @@ const Service = ({ service }) => {
           </span>
         </h3>
         {hover ? (
-          <div className="h-[250px] w-[250px] absolute -top-[60%] right-[20%] z-50">
+          <motion.div
+            className="h-[250px] w-[250px] absolute -top-[60%] right-[20%] z-50"
+            variants={{
+              hidden: { opacity: 1, scale: 0 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.6, ease: "easeInOut", type: "spring" }}
+          >
             <Image
               src="/images/dummy.jpg"
               width={250}
@@ -36,7 +47,7 @@ const Service = ({ service }) => {
               <source src="video/Final Comp.mp4" type="video/mp4" />
               <source src="video/Final Comp.3gpp" type="video/3gpp" />
             </video> */}
-          </div>
+          </motion.div>
         ) : (
           <></>
         )}
@@ -57,7 +68,7 @@ const Service = ({ service }) => {
             />
           )}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
