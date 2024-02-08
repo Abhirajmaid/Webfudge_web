@@ -56,8 +56,9 @@ const OurServices = () => {
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.5, delay: i * 0.4 }}
+            key={i}
           >
-            <Service key={i} service={item} />
+            <Service service={item} />
           </motion.div>
         );
       })}

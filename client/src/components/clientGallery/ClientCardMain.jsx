@@ -21,6 +21,7 @@ const ClientCardMain = ({ data }) => {
             height={500}
             loading="lazy"
             className="w-full md:h-[600px] h-[300px] object-cover"
+            alt={`webfudge ${data?.title}`}
           />
           {/* <video
           className="w-full h-[600px] object-cover"
@@ -55,6 +56,7 @@ const ClientCardMain = ({ data }) => {
             width={500}
             height={550}
             className="md:w-[180px] md:h-[40px] w-[25%] h-[30px]"
+            alt="arrow"
           />
         </div>
         <p className="font-Poppins md:text-[1vw] text-[3.5vw] w-full">

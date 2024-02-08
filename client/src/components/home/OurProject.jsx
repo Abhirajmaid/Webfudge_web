@@ -62,6 +62,7 @@ const OurProject = () => {
           {clients?.slice(0, 6)?.map((item, i) => {
             return (
               <motion.div
+                key={i}
                 className="md:w-[31%] w-full"
                 variants={{
                   hidden: { opacity: 0 },
@@ -80,7 +81,7 @@ const OurProject = () => {
                 }}
                 layout
               >
-                <ClientCard key={i} data={item} />
+                <ClientCard data={item} />
               </motion.div>
             );
           })}

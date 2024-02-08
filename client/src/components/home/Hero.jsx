@@ -3,7 +3,7 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (

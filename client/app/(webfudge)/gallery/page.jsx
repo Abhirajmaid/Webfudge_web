@@ -3,6 +3,7 @@ import React from "react";
 
 export const metadata = {
   title: "Daily Creatives - Webfudge",
+  description: "Let's be creative with webfudge",
 };
 
 const page = () => {

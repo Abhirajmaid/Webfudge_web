@@ -63,18 +63,6 @@ footer a:hover {
   @apply ml-2 text-primary;
 }
 
-.heading {
-  @apply text-3xl font-bold capitalize text-secondary dark:text-slate-300;
-}
-
-.sub-heading {
-  @apply text-primary text-sm uppercase w-fit bg-primary/20 px-3 py-[3px] rounded-full mb-3 max-w-[200px];
-}
-
-.image {
-  @apply group-hover:scale-125 transition-a;
-}
-
 .card {
   @apply p-4 bg-white border rounded-lg dark:bg-card-dark dark:border-dark;
 }
@@ -113,18 +101,6 @@ footer a:hover {
 
 .isOpen {
   @apply max-h-screen p-4;
-}
-
-/* Back to top button */
-.back-to-top-btn {
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-}
-
-.back-to-top-btn.active {
-  opacity: 1;
-  visibility: visible;
 }
 
 .loading {
@@ -173,151 +149,8 @@ a.active {
   @apply block;
 }
 
-/* Loader */
-.loader {
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  position: relative;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  color: #fff;
-  animation: rotation 1s linear infinite;
-}
-
-.loader:after,
-.loader:before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 0;
-  background-color: #fff;
-  border-radius: 50%;
-  animation: scale50 1s infinite ease-in-out;
-}
-
-.loader:before {
-  top: auto;
-  bottom: 0;
-  background-color: #ff6400;
-  animation-delay: 0.5s;
-}
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes scale50 {
-  0%,
-  100% {
-    transform: scale(0);
-  }
-
-  50% {
-    transform: scale(1);
-  }
-}
-
-/* -------------------------PAGINATION---------------------- */
-.wb-pagination {
-  @apply flex-align-center sm:flex-center-center mt-4 w-full px-4 select-none max-w-[300px] sm:max-w-fit overflow-auto mx-auto;
-}
-
-.wb-pagination::-webkit-scrollbar {
-  @apply hidden;
-}
-
-.wb-pagination .pagination-item {
-  @apply p-2;
-}
-
-.wb-pagination .pagination-item .pagination-link {
-  @apply grid w-8 h-8 mx-3 text-sm text-inherit place-items-center;
-}
-
-.wb-pagination .prev,
-.wb-pagination .next {
-  @apply inline-flex text-primary;
-}
-
-.wb-pagination .prev {
-  @apply mr-4;
-}
-
-.wb-pagination .next {
-  @apply ml-4;
-}
-
-.disabled {
-  @apply opacity-40;
-}
-
-.wb-pagination .pagination-item.pagination-link-active .pagination-link {
-  @apply text-white rounded-lg shadow-md bg-primary shadow-primary/60;
-}
-
 .test-color {
   color: rgba(213, 211, 211, 0.192);
-}
-
-/* Testimonial slides */
-.activeSlide {
-  @apply translate-x-0 opacity-100;
-}
-
-.lastSlide {
-  @apply -translate-x-full opacity-100;
-}
-
-.nextSlide {
-  @apply translate-x-full opacity-100;
-}
-
-/* Filter */
-.filter {
-  @apply w-full px-3 py-2 border outline-none  dark:border-dark bg-slate-100 dark:bg-dark-light;
-}
-
-/* Check box & radio box */
-.input-check label,
-.input-radio label {
-  @apply relative flex items-center cursor-pointer select-none;
-}
-
-.input-check input[type="checkbox"],
-.input-radio input[type="radio"] {
-  @apply absolute opacity-0 cursor-pointer;
-}
-
-.input-check label::before {
-  content: "";
-  @apply w-4 h-4 mr-2 border rounded border-primary;
-}
-
-.input-check input[type="checkbox"]:checked + label::before {
-  content: "✔";
-  @apply grid place-items-center text-slate-100 text-[0.7rem] bg-primary;
-}
-
-.input-radio label::before {
-  content: "";
-  @apply w-4 h-4 mr-2 rounded-full border !border-primary;
-}
-
-.input-radio label::after {
-  content: "";
-  @apply absolute w-2 h-2 top-1/2 left-0 -translate-y-1/2 scale-0 ml-[0.25rem] bg-primary transition-a rounded-full;
-}
-
-.input-radio input[type="radio"]:checked + label::after {
-  @apply scale-100 -translate-y-1/2;
 }
 
 /* Gradieent Blob */
@@ -488,6 +321,7 @@ a.active {
   opacity: 0.7;
 }
 
+/* Mask */
 .mask {
   mask-image: url("../public/images/mask.svg");
   mask-repeat: no-repeat;

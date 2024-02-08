@@ -13,6 +13,11 @@ const ClientContainer = () => {
   const end = start + Number(per_page);
 
   const entries = clients.slice(start, end);
+
+  if (entries.status === 404) {
+    notFound();
+  }
+
   return (
     <>
       <div className="mt-[60px] ">
