@@ -14,14 +14,14 @@ const SingleFaq = ({ question, response }) => {
   };
 
   return (
-    <div>
+    <>
       <div
-        className={`accordion flex-center-between my-7 cursor-pointer hover:text-primary  ${
+        className={`accordion flex-center-between md:my-7 my-4 cursor-pointer hover:text-primary  ${
           isActive && "active"
         }`}
         onClick={handleShow}
       >
-        <h1 className="text-[1.5vw] font-[BelfastMedium] tracking-wide font-bold">
+        <h1 className="md:text-[1.5vw] text-[3vw] font-[BelfastMedium] tracking-wide font-bold">
           {question}
         </h1>
         {isOpen ? (
@@ -31,20 +31,20 @@ const SingleFaq = ({ question, response }) => {
         )}
       </div>
       <p
-        className={`p-0 max-h-0 overflow-hidden transition-all text-[1vw] ${
+        className={`p-0 max-h-0 overflow-hidden transition-all md:text-[1vw] text-[2vw] ${
           isOpen && "isOpen"
         }`}
       >
         {response}
       </p>
-    </div>
+    </>
   );
 };
 
 const Faqs = () => {
   return (
-    <div className="w-[70%] m-auto dark:bg-dark-gray bg-gray  p-[50px] rounded-2xl mt-[100px] gap-[20px]">
-      <h1 className="text-[2vw] mb-16">FAQs</h1>
+    <div className="md:w-[70%] w-full m-auto dark:bg-dark-gray bg-gray  md:p-[50px] p-[40px] rounded-2xl md:mt-[100px] mt-[80px] gap-[20px]">
+      <h1 className="md:text-[2vw] text-[4vw] md:mb-16">FAQs</h1>
       <div>
         {faqs.map((faq) => (
           <SingleFaq {...faq} key={faq.id} />

@@ -6,29 +6,35 @@ export const navLinks = [
   },
   {
     id: 2,
-    linkText: "Services",
-    url: "/services",
-  },
-  {
-    id: 3,
     linkText: "Work",
     url: "/our-work",
   },
   {
-    id: 4,
+    id: 3,
     linkText: "Insight",
     url: "/insights",
-    subLinks: [
-      {
-        id: 31,
-        linkText: "Team",
-        url: "/team",
-      },
-      {
-        id: 32,
-        linkText: "Faq",
-        url: "/faqs",
-      },
-    ],
   },
+  {
+    id: 4,
+    linkText: "Gallery",
+    url: "/gallery",
+  },
+
+  // {
+  //   id: 4,
+  //   linkText: "Insight",
+  //   url: "/insights",
+  //   subLinks: [
+  //     {
+  //       id: 31,
+  //       linkText: "Team",
+  //       url: "/team",
+  //     },
+  //     {
+  //       id: 32,
+  //       linkText: "Faq",
+  //       url: "/faqs",
+  //     },
+  //   ],
+  // },
 ];

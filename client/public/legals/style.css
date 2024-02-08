@@ -53,3 +53,7 @@ a {
     cursor: pointer;
     font-size: large;
 }
+
+.pad {
+    padding: 20px;
+}

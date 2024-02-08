@@ -15,8 +15,8 @@ const ContactForm = () => {
   };
   return (
     <>
-      <div className="mt-[100px] flex w-[80%] m-auto gap-[30px]">
-        <div className="w-[35%] flex flex-col justify-center gap-2.5">
+      <div className="mt-[100px] flex md:flex-row flex-col md:w-[80%] m-auto gap-[30px]">
+        <div className="md:w-[35%] w-full flex flex-col justify-center gap-2.5">
           <span className=" text-[22px] font-[700] text-primary ">
             CONTACT US
           </span>
@@ -26,10 +26,10 @@ const ContactForm = () => {
           </p>
           <span className="text-xl mt-[15px]">info@webfudge.com</span>
         </div>
-        <div className="flex flex-col w-[65%] bg-purple-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 px-[25px] py-[70px]">
+        <div className="flex flex-col md:w-[65%] w-full bg-purple-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 px-[25px] py-[70px]">
           <form className="flex flex-col" onSubmit={handleSubmit}>
-            <div className="flex gap-[35px] mb-[40px]">
-              <div className="flex flex-col w-6/12 gap-2">
+            <div className="flex md:flex-row flex-col gap-[35px] mb-[40px]">
+              <div className="flex flex-col md:w-6/12 w-full gap-2">
                 <label htmlFor="name">
                   Name<span className="text-red-600 text-xl">*</span>
                 </label>
@@ -42,7 +42,7 @@ const ContactForm = () => {
                   onChange={(e) => setUserName(e.target.value)}
                 />
               </div>
-              <div className="flex flex-col w-6/12 gap-2">
+              <div className="flex flex-col md:w-6/12 w-full gap-2">
                 <label htmlFor="company name">
                   Company Name<span className="text-red-600 text-xl">*</span>
                 </label>
@@ -56,8 +56,8 @@ const ContactForm = () => {
                 />
               </div>
             </div>
-            <div className="flex gap-[35px] mb-[40px] ">
-              <div className="flex flex-col w-6/12 gap-2">
+            <div className="flex md:flex-row flex-col gap-[35px] mb-[40px] ">
+              <div className="flex flex-col md:w-6/12 w-full gap-2">
                 <label htmlFor="email">
                   Your Email<span className="text-red-600 text-xl">*</span>
                 </label>
@@ -70,7 +70,7 @@ const ContactForm = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div className="flex flex-col w-6/12 gap-2">
+              <div className="flex flex-col md:w-6/12 w-full gap-2">
                 <label htmlFor="number">
                   Your Contact Number
                   <span className="text-red-600 text-xl">*</span>
@@ -97,7 +97,10 @@ const ContactForm = () => {
               ></textarea>
             </div>
 
-            <button className="btn bg-primary w-[15%] text-white" type="submit">
+            <button
+              className="btn bg-primary md:w-[15%] w-[50%] text-white"
+              type="submit"
+            >
               Submit
             </button>
             {/* <p className="error">{error}</p> */}

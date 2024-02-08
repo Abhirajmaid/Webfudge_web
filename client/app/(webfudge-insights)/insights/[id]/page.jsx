@@ -2,11 +2,11 @@
 
 import { useParams } from "next/navigation";
 import React from "react";
-// import { articles } from "../../../src/data/clients";
+// import { articles } from "@/src/data/clients";
 
 const SingleArticle = () => {
   const params = useParams();
-  // const article = articles.find((item) => {
+  // const article = articles?.find((item) => {
   //   return item?.id == params?.id;
   // });
   return (

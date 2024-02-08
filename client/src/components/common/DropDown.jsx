@@ -18,7 +18,7 @@ const Dropdown = () => {
     <>
       {currentLink && (
         <div
-          className={`dropdown hidden z-[55] transition-a fixed top-11 left-1/2 -translate-x-1/2 !rounded-xl w-52 bg-white dark:bg-dark-light card-shadow dark:shadow-none ${
+          className={`dropdown hidden z-[99] transition-a fixed top-[80px] left-1/2v -translate-x-1/2 !rounded-xl w-52 bg-white dark:bg-dark-light card-shadow dark:shadow-none ${
             isDropdownOpen && subLinks && "show before:w-4 before:h-4"
           }`}
           initial={{ y: 30, opacity: 0 }}

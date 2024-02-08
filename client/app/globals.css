@@ -111,6 +111,10 @@ footer a:hover {
   @apply hidden;
 }
 
+.isOpen {
+  @apply max-h-screen p-4;
+}
+
 /* Back to top button */
 .back-to-top-btn {
   opacity: 0;
@@ -121,6 +125,11 @@ footer a:hover {
 .back-to-top-btn.active {
   opacity: 1;
   visibility: visible;
+}
+
+.loading {
+  overflow: hidden;
+  height: 100vh;
 }
 
 a.active {

@@ -5,3 +5,5 @@ export { default as Service } from "./Service";
 export { default as ClientCard } from "./ClientCard";
 export { default as Footer } from "./Footer";
 export { default as PaginationControls } from "./PaginationControls";
+export { default as Loader } from "./Loader";
+export { default as LoadingScreen } from "./LoadingScreen";

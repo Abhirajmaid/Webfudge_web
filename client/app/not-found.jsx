@@ -1,5 +1,5 @@
-import { darkMode } from "@tailwind.config";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const NotFound = () => {
@@ -8,16 +8,24 @@ const NotFound = () => {
       <img
         src="/images/fudge_1.png"
         alt="contact"
-        className="absolute left-0 top-0 object-cover"
+        className="absolute md:h-auto w-full h-screen left-0 top-0 object-cover"
       />
-      <div className="w-full h-full mt-[100px] relative flex flex-col justify-center items-center gap-6">
-        <Image src="/images/404_txt2.png" width={300} height={300} />
-        <h2 className="text-[2.5vw] text-white">There's Nothing Here...</h2>
-        <p className="text-[1.5vw] font-Poppins text-white">
+      <div className="w-full h-full relative flex flex-col justify-center items-center gap-6">
+        <Image
+          src="/images/404_txt2.png"
+          width={300}
+          height={300}
+          className="md:w-[300px] w-[150px]"
+        />
+        <h2 className="md:text-[2.5vw] text-[6vw] text-white">
+          There's Nothing Here...
+        </h2>
+        <p className="md:text-[1.5vw] text-[4vw] font-Poppins text-center text-white">
           So, uh, that page you were looking kinda doesn’t exist. Sorry!
-          <span className=" text-primary cursor-pointer"> Back To Home</span>
+          <Link href="/" className="opacity-100">
+            <span className=" text-primary cursor-pointer"> Back To Home</span>
+          </Link>
         </p>
-        {console.log(darkMode)}
       </div>
     </div>
   );

@@ -20,10 +20,16 @@ import { navLinks } from "../../data/navLinks";
 import SingleLink from "./SingleLink";
 import Model from "./Model";
 
-const Navbar = () => {
+const Navbar = ({ isShowMode }) => {
   const rootDoc = document.querySelector(":root");
   const { darkMode, isSidebarOpen } = useSelector(uiStore);
   const dispatch = useDispatch();
+
+  // dark Mode
+  const [showMode, setShowMode] = useState(true);
+  useEffect(() => {
+    setShowMode(isShowMode);
+  }, []);
 
   //Nav bg
   const [navBg, setNavBg] = useState(false);
@@ -70,20 +76,34 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`navbar h-[100px] fixed w-full z-[99] top-0 left-0 px-[2%]  md:px-[6%] flex-center-between !py-[20px] ${
+        className={`md:h-[100px] fixed w-full z-[99] top-0 left-0 px-[2%]  md:px-[6%] flex-center-between !py-[20px] ${
           navBg
             ? "bg-white/60 border-b backdrop-blur-sm dark:border-dark dark:bg-dark/60"
             : " dark:hero-dark "
         } `}
         onMouseOver={handleClose}
       >
-        <Link href="/" className="flex-shrink-0 flex-align-center gap-x-1">
-          <Image
-            src="/images/webfudge_logo_white.png"
-            width={100}
-            height={80}
-            alt="Webfudge"
-          />
+        <Link
+          href="/"
+          className="flex-shrink-0 flex-align-center gap-x-1 opacity-100"
+        >
+          {darkMode ? (
+            <Image
+              src="/images/webfudge_logo_white.png"
+              width={110}
+              height={100}
+              alt="Webfudge"
+              className="w-14 md:w-[100px] h-auto "
+            />
+          ) : (
+            <Image
+              src="/images/webfudge_logo_black.png"
+              width={100}
+              height={100}
+              alt="Webfudge"
+              className="w-14 md:w-[120px] h-auto "
+            />
+          )}
         </Link>
 
         <div className="flex-align-center gap-x-4">
@@ -144,18 +164,22 @@ const Navbar = () => {
 
           <div className="space-x-2 flex-align-center">
             <button
-              className=" text-sm !rounded-3xl font-bold md:text-inherit btn md:w-fit bg-white shadow-md dark:bg-black !px-7 !py-4  "
+              className="md:text-sm text-xs !rounded-3xl md:font-bold md:text-inherit btn md:w-fit bg-white shadow-md dark:bg-black md:!px-7 !px-4 !py-4 dark:hover:bg-white dark:hover:text-main-dark hover:bg-main-dark hover:text-white"
               onClick={() => setShowVideo(true)}
             >
               Start New Project!
             </button>
             {/*----------------------------- Dark mode toggle-------------------------------------------------- */}
-            <div
-              className="bg-white shadow-md icon-box dark:bg-black hover:shadow-lg hover:bg-transparent"
-              onClick={handleDarkMode}
-            >
-              {darkMode ? <FiSun /> : <FiMoon />}
-            </div>
+            {showMode ? (
+              <div
+                className="bg-white shadow-md icon-box dark:bg-black hover:shadow-lg hover:bg-transparent"
+                onClick={handleDarkMode}
+              >
+                {darkMode ? <FiSun /> : <FiMoon />}
+              </div>
+            ) : (
+              <></>
+            )}
             {/*----------------------------- Profile Icon-------------------------------------------------- */}
             {/* {user ? (
             <Link to="/user-profile">

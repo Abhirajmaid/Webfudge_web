@@ -19,18 +19,18 @@ const Model = ({ visible, onClose, url }) => {
           ease: "easeInOut",
           type: "tween",
         }}
-        className="p-[90px] bg-[#161616] rounded-2xl flex flex-col items-center justify-center relative w-[60vw] gap-[60px] "
+        className="md:p-[90px] p-7 bg-[#161616] rounded-2xl flex flex-col items-center justify-center relative md:w-[60vw] w-[80%] md:gap-[60px] gap-[30px] "
       >
         <button
-          className="btn absolute top-4 right-4 !text-white"
+          className="btn absolute top-4 md:right-4 right-[42%] !text-white"
           onClick={onClose}
         >
           X
         </button>
-        <h1 className="!text-[4.2vw] text-white tracking-tight p-0 text-center leading-[90px]  ">
+        <h1 className="md:!text-[4.2vw] text-[7vw] text-white tracking-tight p-0 text-center md:leading-[90px] mt-[40px] ">
           Everything is good! feel free to approach us!
         </h1>
-        <p className=" text-2xl font-Poppins tracking-wider text-center !text-white ">
+        <p className=" md:text-2xl text-base font-Poppins tracking-wider text-center !text-white ">
           Whether you're into long-term collaboration or need a quote for a big
           project, we have the perfect plan to suit your needs.
         </p>

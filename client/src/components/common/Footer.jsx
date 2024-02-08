@@ -16,8 +16,8 @@ const Footer = () => {
     <>
       <div className="mt-[120px] px-[3%] md:px-[6%]">
         <div className="relative w-full flex justify-center">
-          <div className="bg-primary h-[400px] w-full rounded-b-[120px] py-11 flex flex-col items-center gap-[40px]">
-            <div className="flex justify-center gap-[100px] w-full items-center">
+          <div className="bg-primary md:h-[400px] h-[300px] w-full md:rounded-b-[120px] rounded-b-[40px] py-11 flex flex-col items-center md:gap-[40px] gap-[25px]">
+            <div className="flex justify-center md:gap-[100px] gap-[30px] w-full items-center">
               <hr className="h-[2px] w-[30%] bg-gray" />
               <Image
                 src="/images/star.png"
@@ -40,7 +40,7 @@ const Footer = () => {
               <hr className="h-[2px] w-[30%] bg-gray" />
             </div>
             <div className="flex justify-center item-center">
-              <h1 className="!text-[4vw] dark:text-white leading-[80px] tracking-tight p-0 uppercase text-center ">
+              <h1 className="md:!text-[4vw] text-[7vw] dark:text-white md:leading-[80px] tracking-tight p-0 uppercase text-center ">
                 Let's Discuss <br /> Your Ideas
               </h1>
             </div>
@@ -53,15 +53,36 @@ const Footer = () => {
               </button>
             </div>
           </div>
-          <div className="w-[120%] absolute -bottom-[160px]">
+          <div className="md:w-[120%] w-[100%] absolute md:-bottom-[160px] -bottom-[80px]">
             <Marquee>
-              <div className=" flex justify-between py-[0.2rem] text-[6vw] items-center  dark:text-[#d4c5e199] text-gray/50 ">
+              <div className=" flex justify-between py-[0.2rem] md:text-[6vw] text-[40px] items-center  dark:text-[#d4c5e199] text-gray/50 ">
                 <div className="flex items-center gap-8">
                   <Image
                     src="/images/star1.png"
                     width={45}
                     height={45}
                     alt="Webfudge star"
+                    className="w-[30px] md:w-[45px]"
+                  />
+                  <span className="mr-8 md:mb-[20px]">WEBFUDGE</span>
+                </div>
+                <div className="flex items-center gap-8">
+                  <Image
+                    src="/images/star1.png"
+                    width={45}
+                    height={45}
+                    alt="Webfudge star"
+                    className="w-[30px] md:w-[45px]"
+                  />
+                  <span className="mr-8 md:mb-[20px]">WEBFUDGE</span>
+                </div>
+                <div className="flex items-center gap-8">
+                  <Image
+                    src="/images/star1.png"
+                    width={45}
+                    height={45}
+                    alt="Webfudge star"
+                    className="w-[30px] md:md:w-[45px]"
                   />
                   <span className="mr-8 mb-[20px]">WEBFUDGE</span>
                 </div>
@@ -71,32 +92,15 @@ const Footer = () => {
                     width={45}
                     height={45}
                     alt="Webfudge star"
+                    className="w-[30px] md:w-[45px]"
                   />
-                  <span className="mr-8 mb-[20px]">WEBFUDGE</span>
-                </div>
-                <div className="flex items-center gap-8">
-                  <Image
-                    src="/images/star1.png"
-                    width={45}
-                    height={45}
-                    alt="Webfudge star"
-                  />
-                  <span className="mr-8 mb-[20px]">WEBFUDGE</span>
-                </div>
-                <div className="flex items-center gap-8">
-                  <Image
-                    src="/images/star1.png"
-                    width={45}
-                    height={45}
-                    alt="Webfudge star"
-                  />
-                  <span className="mr-8 mb-[20px]">WEBFUDGE</span>
+                  <span className="mr-8 md:mb-[20px]">WEBFUDGE</span>
                 </div>
               </div>
             </Marquee>
           </div>
         </div>
-        <div className=" font-[BelfastMedium] flex justify-between text-[1.2vw] mt-[200px] mb-[80px]">
+        <div className=" font-[BelfastMedium] flex justify-between md:text-[1.2vw] text-[2.3vw] gap-3 md:mt-[200px] mt-[100px] mb-[80px] text-center">
           <Link href="/legals/terms-and-conditions.html">
             <span>TERMS & CONDITION</span>
           </Link>

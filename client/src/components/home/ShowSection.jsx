@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -6,9 +8,9 @@ const ShowSection = () => {
     <>
       <div className="mt-[100px] w-full relative ">
         <motion.video
-          className="w-full rounded-t-[160px] card-shadow dark:border-none"
+          className="w-full md:rounded-t-[160px] rounded-t-[40px] card-shadow dark:border-none"
           muted
-          autoplay="autoploay"
+          autoPlay
           poster=""
           variants={{
             hidden: { opacity: 0, scale: 0 },
@@ -22,7 +24,7 @@ const ShowSection = () => {
           <source src="video/Final Comp.3gpp" type="video/3gpp" />
         </motion.video>
         <motion.div
-          className=" h-[230px] bg-white rounded-full w-[230px] border-solid border-[6px]  flex justify-center items-center border-gray cursor-pointer absolute -top-[70px] right-[80px] "
+          className=" md:h-[230px] h-[100px] bg-white rounded-full md:w-[230px] w-[100px] border-solid md:border-[6px] border-[4px]  flex justify-center items-center border-gray cursor-pointer absolute md:-top-[70px] -top-[50px] right-[80px] "
           variants={{
             hidden: { opacity: 0, rotate: "0deg" },
             visible: { opacity: 1, rotate: "360deg" },
@@ -35,7 +37,8 @@ const ShowSection = () => {
             src="/images/arrow.png"
             width={75}
             height={78}
-            alt="Webfudge arrow"
+            alt="arrow"
+            className="w-10 md:w-[75px]"
           />
         </motion.div>
       </div>

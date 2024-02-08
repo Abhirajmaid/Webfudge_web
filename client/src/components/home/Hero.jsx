@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
@@ -7,7 +9,7 @@ const Hero = () => {
   return (
     <>
       <motion.div
-        className="relative h-[550px]"
+        className="relative md:h-[550px] h-[350px] mt-[20px] "
         variants={{
           hidden: { opacity: 0, y: 75 },
           visible: { opacity: 1, y: 0 },
@@ -16,17 +18,17 @@ const Hero = () => {
         animate="visible"
         transition={{ duration: 0.5, delay: 0.25 }}
       >
-        <div className="w-full flex justify-between z-50 absolute overflow-hidden">
+        <div className="w-full md:flex-row flex flex-col md:justify-between z-50 absolute overflow-hidden">
           <div>
             <Image
-              src="/images/balls.png"
-              width={80}
-              height={80}
+              src="/images/balls.svg"
+              height={0}
+              width={0}
               alt="Webfudge star"
-              className="-mb-[30px] mt-[40px]"
+              className="md:-mb-[30px] mt-[40px] w-[30px] md:w-[80px] h-auto hidden md:block dark:fill-black "
             />
             <motion.h1
-              className="!text-[10vw] dark:text-white leading-[180px] tracking-tight py-2"
+              className="md:!text-[10vw] !text-[15vw]  dark:text-white md:leading-[180px] leading-[60px] tracking-tight py-2 text-center md:text-left"
               variants={{
                 hidden: { opacity: 1, y: 200 },
                 visible: { opacity: 1, y: 0 },
@@ -39,47 +41,49 @@ const Hero = () => {
               <br /> AGENCY
             </motion.h1>
           </div>
-          <div className="flex-col gap-7 flex-align-center">
-            <div className=" w-[80%] max-h-[100px]  rounded-full bg-[#D9D9D9] mt-[85px] p-3 py-[20px] flex items-center overflow-hidden relative">
-              <div className=" h-[85px] bg-white rounded-full w-[85px] border-solid border-[6px] border-gray cursor-pointer absolute ">
+          <div className="flex-col md:gap-7 gap-3 flex-align-center">
+            <div className=" md:w-[80%] w-[60%] md:max-h-[100px] max-h-10  rounded-full bg-[#D9D9D9] md:mt-[85px] p-3 py-[20px] flex items-center overflow-hidden relative">
+              <div className=" md:h-[85px] h-10 bg-white rounded-full md:w-[85px] w-10 border-solid md:border-[6px] border-[3px] border-gray cursor-pointer absolute md:block hidden">
                 <Icon icon="mdi:play" width="75" className=" text-primary " />
               </div>
               <video
                 className="videobackground"
                 muted
-                controls
-                autoplay="true"
-                loop="true"
+                autoPlay
+                loop={true}
                 poster=""
               >
                 <source src="video/abstract.mp4" type="video/mp4" />
                 <source src="video/abstract.3gpp" type="video/3gpp" />
               </video>
             </div>
-            <div className="flex justify-center items-center gap-[100px] ">
+            <div className="flex justify-center items-center md:gap-[100px] gap-[40px] ">
               <Image
                 src="/images/star.png"
-                width={27}
-                height={27}
+                height={0}
+                width={0}
                 alt="Webfudge star"
+                className=" w-4 md:w-[27px] h-auto"
               />
               <Image
                 src="/images/star.png"
-                width={27}
-                height={27}
+                width={0}
+                height={0}
                 alt="Webfudge star"
+                className=" w-4 md:w-[27px] h-auto"
               />
               <Image
                 src="/images/star.png"
-                width={27}
-                height={27}
+                width={0}
+                height={0}
                 alt="Webfudge star"
+                className="w-4 md:w-[27px] h-auto"
               />
             </div>
           </div>
-          <p className="w-[35%] text-justify font-[BelfastMedium] absolute -bottom-2 right-0 text-[1vw] py-2">
+          <p className="md:w-[35%] w-[80%] mx-auto md:text-justify font-[BelfastMedium] md:absolute md:-bottom-2 right-0 md:text-[1vw] text-center text-[10px] py-2">
             Welcome to{" "}
-            <span className=" font-[BelfastGrotesk] text-[1.2vw] ">
+            <span className=" font-[BelfastGrotesk] md:text-[1.2vw] text-[2.5vw] ">
               Webfudge
             </span>{" "}
             , the ultimate web design solution. Unleash your imagination and
@@ -87,19 +91,20 @@ const Hero = () => {
             and transform your online presence today !
           </p>
         </div>
-        <div className="w-full flex justify-between items-center absolute bottom-0 z-50">
-          <button className=" btn border-[2px] !py-5 !rounded-full border-solid dark:border-white w-[25%] ">
+        <div className="w-full flex md:justify-between gap-3 justify-center items-center absolute bottom-0 z-50">
+          <button className=" btn border-[2px] text-[10px] md:text-base md:!py-5 !py-3 !rounded-full border-solid dark:border-white md:max-w-[25%] ">
             2 Years of Experience
           </button>
-          <button className=" btn border-[2px] !py-5 !rounded-full border-solid dark:border-white w-[18%] ">
+          <button className=" btn border-[2px] text-[10px] md:text-base md:!py-5 !py-3 !rounded-full border-solid dark:border-white md:max-w-[18%] ">
             20+ Happy Clients
           </button>
-          <div className=" h-[1px] w-[50%] bg-dark dark:bg-gray opacity-70 "></div>
+          <div className="hidden md:block h-[1px] w-[65%] bg-dark dark:bg-gray opacity-70 "></div>
           <Image
             src="/images/rings.png"
-            width={60}
-            height={60}
-            alt="Webfudge star"
+            width={0}
+            height={0}
+            alt="Webfudge rings"
+            className="hidden md:block w-[60px] h-auto "
           />
         </div>
         <div className="z-0">
@@ -132,11 +137,11 @@ const Hero = () => {
               animate="visible"
               transition={{ duration: 0.5, delay: 0.7 }}
             >
-              <div class="g2"></div>
-              <div class="g1"></div>
-              <div class="g3"></div>
-              <div class="g4"></div>
-              {/* <div class="interactive"></div> */}
+              <div className="g2"></div>
+              <div className="g1"></div>
+              <div className="g3"></div>
+              <div className="g4"></div>
+              {/* <div className="interactive"></div> */}
             </motion.div>
           </div>
         </div>

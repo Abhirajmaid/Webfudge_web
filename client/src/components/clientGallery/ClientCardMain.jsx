@@ -8,7 +8,7 @@ import Link from "next/link";
 const ClientCardMain = ({ data }) => {
   const [hide, setHide] = useState(false);
   return (
-    <div className="w-[48%] flex flex-col gap-3">
+    <div className="md:w-[48%] w-full flex flex-col gap-5">
       <Link href={`/our-work/${data.id}`} className="opacity-100">
         <div
           className="relative w-full  cursor-pointer"
@@ -17,11 +17,10 @@ const ClientCardMain = ({ data }) => {
         >
           <Image
             src={data?.img_url}
-            placeholder="blur"
-            blurDataURL={data.img_url}
             width={500}
             height={500}
-            className="w-full h-[600px]"
+            loading="lazy"
+            className="w-full md:h-[600px] h-[300px] object-cover"
           />
           {/* <video
           className="w-full h-[600px] object-cover"
@@ -47,23 +46,27 @@ const ClientCardMain = ({ data }) => {
             <></>
           )}
         </div>
-        <div className="flex gap-4 w-full items-center cursor-pointer">
-          <h1 className="text-[2vw] uppercase font-[BelfastMedium] font-semibold text-gray">
+        <div className="flex gap-4 w-full items-center cursor-pointer mt-5">
+          <h1 className="md:text-[2vw] text-[5.5vw] uppercase font-[BelfastMedium] font-semibold text-gray">
             {data.title}
           </h1>
           <Image
             src="/images/Arrow 3.png"
             width={500}
             height={550}
-            className="w-[180px] h-[40px]"
+            className="md:w-[180px] md:h-[40px] w-[25%] h-[30px]"
           />
         </div>
-        <p className="font-Poppins text-[1vw] w-full">{data.short_des}</p>
-        <div className="flex gap-[2px] flex-wrap w-full text-primary">
+        <p className="font-Poppins md:text-[1vw] text-[3.5vw] w-full">
+          {data.short_des}
+        </p>
+        <div className="flex gap-[2px] flex-wrap w-full items-center text-primary">
           {data.services_offered?.map((item) => {
             return (
               <>
-                <span className="font-Poppins text-[1vw]">{item}</span>
+                <span className="font-Poppins md:text-[1vw] text-[3vw]">
+                  {item}
+                </span>
                 <Icon icon="ci:line-l" width="24" />
               </>
             );
