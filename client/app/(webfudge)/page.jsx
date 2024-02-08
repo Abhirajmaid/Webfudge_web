@@ -14,6 +14,13 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  openGraph: {
+    images: [
+      {
+        url: "./opengraph-image.png",
+      },
+    ],
+  },
 };
 
 const Home = () => {
