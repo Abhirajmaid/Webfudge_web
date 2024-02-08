@@ -1,5 +1,3 @@
-"use client";
-
 import { ClientContainer, Filter } from "@src/components/clientGallery";
 import { PaginationControls } from "@src/components/common";
 import React from "react";
@@ -7,6 +5,7 @@ import React from "react";
 export const metadata = {
   title: "Clients - Webfudge",
 };
+
 const Clients = () => {
   return (
     <>
