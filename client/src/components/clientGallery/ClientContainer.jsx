@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { clients } from "../../data/clients";
 import { ClientCardMain } from "@src/components/clientGallery";
