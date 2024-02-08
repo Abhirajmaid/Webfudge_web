@@ -3,7 +3,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { navLinks } from "../../data/navLinks";
 
-const mode = JSON.parse(localStorage.getItem("Martvilla-theme-mode")) || false;
 
 const initialState = {
     isDropdownOpen: false,
@@ -11,7 +10,6 @@ const initialState = {
     currentLink: {},
     isSidebarOpen: false,
     isFilterMenuOpen: false,
-    darkMode: mode,
 };
 
 const uiSlice = createSlice({
@@ -46,9 +44,6 @@ const uiSlice = createSlice({
         closeFilterMenu: (state) => {
             state.isFilterMenuOpen = false;
         },
-        toggleDarkMode: (state) => {
-            state.darkMode = !state.darkMode;
-        },
     },
 });
 
@@ -65,5 +60,4 @@ export const {
     toggleSidebar,
     openFilterMenu,
     closeFilterMenu,
-    toggleDarkMode,
 } = uiSlice.actions;

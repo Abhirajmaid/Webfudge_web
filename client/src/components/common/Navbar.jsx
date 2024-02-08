@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { FiDelete, FiMoon, FiSun } from "react-icons/fi";
 import { BiMenu, BiUser } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,18 +13,19 @@ import {
   closeDropdown,
   closeSidebar,
   openSidebar,
-  toggleDarkMode,
   uiStore,
 } from "../../redux/features/uiSlice";
 
 import { navLinks } from "../../data/navLinks";
 import SingleLink from "./SingleLink";
 import Model from "./Model";
+import { useTheme } from "next-themes";
 
 const Navbar = ({ isShowMode }) => {
-  const rootDoc = document.querySelector(":root");
-  const { darkMode, isSidebarOpen } = useSelector(uiStore);
+  const { isSidebarOpen } = useSelector(uiStore);
   const dispatch = useDispatch();
+
+  const { theme, setTheme } = useTheme();
 
   // dark Mode
   const [showMode, setShowMode] = useState(true);
@@ -44,18 +46,6 @@ const Navbar = ({ isShowMode }) => {
       window.removeEventListener("scroll", changeNavBg);
     };
   }, []);
-
-  // Dark mode toggle
-  const handleDarkMode = () => {
-    dispatch(toggleDarkMode());
-  };
-
-  // Store darkmode value to localStorage;
-  useEffect(() => {
-    if (darkMode) rootDoc.classList.add("dark");
-    else rootDoc.classList.remove("dark");
-    localStorage.setItem("Martvilla-theme-mode", JSON.stringify(darkMode));
-  }, [darkMode]);
 
   const handleClose = (e) => {
     if (!e.target.classList.contains("link")) {
@@ -87,7 +77,7 @@ const Navbar = ({ isShowMode }) => {
           href="/"
           className="flex-shrink-0 flex-align-center gap-x-1 opacity-100"
         >
-          {darkMode ? (
+          {theme == "dark" ? (
             <Image
               src="/images/webfudge_logo_white.png"
               width={110}
@@ -173,9 +163,9 @@ const Navbar = ({ isShowMode }) => {
             {showMode ? (
               <div
                 className="bg-white shadow-md icon-box dark:bg-black hover:shadow-lg hover:bg-transparent"
-                onClick={handleDarkMode}
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                {darkMode ? <FiSun /> : <FiMoon />}
+                {theme == "dark" ? <FiSun /> : <FiMoon />}
               </div>
             ) : (
               <></>
