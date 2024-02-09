@@ -22,7 +22,7 @@ const Home = () => {
       <div className="md:px-[6%]" style={{ paddingTop: "80px" }}>
         <Hero />
         <ShowSection />
-        <InfiniteMarquee />
+        <InfiniteMarquee txt="Let's Discuss" url="/contact-us" />
         <OurServices />
         <About />
         <OurProject />

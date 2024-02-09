@@ -100,7 +100,7 @@ footer a:hover {
 }
 
 .isOpen {
-  @apply max-h-screen p-4;
+  @apply max-h-screen p-4 pl-2 pt-0;
 }
 
 .loading {
@@ -112,47 +112,9 @@ a.active {
   @apply relative text-primary before:absolute before:w-full before:h-[2px] before:bg-primary before:left-0 before:bottom-0 lg:before:-bottom-[0.1rem];
 }
 
-.dropdown a.active {
-  @apply before:bottom-0;
+.text-full-opacity {
+  @apply opacity-100;
 }
-
-.dropdown {
-  @apply z-40 -translate-x-1/2 before:rotate-45 before:absolute before:bg-inherit before:-top-2 before:left-1/2;
-}
-
-/* Filter dialog and modal */
-.filter-modal {
-  @apply fixed top-0 left-0 z-50 w-full h-full transition-opacity opacity-0 pointer-events-none bg-black/50 md:static md:opacity-100 md:pointer-events-auto md:bg-transparent;
-}
-
-.filter-dialog {
-  @apply absolute right-0 p-3 md:p-0 bg-white dark:bg-card-dark h-screen max-w-[300px] translate-x-[500px] w-full max-h-screen overflow-auto transition-transform md:static md:max-w-full md:translate-x-0 md:max-h-fit md:h-fit md:bg-main-bg md:dark:!bg-main-dark;
-}
-
-.mobile-modal.open,
-.filter-modal.open,
-.mobile-dialog.open,
-.filter-dialog.open {
-  @apply translate-x-0 opacity-100 pointer-events-auto;
-}
-
-.modal.open,
-.dialog.open {
-  @apply translate-x-0 opacity-100 pointer-events-auto;
-}
-
-.test-color {
-  color: #353949;
-}
-
-.dropdown.show {
-  @apply block;
-}
-
-.test-color {
-  color: rgba(213, 211, 211, 0.192);
-}
-
 /* Gradieent Blob */
 :root {
   --color-bg1: #6c00a2;

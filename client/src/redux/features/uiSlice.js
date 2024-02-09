@@ -1,11 +1,7 @@
 "use client"
-
 import { createSlice } from "@reduxjs/toolkit";
-import { navLinks } from "../../data/navLinks";
-
 
 const initialState = {
-    isDropdownOpen: false,
     position: null,
     currentLink: {},
     isSidebarOpen: false,
@@ -16,19 +12,6 @@ const uiSlice = createSlice({
     name: "ui",
     initialState,
     reducers: {
-        openDropdown: (state, action) => {
-            const mainLink = action.payload.link;
-            state.currentLink = navLinks.find((link) => link.linkText === mainLink);
-            state.isDropdownOpen = true;
-            state.position = action.payload.center;
-        },
-        closeDropdown: (state) => {
-            state.isDropdownOpen = false;
-        },
-        toggleDropdown: (state) => {
-            state.isDropdownOpen = !state.isDropdownOpen;
-        },
-
         openSidebar: (state) => {
             state.isSidebarOpen = true;
         },
@@ -52,9 +35,6 @@ export default uiSlice.reducer;
 export const uiStore = (state) => state.ui;
 
 export const {
-    openDropdown,
-    closeDropdown,
-    toggleDropdown,
     openSidebar,
     closeSidebar,
     toggleSidebar,

@@ -16,7 +16,6 @@ export default function WebfudgeLayout({ children }) {
         <LoadingScreen setLoading={setLoading} />
       ) : (
         <>
-          <DropDown />
           <Navbar isShowMode={true} />
           {children}
           <Footer />

@@ -1,3 +1,4 @@
+import { InfiniteMarquee } from "@src/components/common";
 import { ContactForm, Faqs } from "@src/components/contact";
 
 export const metadata = {
@@ -17,6 +18,7 @@ const Contact = () => {
         />
         <div className="w-full relative">
           <ContactForm />
+          <InfiniteMarquee txt="Get Personalize Project Quote" url="/quote" />
           <Faqs />
         </div>
       </div>

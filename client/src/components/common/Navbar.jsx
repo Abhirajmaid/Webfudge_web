@@ -1,25 +1,25 @@
 "use client";
 
 /* eslint-disable react-hooks/exhaustive-deps */
+
 import { useEffect, useState } from "react";
 import { FiDelete, FiMoon, FiSun } from "react-icons/fi";
-import { BiMenu, BiUser } from "react-icons/bi";
+import { BiMenu } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 
 import Link from "next/link";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 import {
-  closeDropdown,
   closeSidebar,
   openSidebar,
   uiStore,
-} from "../../redux/features/uiSlice";
+} from "@/src/redux/features/uiSlice";
 
-import { navLinks } from "../../data/navLinks";
+import { navLinks } from "@/src/data/navLinks";
 import SingleLink from "./SingleLink";
 import Model from "./Model";
-import { useTheme } from "next-themes";
 
 const Navbar = ({ isShowMode }) => {
   const { isSidebarOpen } = useSelector(uiStore);
@@ -47,12 +47,6 @@ const Navbar = ({ isShowMode }) => {
     };
   }, []);
 
-  const handleClose = (e) => {
-    if (!e.target.classList.contains("link")) {
-      dispatch(closeDropdown());
-    }
-  };
-
   const handleCloseSidebar = (e) => {
     if (e.target.classList.contains("mobile-modal")) dispatch(closeSidebar());
   };
@@ -71,7 +65,6 @@ const Navbar = ({ isShowMode }) => {
             ? "bg-white/60 border-b backdrop-blur-sm dark:border-dark dark:bg-dark/60"
             : " dark:hero-dark "
         } `}
-        onMouseOver={handleClose}
       >
         <Link
           href="/"
@@ -170,20 +163,6 @@ const Navbar = ({ isShowMode }) => {
             ) : (
               <></>
             )}
-            {/*----------------------------- Profile Icon-------------------------------------------------- */}
-            {/* {user ? (
-            <Link to="/user-profile">
-            <div className="bg-white shadow-md icon-box dark:bg-dark-light hover:shadow-lg hover:bg-transparent">
-            <BiUser />
-            </div>
-            </Link>
-            ) : (
-              <Link to="/signin">
-              <button className=" text-sm md:text-inherit btn md:w-fit bg-white shadow-md dark:bg-dark-light hover:shadow-lg hover:bg-transparent">
-              Sign In
-              </button>
-              </Link>
-            )} */}
 
             {/*------------------------------- Mobile Menu Toogle------------------------- */}
             <div

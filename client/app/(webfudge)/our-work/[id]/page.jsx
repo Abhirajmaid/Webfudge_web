@@ -2,7 +2,7 @@
 import { notFound, useParams } from "next/navigation";
 import React from "react";
 import { clients } from "@/src/data/clients";
-import SingleClientPage from "@src/components/singleClient/SingleClientPage";
+import { SingleClientPage } from "@src/components/SinglePages";
 
 const page = () => {
   const params = useParams();

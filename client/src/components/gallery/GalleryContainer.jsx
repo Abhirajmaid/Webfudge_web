@@ -74,7 +74,7 @@ const GalleryContainer = async () => {
       <h1 className="md:text-[2.5vw] text-[6vw] mb-10">
         Work That Brings Ideas To Life:
       </h1>
-      <div class="columns-1 gap-5 lg:gap-8 sm:columns-2 lg:columns-3 xl:columns-3 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-[80PX]">
+      <div className="columns-1 gap-5 lg:gap-8 sm:columns-2 lg:columns-3 xl:columns-3 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-[80PX]">
         {images?.map((item) => {
           return (
             <Suspense fallback={<CardLaod />}>

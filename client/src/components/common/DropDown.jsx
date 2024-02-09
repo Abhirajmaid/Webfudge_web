@@ -1,45 +1,45 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { useSelector } from "react-redux";
 import Link from "next/link";
-import { uiStore } from "../../redux/features/uiSlice";
-const Dropdown = () => {
-  const { currentLink, isDropdownOpen, position } = useSelector(uiStore);
-  const { subLinks } = currentLink;
-  const container = useRef(null);
-
-  useEffect(() => {
-    const dropdown = container.current;
-    dropdown.style.left = `${position}px`;
-  }, [position]);
-
+import { clients } from "@src/data/clients";
+import { ClientCard } from ".";
+import { motion } from "framer-motion";
+const Dropdown = ({ subLinks }) => {
   return (
-    <>
-      {currentLink && (
-        <div
-          className={`dropdown hidden z-[99] transition-a fixed top-[80px] left-1/2v -translate-x-1/2 !rounded-xl w-52 bg-white dark:bg-dark-light card-shadow dark:shadow-none ${
-            isDropdownOpen && subLinks && "show before:w-4 before:h-4"
-          }`}
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          ref={container}
-        >
-          <div className={`${subLinks && "p-2"}`}>
-            {subLinks?.map(({ id, linkText, url }) => (
-              <Link
-                key={id}
-                end
-                href={url}
-                className="p-2 space-x-3 rounded-lg flex-align-center sm:cursor-pointer hover:bg-slate-100 dark:hover:bg-hover-color-dark before:!hidden"
-              >
-                {linkText}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
-    </>
+    <motion.div
+      className="z-[99] !bg-dark-gray p-6 rounded-lg shadow-lg w-[70vw] flex "
+      variants={{
+        hidden: { opacity: 0, y: 200 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      initial="hidden"
+      animate="visible"
+      transition={{ ease: "easeInOut", duration: 0.3 }}
+    >
+      <div className="w-[25%]">
+        <ul className="gap-[20px] flex flex-col">
+          {subLinks?.map(({ id, linkText, url }) => (
+            <Link
+              key={id}
+              end
+              href={url}
+              className="text-white opacity-100 font-[BelfastMedium] text-[25px] hover:opacity-70"
+            >
+              {linkText}
+            </Link>
+          ))}
+        </ul>
+      </div>
+      <div className="flex gap-4 w-[75%]">
+        {clients?.slice(0, 2)?.map((item, i) => {
+          return (
+            <div key={i} className="md:w-fit w-full">
+              <ClientCard data={item} />
+            </div>
+          );
+        })}
+      </div>
+    </motion.div>
   );
 };
 

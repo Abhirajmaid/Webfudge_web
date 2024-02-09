@@ -24,6 +24,10 @@ export default function sitemap() {
             lastModified: new Date()
         },
         {
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/our-work`,
+            lastModified: new Date()
+        },
+        {
             url: `${process.env.NEXT_PUBLIC_BASE_URL}/gallery`,
             lastModified: new Date()
         },

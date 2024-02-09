@@ -50,7 +50,10 @@ module.exports = {
     plugin(function ({ addUtilities }) {
       const newUtilities = {
         ".text-muted": {
-          opacity: 0.7,
+          opacity: 0.8,
+        },
+        ".text-full-opacity": {
+          opacity: 1,
         },
         ".transition-a": {
           transition: "all 0.3s ease-in-out",
