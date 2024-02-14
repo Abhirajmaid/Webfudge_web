@@ -33,7 +33,7 @@ const OurClients = () => {
                 src={item}
                 width={200}
                 height={250}
-                className=" md:w-[130px] w-[80px] mr-[70px] opacity-80 "
+                className="md:w-[150px] w-[100px] md:mr-[50px] mr-[20px] opacity-80 p-4 rounded-md bg-white"
               />
             );
           })}
@@ -45,7 +45,7 @@ const OurClients = () => {
                 src={item}
                 width={200}
                 height={250}
-                className=" md:w-[130px] w-[80px] mr-[70px] opacity-80 "
+                className="md:w-[150px] w-[100px] md:mr-[50px] mr-[20px] opacity-80 p-4 rounded-md bg-white"
               />
             );
           })}

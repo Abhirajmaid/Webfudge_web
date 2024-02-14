@@ -22,24 +22,23 @@ export const navLinks = [
       // },
       {
         id: 23,
+        linkText: "Insight",
+        url: "/insights",
+      },
+      {
+        id: 24,
         linkText: "Meet The Team",
         url: "/team",
       },
     ],
   },
-
   {
     id: 3,
-    linkText: "Insight",
-    url: "/insights",
-  },
-  {
-    id: 4,
     linkText: "Gallery",
     url: "/gallery",
   },
   {
-    id: 5,
+    id: 4,
     linkText: "Careers",
     url: "https://webfudgeagency.zohorecruit.in/jobs/Careers",
     target: "_blank"
@@ -64,11 +63,6 @@ export const mobileNavLinks = [
     url: "/webfudge-network",
     subLink: true,
   },
-  // {
-  //   id: 22,
-  //   linkText: "Our Collaboration",
-  //   url: "/our-collaboration",
-  // },
   {
     id: 23,
     linkText: "Team",

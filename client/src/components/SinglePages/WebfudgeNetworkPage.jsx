@@ -22,7 +22,7 @@ const WebfudgeNetworkPage = ({ WebfudgeNetworkData }) => {
                   alt={item.name}
                   width={300}
                   height={320}
-                  className="object-cover grayscale md:w-[250px] w-[150px]"
+                  className="object-cover dark:grayscale md:w-[200px] w-[150px]"
                 />
               );
             })}
