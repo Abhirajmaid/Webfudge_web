@@ -1,7 +1,7 @@
 import React from "react";
 
 export const metadata = {
-  title: "About | Webfudge",
+  title: "About",
   description:
     "Webfudge's aim is to simplify the client experience by acting as a one-stop shop that can meet all of a client's marketing needs. Rather than specialising in one narrow area, we incorporate strategies that span across all mediums.",
 };

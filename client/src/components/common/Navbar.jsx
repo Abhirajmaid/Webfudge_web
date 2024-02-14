@@ -3,30 +3,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import { useEffect, useState } from "react";
-import { FiDelete, FiMoon, FiSun } from "react-icons/fi";
+import { FiMoon, FiSun } from "react-icons/fi";
 import { BiMenu } from "react-icons/bi";
-import { useDispatch, useSelector } from "react-redux";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 
-import {
-  closeSidebar,
-  openSidebar,
-  uiStore,
-} from "@/src/redux/features/uiSlice";
-
-import { navLinks } from "@/src/data/navLinks";
+import { mobileNavLinks, navLinks } from "@/src/data/navLinks";
 import SingleLink from "./SingleLink";
 import MobileNavLink from "./MobileNavLink";
 import Modal from "./Modal";
 
 const Navbar = ({ isShowMode }) => {
-  // const { isSidebarOpen } = useSelector(uiStore);
-  // const dispatch = useDispatch();
-
   // Mobile Menu
   const [open, setOpen] = useState(false);
   const toggleMenu = () => {
@@ -67,9 +57,6 @@ const Navbar = ({ isShowMode }) => {
       },
     },
   };
-  // const handleCloseSidebar = (e) => {
-  //   if (e.target.classList.contains("mobile-modal")) dispatch(closeSidebar());
-  // };
 
   // Theme
   const { theme, setTheme } = useTheme();
@@ -149,11 +136,22 @@ const Navbar = ({ isShowMode }) => {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="fixed left-0 top-0 w-full h-screen origin-top bg-primary text-black p-10"
+                className="fixed z-50 left-0 top-0 w-full h-screen origin-top bg-primary text-black p-10"
               >
                 <div className="flex h-full flex-col">
                   <div className="flex justify-between">
-                    <h1 className="text-lg text-black">Portfolio</h1>
+                    <Link
+                      href="/"
+                      className="flex-align-center gap-x-1 opacity-100"
+                    >
+                      <Image
+                        src="/images/webfudge_logo_white.png"
+                        width={110}
+                        height={100}
+                        alt="Webfudge"
+                        className="w-14 md:w-[100px] h-auto "
+                      />
+                    </Link>
                     <p
                       className="cursor-pointer text-md text-black"
                       onClick={toggleMenu}
@@ -168,13 +166,14 @@ const Navbar = ({ isShowMode }) => {
                     exit="initial"
                     className="flex flex-col h-full justify-center font-lora items-center gap-4 "
                   >
-                    {navLinks.map((link, index) => {
+                    {mobileNavLinks.map((link, index) => {
                       return (
-                        <div className="overflow-hidden">
+                        <div className="overflow-hidden" onClick={toggleMenu}>
                           <MobileNavLink
                             key={index}
                             title={link.linkText}
                             href={link.url}
+                            subLink={link.subLink}
                           />
                         </div>
                       );
@@ -195,7 +194,7 @@ const Navbar = ({ isShowMode }) => {
             {/*----------------------------- Dark mode toggle-------------------------------------------------- */}
             {showMode ? (
               <div
-                className="bg-white shadow-md icon-box dark:bg-black hover:shadow-lg hover:bg-transparent"
+                className="bg-white shadow-md icon-box dark:bg-black hover:shadow-lg hover:bg-transparent z-10"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
                 {theme == "dark" ? <FiSun /> : <FiMoon />}
@@ -205,7 +204,7 @@ const Navbar = ({ isShowMode }) => {
             )}
 
             {/*------------------------------- Mobile Menu Toogle------------------------- */}
-            <div className="icon-box md:hidden" onClick={toggleMenu}>
+            <div className="icon-box md:hidden z-10" onClick={toggleMenu}>
               <BiMenu />
             </div>
           </div>

@@ -50,8 +50,39 @@ const About = () => {
               setIsHovered(false);
             }}
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex ver
-            veritatis voluptatem dolorem rem rem laboriosam voluptate
+            A CREATIVE{" "}
+            <Image
+              src="/images/abstract.png"
+              width={120}
+              height={10}
+              className="w-[28%] md:h-[75px] h-[30px] rounded-full inline mb-[15px]"
+              alt="abstract"
+            />{" "}
+            MIND KNOWS{" "}
+            <Image
+              src="/images/abstract_1.png"
+              width={120}
+              height={10}
+              className="w-[17%] md:h-[75px] h-[30px] rounded-full inline mb-[10px]"
+              alt="abstract"
+            />{" "}
+            HOW TO DO THE{" "}
+            <Image
+              src="/images/arrow_img.svg"
+              width={12}
+              height={75}
+              className="md:w-[13%] w-[15%] md:h-[95px] h-[30px] rounded-full inline mb-[10px]"
+              alt="abstract"
+            />{" "}
+            RIGHT THING AT THE RIGHT PLACE{" "}
+            <Image
+              src="/images/abstract_1.png"
+              width={125}
+              height={75}
+              className="w-[20%] md:h-[75px] h-[30px] rounded-full inline md:mb-[20px]"
+              alt="abstract"
+            />{" "}
+            AND AT THE RIGHT TIME
           </h3>
         </motion.div>
         <h3>

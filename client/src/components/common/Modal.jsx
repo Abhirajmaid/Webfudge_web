@@ -12,9 +12,11 @@ const Modal = ({ visible, onClose, url }) => {
         variants={{
           hidden: { opacity: 0, scale: 0 },
           visible: { opacity: 1, scale: 1 },
+          exit: { opacity: 0, scale: 0 },
         }}
         initial="hidden"
         animate="visible"
+        exit="exit"
         transition={{
           duration: 0.5,
           ease: "easeInOut",

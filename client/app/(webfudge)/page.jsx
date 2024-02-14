@@ -1,6 +1,7 @@
 import {
   About,
   Hero,
+  OurClients,
   OurProject,
   OurServices,
   ShowSection,
@@ -8,12 +9,15 @@ import {
 import { InfiniteMarquee } from "@src/components/common";
 
 export const metadata = {
-  title: "Webfudge - Home",
+  title: "Home",
   description:
     "Build Brand Fast! Webfudge is Leading creative, media, and technology-driven digital agency based in Pune. Specializing in brand strategy and marketing, Web-design, transforming ideas into captivating online experiences.",
-  twitter: {
-    card: "summary_large_image",
-  },
+  keywords: [
+    "Webfudge",
+    "Webfudge Agency",
+    "Entreprenure",
+    "Social Media Management",
+  ],
 };
 
 const Home = () => {
@@ -26,6 +30,7 @@ const Home = () => {
         <OurServices />
         <About />
         <OurProject />
+        <OurClients />
       </div>
     </>
   );

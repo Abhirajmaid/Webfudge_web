@@ -21,7 +21,7 @@ const MobileNavLink = ({ title, href }) => {
   return (
     <motion.div
       variants={mobileLinkVars}
-      className="text-5xl uppercase text-black"
+      className="text-4xl uppercase text-black"
     >
       <Link href={href}>{title}</Link>
     </motion.div>

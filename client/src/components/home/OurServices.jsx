@@ -111,7 +111,7 @@ const OurServices = () => {
         <h2 className="md:text-[6vw] text-[8vw] tracking-tighter uppercase align-middle">
           Our Services <span className="text-[#D71EB9] !text-[8vw]">.</span>
         </h2>
-        <p className="font-Poppins md:text-[1vw] text-xs w-[50%] text-gray">
+        <p className="font-Poppins md:text-[1.1vw] leading-5 text-xs w-[50%] text-gray">
           Every ono of us loves sot-nothing different. So. exgsore the world
           through the lens of our visual capabilities, and find what you love
         </p>

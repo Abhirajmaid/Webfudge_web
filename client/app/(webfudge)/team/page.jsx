@@ -2,7 +2,7 @@ import { InfiniteMarquee, TeamCard } from "@src/components/common";
 import { teamMembers } from "@src/data/TeamData";
 import React from "react";
 export const metadata = {
-  title: "Team | Webfudge",
+  title: "Team",
   description: "Meet Our Team of Experts!",
 };
 const Page = () => {
