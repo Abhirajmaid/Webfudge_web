@@ -2,7 +2,6 @@
 
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { FiMousePointer } from "react-icons/fi";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -52,7 +51,7 @@ const TeamCard = ({ data }) => {
         rotateX,
         rotateY,
       }}
-      className="relative md:h-[550px] md:w-[450px] w-[80%] h-[400px] rounded-xl bg-gradient-to-br from-primary to-blue-400 cursor-pointer md:mt-20 mt-10"
+      className="relative md:h-[500px] md:w-[30%] w-[80%] h-[400px] rounded-xl bg-gradient-to-br from-primary to-blue-400 cursor-pointer md:mt-20 mt-10"
       onClick={() => router.push(`/team/${data.nameID}`)}
     >
       <Image

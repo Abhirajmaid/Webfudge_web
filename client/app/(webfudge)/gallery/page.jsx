@@ -2,7 +2,7 @@ import { GalleryContainer } from "@src/components/gallery";
 import React from "react";
 
 export const metadata = {
-  title: "Daily Creatives - Webfudge",
+  title: "Daily Creatives | Webfudge",
   description: "Let's be creative with webfudge",
 };
 

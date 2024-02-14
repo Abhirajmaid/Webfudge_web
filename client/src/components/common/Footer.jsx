@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
-import Model from "./Model";
+import Model from "./Modal";
 import Link from "next/link";
 
 const Footer = () => {
@@ -84,7 +84,7 @@ const Footer = () => {
                     alt="Webfudge star"
                     className="w-[30px] md:md:w-[45px]"
                   />
-                  <span className="mr-8 mb-[20px]">WEBFUDGE</span>
+                  <span className="mr-8 md:mb-[20px]">WEBFUDGE</span>
                 </div>
                 <div className="flex items-center gap-8">
                   <Image
@@ -100,7 +100,7 @@ const Footer = () => {
             </Marquee>
           </div>
         </div>
-        <div className=" font-[BelfastMedium] flex justify-between md:text-[1.2vw] text-[2.3vw] gap-3 md:mt-[200px] mt-[100px] mb-[80px] text-center">
+        <div className=" font-[BelfastMedium] flex justify-between md:text-[1.2vw] text-[2.5vw] gap-3 md:mt-[200px] mt-[100px] mb-[80px] text-center">
           <Link href="/legals/terms-and-conditions.html">
             <span>TERMS & CONDITION</span>
           </Link>

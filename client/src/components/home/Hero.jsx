@@ -60,22 +60,22 @@ const Hero = () => {
             <div className="flex justify-center items-center md:gap-[100px] gap-[40px] ">
               <Image
                 src="/images/star.png"
-                height={0}
-                width={0}
+                height={100}
+                width={100}
                 alt="Webfudge star"
                 className=" w-4 md:w-[27px] h-auto"
               />
               <Image
                 src="/images/star.png"
-                width={0}
-                height={0}
+                width={100}
+                height={100}
                 alt="Webfudge star"
                 className=" w-4 md:w-[27px] h-auto"
               />
               <Image
                 src="/images/star.png"
-                width={0}
-                height={0}
+                width={100}
+                height={100}
                 alt="Webfudge star"
                 className="w-4 md:w-[27px] h-auto"
               />
@@ -101,8 +101,8 @@ const Hero = () => {
           <div className="hidden md:block h-[1px] w-[65%] bg-dark dark:bg-gray opacity-70 "></div>
           <Image
             src="/images/rings.png"
-            width={0}
-            height={0}
+            width={100}
+            height={100}
             alt="Webfudge rings"
             className="hidden md:block w-[60px] h-auto "
           />

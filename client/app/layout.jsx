@@ -3,9 +3,10 @@ import { Providers } from "@/src/redux/provider";
 
 export const metadata = {
   metadataBase: new URL("https://webfudgeagency.com"),
-  title: "Webfudge",
+  template: "%s | Webfudge",
+  default: "Webfudge",
   description:
-    "Build Brand Fast! Leading creative, media, and technology-driven digital agency based in Pune. Specializing in brand strategy and marketing, Web-design, transforming ideas into captivating online experiences.",
+    "Build Brand Fast! Webfudge is Leading creative, media, and technology-driven digital agency based in Pune. Specializing in brand strategy and marketing, Web-design, transforming ideas into captivating online experiences.",
   twitter: {
     card: "summary_large_image",
     site: "@Webfudge",

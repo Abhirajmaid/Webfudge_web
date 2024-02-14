@@ -9,8 +9,8 @@ const Dropdown = ({ subLinks }) => {
     <motion.div
       className="z-[99] !bg-dark-gray p-6 rounded-lg shadow-lg w-[70vw] flex "
       variants={{
-        hidden: { opacity: 0, y: 200 },
-        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
       }}
       initial="hidden"
       animate="visible"

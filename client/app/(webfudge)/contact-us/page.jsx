@@ -2,9 +2,9 @@ import { InfiniteMarquee } from "@src/components/common";
 import { ContactForm, Faqs } from "@src/components/contact";
 
 export const metadata = {
-  title: "Contact - Webfudge",
+  title: "Contact | Webfudge",
   description:
-    "Drop Us A Message, We're excited to work with you soon! Please drop an email with your details & requirements to contact@webfudgeagency.com.",
+    "Drop Webfudge A Message, We're excited to work with you soon! Please drop an email with your details & requirements to contact@webfudgeagency.com.",
 };
 
 const Contact = () => {

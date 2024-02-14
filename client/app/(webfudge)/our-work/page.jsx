@@ -3,7 +3,8 @@ import { PaginationControls } from "@src/components/common";
 import React from "react";
 
 export const metadata = {
-  title: "Clients - Webfudge",
+  title: "Clients | Webfudge",
+  description: "Webfudge' Clients Gallery",
 };
 
 const Clients = () => {

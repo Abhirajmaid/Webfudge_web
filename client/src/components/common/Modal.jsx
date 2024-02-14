@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-const Model = ({ visible, onClose, url }) => {
+
+const Modal = ({ visible, onClose, url }) => {
   if (!visible) return null;
   return (
     <div
@@ -59,4 +60,4 @@ const Model = ({ visible, onClose, url }) => {
   );
 };
 
-export default Model;
+export default Modal;

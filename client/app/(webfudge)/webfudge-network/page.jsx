@@ -3,7 +3,7 @@ import { WebfudgeNetworkData } from "@src/data/accordionData";
 import { WebfudgeNetworkPage } from "@src/components/SinglePages";
 
 export const metadata = {
-  title: "Webfudge",
+  title: "Networks",
 };
 const WebfudgeNetwork = () => {
   return (
