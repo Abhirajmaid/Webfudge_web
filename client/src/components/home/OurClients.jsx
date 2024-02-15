@@ -33,7 +33,7 @@ const OurClients = () => {
                 src={item}
                 width={200}
                 height={250}
-                className="md:w-[150px] w-[100px] md:mr-[50px] mr-[20px] opacity-80 p-4 rounded-md bg-white"
+                className="md:w-[150px] md:min-h-[150px] min-h-[100px] w-[100px] md:mr-[50px] mr-[20px] opacity-80 p-4 rounded-md bg-white object-contain "
               />
             );
           })}
@@ -45,7 +45,7 @@ const OurClients = () => {
                 src={item}
                 width={200}
                 height={250}
-                className="md:w-[150px] w-[100px] md:mr-[50px] mr-[20px] opacity-80 p-4 rounded-md bg-white"
+                className="md:w-[150px] md:min-h-[150px] min-h-[100px] w-[100px] md:mr-[50px] mr-[20px] opacity-80 p-4 rounded-md bg-white object-contain"
               />
             );
           })}

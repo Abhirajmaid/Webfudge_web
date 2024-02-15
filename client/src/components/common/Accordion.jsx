@@ -21,7 +21,7 @@ const Single = ({ name, response, url }) => {
         }`}
         onClick={handleShow}
       >
-        <h1 className="md:text-[1.4vw] text-[3.5vw] font-[BelfastMedium] tracking-wide font-bold md:pl-2">
+        <h1 className="md:text-[1.4vw] text-lg font-[BelfastMedium] tracking-wide font-bold md:pl-2">
           {name}
         </h1>
         {isOpen ? (
@@ -31,14 +31,14 @@ const Single = ({ name, response, url }) => {
         )}
       </div>
       <p
-        className={`p-0 max-h-0 overflow-hidden font-[BelfastMedium] transition-all md:text-[1.1vw] text-[2.5vw] text-full-opacity ${
+        className={`p-0 max-h-0 overflow-hidden font-Poppins transition-all md:text-[1.1vw] text-base text-full-opacity ${
           isOpen && "isOpen"
         }`}
       >
         {response}
         {url && (
           <Link href={`${url}`} target="_black" className="opacity-100">
-            <div className="text-[1.3vw] text-primary font-[BelfastMedium] cursor-pointer hover:opacity-70 ">
+            <div className="md:text-2xl text-xl text-primary font-[BelfastMedium] cursor-pointer hover:opacity-70 ">
               Learn more about their Work
             </div>
           </Link>

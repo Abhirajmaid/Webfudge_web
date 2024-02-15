@@ -59,13 +59,13 @@ const SingleClientPage = ({ client, id }) => {
           </div>
           <div className="flex flex-col gap-[20px]">
             <h2 className="md:text-4xl text-[5.4vw]">Introduction:</h2>
-            <p className="md:text-xl text-base tracking-wide font-[BelfastMedium] opacity-100 text-justify">
+            <p className="md:text-xl text-base tracking-wide font-Poppins opacity-100 text-justify">
               {client.introduction}
             </p>
           </div>
           <div className="flex flex-col gap-[20px]">
             <h2 className="md:text-4xl text-[5.4vw] ">Solution:</h2>
-            <p className="md:text-xl text-base tracking-wide font-[BelfastMedium] opacity-100 text-justify">
+            <p className="md:text-xl text-base tracking-wide font-Poppins opacity-100 text-justify">
               {client.solution_offered}
             </p>
           </div>

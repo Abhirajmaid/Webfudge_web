@@ -22,7 +22,7 @@ const SingleFaq = ({ question, response, url }) => {
         }`}
         onClick={handleShow}
       >
-        <h1 className="md:text-[1.5vw] text-[3.5vw] font-[BelfastMedium] tracking-wide font-bold">
+        <h1 className="md:text-[1.7vw] text-lg font-[BelfastMedium] tracking-wide font-bold">
           {question}
         </h1>
         {isOpen ? (
@@ -32,7 +32,7 @@ const SingleFaq = ({ question, response, url }) => {
         )}
       </div>
       <p
-        className={`p-0 max-h-0 overflow-hidden transition-all md:text-[1vw] text-[2.5vw] ${
+        className={`p-0 max-h-0 overflow-hidden font-Poppins font-normal transition-all md:text-[1.3vw] text-base ${
           isOpen && "isOpen"
         }`}
       >
@@ -41,7 +41,7 @@ const SingleFaq = ({ question, response, url }) => {
 
       {url && (
         <Link href={`${url}`} target="_black" className="opacity-100">
-          <div className="text-[1.4vw] text-white font-[BelfastMedium] cursor-pointer hover:opacity-70">
+          <div className="text-[1.6vw] text-white font-[BelfastMedium] cursor-pointer hover:opacity-70">
             Learn more
           </div>
         </Link>

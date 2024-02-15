@@ -37,7 +37,7 @@ const OurProject = () => {
           <h2 className="md:text-[6vw] text-[8vw] tracking-tighter uppercase align-middle">
             Best Project <span className="text-[#D71EB9] !text-[8vw]">.</span>
           </h2>
-          <p className="font-Poppins md:text-[1.1vw] leading-5 text-xs md:w-[30%] w-[50%] text-gray">
+          <p className="font-Poppins md:text-[1.1vw] leading-5 text-sm md:w-[30%] w-[65%] text-gray">
             Webfudge fuels design. design fuels creativity, be here for more,
             are you in love with a creative?
           </p>

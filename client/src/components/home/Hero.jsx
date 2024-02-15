@@ -81,9 +81,9 @@ const Hero = () => {
               />
             </div>
           </div>
-          <p className="md:w-[35%] w-[80%] mx-auto md:text-justify font-[BelfastMedium] md:absolute md:-bottom-2 right-0 md:text-[1vw] text-center text-[10px] py-2">
+          <p className="md:w-[35%] w-[80%] mx-auto md:text-justify font-[BelfastMedium] md:absolute md:-bottom-2 right-0 md:text-[1vw] text-center text-[0.9rem] py-2">
             Welcome to{" "}
-            <span className=" font-[BelfastGrotesk] md:text-[1.2vw] text-[2.5vw] ">
+            <span className=" font-[BelfastGrotesk] md:text-[1.2vw] text-[1.2rem] ">
               Webfudge
             </span>{" "}
             , the ultimate web design solution. Unleash your imagination and
@@ -91,7 +91,7 @@ const Hero = () => {
             and transform your online presence today !
           </p>
         </div>
-        <div className="w-full flex md:justify-between gap-3 justify-center items-center absolute bottom-0 z-50">
+        <div className="w-full flex md:justify-between gap-3 justify-center items-center absolute -bottom-[30px] md:bottom-0 z-50">
           <button className=" btn border-[2px] text-[10px] md:text-base md:!py-5 !py-3 !rounded-full border-solid dark:border-white md:max-w-[25%] ">
             2 Years of Experience
           </button>

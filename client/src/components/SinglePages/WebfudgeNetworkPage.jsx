@@ -10,7 +10,7 @@ const WebfudgeNetworkPage = ({ WebfudgeNetworkData }) => {
           <h1 className="md:text-[2vw] text-[7vw] tracking-tight capitalize align-middle">
             Webfudge Network & Partnerships
           </h1>
-          <p className=" font-Poppins md:text-[1vw] text-[2.5vw] w-[70%] ">
+          <p className=" font-Poppins md:text-[1vw] text-sm w-[70%] ">
             Our partner companies like SchbangQ, 88GB, Spek Digital and Django
             Digital cater to unique market needs.
           </p>
@@ -18,8 +18,8 @@ const WebfudgeNetworkPage = ({ WebfudgeNetworkData }) => {
             {WebfudgeNetworkData.map((item) => {
               return (
                 <Image
-                  src={item.img}
-                  alt={item.name}
+                  src={item?.img}
+                  alt={item?.name}
                   width={300}
                   height={320}
                   className="object-cover dark:grayscale md:w-[200px] w-[150px]"
