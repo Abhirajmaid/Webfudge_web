@@ -1,5 +1,5 @@
 import React from "react";
-import { WebfudgeNetworkData } from "@src/data/accordionData";
+import { WebfudgeNetworkData } from "@src/data/data";
 import { WebfudgeNetworkPage } from "@src/components/SinglePages";
 
 export const metadata = {

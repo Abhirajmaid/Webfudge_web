@@ -1,3 +1,4 @@
+import Head from "next/head";
 import "./globals.css";
 import { Providers } from "@src/provider";
 
@@ -32,6 +33,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </Head>
       <body>
         <Providers>{children}</Providers>
       </body>

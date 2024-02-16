@@ -1,5 +1,5 @@
 import { InfiniteMarquee, TeamCard } from "@src/components/common";
-import { teamMembers } from "@src/data/TeamData";
+import { teamMembers } from "@src/data/data";
 import React from "react";
 export const metadata = {
   title: "Team",

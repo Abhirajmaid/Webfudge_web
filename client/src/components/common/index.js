@@ -8,3 +8,4 @@ export { default as PaginationControls } from "./PaginationControls";
 export { default as Accordion } from "./Accordion";
 export { default as Loader } from "./Loader";
 export { default as TeamCard } from "./TeamCard";
+export { default as Testimonial } from "./Testimonial";

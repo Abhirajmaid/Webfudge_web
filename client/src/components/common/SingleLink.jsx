@@ -21,7 +21,7 @@ const SingleLink = ({ id, linkText, url, subLinks, target }) => {
         <Link
           key={id}
           className="relative w-full px-3 py-[0.6rem] lg:px-4 flex-align-center gap-x-1 link text-lg text-dark dark:text-white cursor-pointer opacity-100"
-          href={`${url}`}
+          href={`${url ? url : "/"}`}
           target={target}
         >
           {linkText}

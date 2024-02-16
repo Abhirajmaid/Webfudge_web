@@ -8,7 +8,7 @@ export const navLinks = [
   {
     id: 2,
     linkText: "About us",
-    url: "/about-us",
+    // url: "/about-us",
     subLinks: [
       {
         id: 21,
@@ -50,12 +50,6 @@ export const mobileNavLinks = [
     id: 1,
     linkText: "Work",
     url: "/our-work",
-  },
-
-  {
-    id: 2,
-    linkText: "About us",
-    url: "/about-us",
   },
   {
     id: 21,

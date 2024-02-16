@@ -23,7 +23,7 @@ const OurClients = () => {
   return (
     <div className="md:mt-[100px] mt-[60px] md:px-0 px-[3%]">
       <h2 className="md:text-[5vw] text-[8vw] tracking-tighter uppercase align-middle text-center mb-5">
-        Our Cliets <span className="text-[#D71EB9] !text-[8vw]">.</span>
+        Our Clients <span className="text-[#D71EB9] !text-[8vw]">.</span>
       </h2>
       <div className="flex flex-col md:gap-12 gap-5">
         <Marquee speed={20}>
