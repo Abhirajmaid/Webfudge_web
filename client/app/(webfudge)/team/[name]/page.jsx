@@ -1,7 +1,7 @@
 "use client";
 import { Member } from "@src/components/SinglePages";
 import { useParams } from "next/navigation";
-import { teamMembers } from "@src/data/TeamData";
+import { teamMembers } from "@src/data/data";
 import React from "react";
 
 const page = () => {
