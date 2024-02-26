@@ -14,18 +14,12 @@ module.exports = {
       "2xl": "1536px",
     },
     fontFamily: {
-      Alike: ["Alike", "sans-serif"],
       Poppins: ["poppins", "sans-serif"],
-      Questrial: ["questrial"],
       Belfast: ["Belfast Grotesk", "san-serif"],
-      WorkSans: ["WorkSans", "sans-serif"]
     },
     extend: {
       animation: {
         'spin-slow': 'spin 5s linear infinite',
-      },
-      fontFamily: {
-        questrial: "Questrial",
       },
       colors: {
         primary: "#D305B1",
@@ -40,10 +34,7 @@ module.exports = {
         "hover-color-dark": "#101010",
         "gray": "#BABABA",
         dark: "#101010",
-      },
-      gridTemplateColumns: {
-        "16-auto": "250px auto",
-      },
+      }
     },
   },
   plugins: [

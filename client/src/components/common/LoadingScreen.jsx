@@ -1,7 +1,6 @@
 "use client";
-import Image from "next/image";
 import { easeInOut, motion, useAnimate } from "framer-motion";
-import React, { useEffect } from "react";
+import React from "react";
 
 const LoadingScreen = ({ setLoading }) => {
   const [scope, animate] = useAnimate();

@@ -9,7 +9,6 @@ const page = () => {
 
   console.log(params);
   const member = teamMembers.find((item) => {
-    console.log(item);
     return item?.nameID == params?.name;
   });
 
