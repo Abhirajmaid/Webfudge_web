@@ -1,5 +1,5 @@
-import Head from "next/head";
 import "./globals.css";
+import Head from "next/head";
 import { Providers } from "@src/provider";
 import { Analytics } from "@vercel/analytics/react";
 

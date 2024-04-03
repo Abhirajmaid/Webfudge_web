@@ -21,14 +21,14 @@ const TestimonialCard = ({ image, reviewText, name, role }) => {
         height={100}
         className=" object-cover md:w-[120px] h-auto w-[90px] mx-auto rounded-full"
       />
-      <div class="flex gap-4 relative">
+      <div className="flex gap-4 relative">
         <span>
           <Icon
             icon="bi:quote"
             className=" md:static absolute text-[3rem] top-0 left-0 text-primary"
           />
         </span>
-        <div class="md:text-right text-center text-base font-medium">
+        <div className="md:text-right text-center text-base font-medium">
           <p className="italic mb-4 font-Poppins text-lg">{reviewText}</p>
           <h4 className="md:text-right text-center text-primary text-base font-medium">
             - {name} <br /> <span>( {role} )</span>
@@ -40,7 +40,6 @@ const TestimonialCard = ({ image, reviewText, name, role }) => {
 };
 
 const Testimonial = () => {
-  //   console.log(testimonials);
   return (
     <div className="md:mt-[100px] mt-[60px] md:px-0 px-[3%]">
       <h2 className="md:text-[3vw] text-[7vw] tracking-tighter uppercase align-middle text-center mb-5">
