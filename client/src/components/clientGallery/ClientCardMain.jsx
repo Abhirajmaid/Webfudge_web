@@ -17,8 +17,8 @@ const ClientCardMain = ({ data }) => {
         >
           <Image
             src={data?.img_url}
-            width={500}
-            height={500}
+            width={2000}
+            height={2000}
             loading="lazy"
             className="w-full md:h-[600px] h-[300px] object-cover"
             alt={`webfudge ${data?.title}`}

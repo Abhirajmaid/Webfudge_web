@@ -51,7 +51,7 @@ const TeamCard = ({ data }) => {
         rotateX,
         rotateY,
       }}
-      className="relative md:h-[500px] md:w-[30%] w-[80%] h-[400px] rounded-xl bg-gradient-to-br from-primary to-blue-400 cursor-pointer md:mt-20 mt-10"
+      className="relative md:h-[650px] md:w-[30%] w-[80%] h-[400px] rounded-xl bg-gradient-to-br from-primary to-blue-400 cursor-pointer md:mt-20 mt-10"
       onClick={() => router.push(`/team/${data.nameID}`)}
     >
       <Image
@@ -62,8 +62,15 @@ const TeamCard = ({ data }) => {
         width={1000}
         height={500}
         src={data.image}
-        className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg h-full object-cover"
+        className="absolute inset-4 grid rounded-xl bg-white shadow-lg h-full object-cover grayscale"
       />
+      <div
+        className="absolute bottom-0 left-0 right-0 px-6 py-4 bg-black bg-opacity-50 text-white z-10 backdrop-blur-sm"
+        style={{ transform: "translateZ(80px)", transformStyle: "preserve-3d" }}
+      >
+        <h3 className="text-lg font-semibold">{data.name}</h3>
+        <p className="text-sm">{data.position}</p>
+      </div>
     </motion.div>
   );
 };

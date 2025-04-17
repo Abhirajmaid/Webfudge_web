@@ -8,12 +8,12 @@ export const metadata = {
 const Page = () => {
   return (
     <div className="md:px-[6%]" style={{ paddingTop: "120px" }}>
-      <div className="flex flex-wrap md:justify-between gap-10  justify-center items-center">
+      <div className="flex flex-wrap gap-10  justify-center items-center">
         {teamMembers?.map((item) => {
           return <TeamCard data={item} />;
         })}
       </div>
-      <div className="mt-10">
+      <div className="mt-[150px]">
         <InfiniteMarquee
           txt="Get Personalize Project Quote"
           url="/contact-us"

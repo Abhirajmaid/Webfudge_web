@@ -3,13 +3,14 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <>
       <motion.div
-        className="relative md:h-[550px] h-[350px] mt-[20px] "
+        className="relative md:h-[550px] h-[400px] mt-[20px] "
         variants={{
           hidden: { opacity: 0, y: 75 },
           visible: { opacity: 1, y: 0 },
@@ -53,8 +54,8 @@ const Hero = () => {
                 loop={true}
                 poster=""
               >
-                <source src="video/abstract.mp4" type="video/mp4" />
-                <source src="video/abstract.3gpp" type="video/3gpp" />
+                <source src="video/Final Comp.mp4" type="video/mp4" />
+                <source src="video/Final Comp.3gpp" type="video/3gpp" />
               </video>
             </div>
             <div className="flex justify-center items-center md:gap-[100px] gap-[40px] ">
@@ -91,13 +92,19 @@ const Hero = () => {
             and transform your online presence today !
           </p>
         </div>
-        <div className="w-full flex md:justify-between gap-3 justify-center items-center absolute -bottom-[30px] md:bottom-0 z-50">
-          <button className=" btn border-[2px] text-[10px] md:text-base md:!py-5 !py-3 !rounded-full border-solid dark:border-white md:max-w-[25%] ">
-            2 Years of Experience
-          </button>
-          <button className=" btn border-[2px] text-[10px] md:text-base md:!py-5 !py-3 !rounded-full border-solid dark:border-white md:max-w-[18%] ">
-            20+ Happy Clients
-          </button>
+        <div className="w-full flex flex-col md:flex-row md:justify-between gap-3 justify-center items-center absolute -bottom-[50px] md:bottom-0 z-50">
+          <Link
+            href="/contact-us"
+            className="btn text-center !font-light w-[60%] border-[1px] text-[13px] md:text-xl md:!py-5 !py-3 !rounded-full border-solid dark:border-primary bg-primary text-white md:max-w-[25%]  hover:scale-110"
+          >
+            <button>Start New Project! &rarr;</button>
+          </Link>
+          <Link
+            href="/our-work"
+            className="btn text-center w-[60%] border-[1px] text-[13px] md:text-xl md:!py-5 !py-3 !rounded-full border-solid dark:border-black bg-white text-black md:max-w-[25%]  hover:scale-110"
+          >
+            <button>Our Work</button>
+          </Link>
           <div className="hidden md:block h-[1px] w-[65%] bg-dark dark:bg-gray opacity-70 "></div>
           <Image
             src="/images/rings.png"

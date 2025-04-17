@@ -1,92 +1,48 @@
 export const teamMembers = [
     {
         id: 1,
-        nameID: "abirajmaid",
+        nameID: "abhirajmaid",
         name: "Abhiraj Maid",
-        role: "Co-Founder",
-        image: "/images/team/member1.jpg",
+        role: "Co-Founder & Design Head",
+        image: "/images/team/abhiraj.jpg",
         socials: [
             {
                 platform: "instagram",
-                url: "https://www.youtube.com/watch?v=-PBw8mv9ZYc"
+                url: "https://instagram.com/abhirajmaid"
             },
             {
                 platform: "linkedin",
-                url: "https://www.youtube.com/watch?v=-PBw8mv9ZYc"
+                url: "https://linkedin.com/in/abhirajmaid"
             },
             {
                 platform: "facebook",
-                url: "https://www.youtube.com/watch?v=-PBw8mv9ZYc"
+                url: "https://facebook.com/abhirajmaid"
             }
         ],
-        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis nisl enim. Nunc in nisi. Lorem ipsum dolor sit amet, consectetur adipiscing"
+        about: "Abhiraj is a design-driven entrepreneur with a passion for building brands that stand out. He leads the visual identity, UX, and creative strategy at Webfudge, blending aesthetics with functionality to create memorable digital experiences."
     },
     {
         id: 2,
-        nameID: "kishanGyamlani",
-        name: "Abhiraj Maid 1",
-        role: "Co-Founder",
-        image: "/images/team/member1.jpg",
+        nameID: "kishangyamlani",
+        name: "Kishan Gyamlani",
+        role: "Co-Founder & Strategy Lead",
+        image: "/images/team/kishan.jpg",
         socials: [
             {
                 platform: "instagram",
-                url: "https://www.youtube.com/watch?v=-PBw8mv9ZYc"
+                url: "https://instagram.com/kishangyamlani"
             },
             {
                 platform: "linkedin",
-                url: "https://www.youtube.com/watch?v=-PBw8mv9ZYc"
+                url: "https://linkedin.com/in/kishangyamlani"
             },
             {
                 platform: "facebook",
-                url: "https://www.youtube.com/watch?v=-PBw8mv9ZYc"
+                url: "https://facebook.com/kishangyamlani"
             }
         ],
-        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis nisl enim. Nunc in nisi. Lorem ipsum dolor sit amet, consectetur adipiscing"
-    },
-    {
-        id: 3,
-        nameID: "abhirajhhaah",
-        name: "Abhiraj Maid 1",
-        role: "Co-Founder",
-        image: "/images/team/member1.jpg",
-        socials: [
-            {
-                platform: "instagram",
-                url: "https://www.youtube.com/watch?v=-PBw8mv9ZYc"
-            },
-            {
-                platform: "linkedin",
-                url: "https://www.youtube.com/watch?v=-PBw8mv9ZYc"
-            },
-            {
-                platform: "facebook",
-                url: "https://www.youtube.com/watch?v=-PBw8mv9ZYc"
-            }
-        ],
-        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis nisl enim. Nunc in nisi. Lorem ipsum dolor sit amet, consectetur adipiscing"
-    },
-    {
-        id: 4,
-        nameID: "abhirajhhaahsfdasd",
-        name: "Abhiraj Maid 1",
-        role: "Co-Founder",
-        image: "/images/team/member1.jpg",
-        socials: [
-            {
-                platform: "instagram",
-                url: "https://www.youtube.com/watch?v=-PBw8mv9ZYc"
-            },
-            {
-                platform: "linkedin",
-                url: "https://www.youtube.com/watch?v=-PBw8mv9ZYc"
-            },
-            {
-                platform: "facebook",
-                url: "https://www.youtube.com/watch?v=-PBw8mv9ZYc"
-            }
-        ],
-        about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis nisl enim. Nunc in nisi. Lorem ipsum dolor sit amet, consectetur adipiscing"
-    },
+        about: "Kishan brings strategic thinking and social media expertise to the table. With a strong focus on growth and brand positioning, he ensures Webfudge clients get real traction and meaningful results from every campaign."
+    }
 ];
 
 export const WebfudgeNetworkData = [
@@ -127,59 +83,75 @@ export const WebfudgeNetworkData = [
 export const testimonials = [
     {
         id: 1,
-        name: "Wabz Braize",
-        role: "Front-end developer",
-        image: "/images/avatar.jpg",
+        name: "Prabhash Rao Balla",
+        role: "CEO, Plantozone",
+        image: "/images/ClientLogos/6.png",
         reviewText:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis porro ex perferendis, nulla consectetur consequuntur odio qui adipisci harum earum dolor, eius accusantium quia praesentium.",
+            "The Webfudge team brought our plant brand to life with fresh, vibrant visuals and a beautiful website. Their ability to understand our vibe and translate it into design and content was impressive. They’re creative, reliable, and always on point!",
     },
     {
         id: 2,
-        name: "Ethan Hunt",
-        role: "Backend engineer",
-        image: "/images/avatar.jpg",
+        name: "Pratik Agrawal",
+        role: "Founder, PA Associates",
+        image: "/images/ClientLogos/5.png",
         reviewText:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis porro ex perferendis, nulla consectetur consequuntur odio qui adipisci harum earum dolor, eius accusantium quia praesentium.",
+            "Webfudge helped us redefine our brand identity with a clean and professional look. From designing our letterheads to delivering a sleek digital presence, their work was sharp, strategic, and delivered on time.",
     },
     {
         id: 3,
-        name: "Raven Kent",
-        role: "UI Designer",
-        image: "/images/avatar.jpg",
+        name: "Aditya Mali",
+        role: "Operations Head, Netgarage",
+        image: "/images/ClientLogos/4.png",
         reviewText:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis porro ex perferendis, nulla consectetur consequuntur odio qui adipisci harum earum dolor, eius accusantium quia praesentium.",
+            "We collaborated with Webfudge to build a superbike resale platform and they absolutely nailed it. The design feels premium, the user experience is smooth, and their backend integration was flawless. Highly recommended for startups!",
+    },
+    {
+        id: 4,
+        name: "Hiten",
+        role: "Founder, Sahayata NGO",
+        image: "/images/ClientLogos/8.png",
+        reviewText:
+            "Working with Webfudge was a breeze! They helped us design digital posters, event IDs, and social content that perfectly reflected the heart of our NGO. Their design sense is thoughtful and purposeful.",
+    },
+    {
+        id: 5,
+        name: "Arti Saklani",
+        role: "Co-founder, Xtrawrkx",
+        image: "/images/ClientLogos/11.png",
+        reviewText:
+            "Webfudge played a key role in the success of our XSOS event. Their creative designs for event collateral, social media content, and branding truly elevated the experience. Their attention to detail and understanding of our event theme made all the difference in creating an impactful presence.",
     },
 ];
 
 export const faqs = [
     {
         id: 1,
-        question: "What types of living spaces do you offer?",
+        question: "What services does Webfudge offer?",
         response:
-            "We offer a range of living solutions tailored for students, including rooms, flats, PGs, and hostels, all equipped with essential amenities, ensuring comfort and convenience.",
+            "Webfudge offers a full suite of creative and digital services including brand identity design, website development, UI/UX design, social media management, and digital strategy tailored to help your brand grow online.",
     },
     {
         id: 2,
-        question: "How can I find the perfect living space for me?",
+        question: "How does Webfudge approach a new project?",
         response:
-            "Our platform provides an intuitive search feature that allows you to filter and discover your ideal living space based on your preferences such as location, budget, and amenities.",
+            "Every project starts with understanding your goals and audience. We conduct in-depth research, create custom strategies, and design user-focused solutions that are visually compelling and performance-driven.",
     },
     {
         id: 3,
-        question: "Can you assist in finding compatible roommates?",
+        question: "Can Webfudge handle both design and development?",
         response:
-            "Yes, we understand the importance of having compatible roommates. Our expert team can help match you with suitable roommates based on your preferences and profiles.",
+            "Absolutely! Webfudge specializes in both. From building pixel-perfect UI/UX designs to developing responsive, high-performing websites and apps, we manage the entire process in-house.",
     },
     {
         id: 4,
-        question: "What amenities are included in the living spaces you offer?",
+        question: "How do you help brands grow on social media?",
         response:
-            "Our living spaces come with a range of amenities, which may include essentials like Wi-Fi, laundry facilities, security, and more. You can find detailed information about amenities on our platform.",
+            "Our social media team creates customized content strategies, designs engaging visuals, and optimizes your brand’s online presence across platforms to ensure consistent growth and community engagement.",
     },
     {
         id: 5,
-        question: "What will I get in Aashray Premium ?",
+        question: "What’s included in Webfudge Premium?",
         response:
-            "Premium service gives you access to all information on Flats, Hostels, and PG's along with a physical visit , as well as complete access to sections of roommates, explore nearby, mess menu , and receive numerous interesting offers and discounts on exclusive amenities.",
+            "Webfudge Premium gives you priority access to our expert team, faster turnaround times, monthly performance reports, and a dedicated account manager to ensure your brand scales efficiently across all digital channels.",
     },
 ];

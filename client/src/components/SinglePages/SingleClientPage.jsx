@@ -2,9 +2,28 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 const SingleClientPage = ({ client, id }) => {
+  function FadeImage({ src, alt, className }) {
+    const [loaded, setLoaded] = useState(false);
+
+    return (
+      <div className={`w-full ${className}`}>
+        <Image
+          src={src}
+          width={2000}
+          height={2000}
+          alt={alt}
+          loading="lazy"
+          onLoad={() => setLoaded(true)}
+          className={`w-full h-full object-cover rounded-md shadow-sm transition-opacity duration-700 ease-in ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      </div>
+    );
+  }
   return (
     <>
       <div
@@ -80,24 +99,33 @@ const SingleClientPage = ({ client, id }) => {
           </div>
         </div>
         <div className="md:w-[57%] w-full">
-          <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div
+            className={`w-full grid grid-cols-2 ${
+              client?.singleColumnDesktop ? "lg:grid-cols-1" : "lg:grid-cols-6"
+            } gap-4`}
+          >
             {client?.project_imgs?.map((item, i) => {
+              const total = client.project_imgs.length;
+              const isSingleImage = total === 1;
+              const isLastEvenImage = total % 2 === 0 && i === total - 1;
+
               const getColSpan = () => {
-                if (i % 7 === 0) return "lg:col-span-6";
+                if (isSingleImage) return "col-span-2 lg:col-span-6";
+                if (isLastEvenImage) return "col-span-2 lg:col-span-6";
+                if (client?.singleColumnDesktop)
+                  return "col-span-2 lg:col-span-6";
+                if (i % 7 === 0) return "col-span-2 lg:col-span-6";
                 if (i % 7 === 1 || i % 7 === 2) return "lg:col-span-3";
                 return "lg:col-span-3";
               };
 
               return (
-                <div key={i} className={`w-full col-span-1 ${getColSpan()}`}>
-                  <Image
-                    className="w-full h-full object-cover rounded-md shadow-sm"
-                    src={item}
-                    width={800}
-                    height={600}
-                    alt={`${client.title} - ${i}`}
-                  />
-                </div>
+                <FadeImage
+                  key={i}
+                  src={item}
+                  alt={`${client.title} - ${i}`}
+                  className={getColSpan()}
+                />
               );
             })}
           </div>

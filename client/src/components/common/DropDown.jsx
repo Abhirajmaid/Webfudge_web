@@ -5,6 +5,10 @@ import { clients } from "@src/data/clients";
 import { ClientCard } from ".";
 import { motion } from "framer-motion";
 const Dropdown = ({ subLinks }) => {
+  const randomClients = clients
+    ?.sort(() => Math.random() - 0.5) // Shuffle the array
+    ?.slice(0, 2); // Pick first 2 after shuffle
+
   return (
     <motion.div
       className="z-[99] !bg-dark-gray p-6 rounded-lg shadow-lg w-[70vw] flex "
@@ -31,7 +35,7 @@ const Dropdown = ({ subLinks }) => {
         </ul>
       </div>
       <div className="flex gap-4 w-[75%]">
-        {clients?.slice(0, 2)?.map((item, i) => {
+        {randomClients?.slice(0, 2)?.map((item, i) => {
           return (
             <div key={i} className="md:w-fit w-full">
               <ClientCard data={item} />
