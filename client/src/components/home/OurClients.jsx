@@ -13,6 +13,8 @@ const ImageArray = [
   "/images/ClientLogos/7.png",
   "/images/ClientLogos/8.png",
   "/images/ClientLogos/9.png",
+  "/images/ClientLogos/10.png",
+  "/images/ClientLogos/11.png",
 ];
 
 const CompanyImages = () => {
@@ -33,7 +35,7 @@ const OurClients = () => {
                 src={item}
                 width={200}
                 height={250}
-                className="md:w-[150px] md:min-h-[150px] min-h-[100px] w-[100px] md:mr-[50px] mr-[20px] opacity-80 p-4 rounded-md bg-white object-contain "
+                className="md:min-w-[150px] md:min-h-[150px] min-h-[100px] w-[100px] md:mr-[50px] mr-[20px] opacity-80 p-4 rounded-md bg-white object-contain "
               />
             );
           })}
@@ -43,9 +45,9 @@ const OurClients = () => {
             return (
               <Image
                 src={item}
-                width={200}
+                width={220}
                 height={250}
-                className="md:w-[150px] md:min-h-[150px] min-h-[100px] w-[100px] md:mr-[50px] mr-[20px] opacity-80 p-4 rounded-md bg-white object-contain"
+                className="md:min-w-[150px] md:min-h-[150px] min-h-[100px] w-[100px] md:mr-[50px] mr-[20px] opacity-80 p-4 rounded-md bg-white object-contain"
               />
             );
           })}

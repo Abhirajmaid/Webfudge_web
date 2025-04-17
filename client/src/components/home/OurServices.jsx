@@ -5,11 +5,12 @@ import Image from "next/image";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 const ServicesList = [
-  { text: "Social Media Marketing", img: "/images/dummy.jpg" },
-  { text: "Paid Advertising", img: "/images/dummy.jpg" },
-  { text: "Web Design & Development", img: "/images/dummy.jpg" },
-  { text: "Search Engine Optimization (SEO)", img: "/images/dummy.jpg" },
-  { text: "Brand Design", img: "/images/dummy.jpg" },
+  { text: "Graphic Design", img: "/images/dummy.jpg" },
+  { text: "UI/UX Design", img: "/images/dummy.jpg" },
+  { text: "Web Development", img: "/images/dummy.jpg" },
+  { text: "Social Media Management", img: "/images/dummy.jpg" },
+  { text: "Brand Identity", img: "/images/dummy.jpg" },
+  { text: "Logo Design", img: "/images/dummy.jpg" },
 ];
 
 const Service = ({ service }) => {
@@ -112,8 +113,9 @@ const OurServices = () => {
           Our Services <span className="text-[#D71EB9] !text-[8vw]">.</span>
         </h2>
         <p className="font-Poppins md:text-[1.1vw] leading-5 text-sm w-[65%] text-gray">
-          Every ono of us loves sot-nothing different. So. exgsore the world
-          through the lens of our visual capabilities, and find what you love
+          Every one of us loves something unique. So, explore the world through{" "}
+          <br />
+          the lens of our visual capabilities and discover what you love.
         </p>
       </div>
       {ServicesList.map((item, i) => {

@@ -71,17 +71,25 @@ const SingleClientPage = ({ client, id }) => {
           </div>
         </div>
         <div className="md:w-[57%]">
-          <div className="flex gap-10 flex-col w-full">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
             {client?.project_imgs?.map((item, i) => {
+              // Logic to randomly vary layout
+              const getColSpan = () => {
+                if (i % 7 === 0) return "col-span-6"; // full row
+                if (i % 7 === 1 || i % 7 === 2) return "col-span-3"; // 2 halves
+                return "col-span-3"; // 3 in a row
+              };
+
               return (
-                <Image
-                  className="w-full object-cover"
-                  src={item}
-                  width={1920}
-                  height={1080}
-                  key={i}
-                  alt={`${client.title}`}
-                />
+                <div key={i} className={`w-full ${getColSpan()} `}>
+                  <Image
+                    className="w-full h-full object-cover rounded-md shadow-sm"
+                    src={item}
+                    width={800}
+                    height={600}
+                    alt={`${client.title} - ${i}`}
+                  />
+                </div>
               );
             })}
           </div>
