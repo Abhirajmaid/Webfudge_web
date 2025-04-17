@@ -4,7 +4,7 @@ import { Providers } from "@src/provider";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
-  metadataBase: new URL("https://webfudgeagency.com"),
+  metadataBase: new URL("https://webfudge.in"),
   title: {
     default: "Webfudge",
     template: "%s | Webfudge",
@@ -22,6 +22,9 @@ export const metadata = {
     images: [
       {
         url: "./opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Webfudge",
       },
     ],
   },
