@@ -3,18 +3,26 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const ServicesList = [
-  { text: "Graphic Design", img: "/images/dummy.jpg" },
-  { text: "UI/UX Design", img: "/images/dummy.jpg" },
-  { text: "Web Development", img: "/images/dummy.jpg" },
-  { text: "Social Media Management", img: "/images/dummy.jpg" },
-  { text: "Brand Identity", img: "/images/dummy.jpg" },
-  { text: "Logo Design", img: "/images/dummy.jpg" },
+  {
+    text: "Graphic Design",
+    img: "https://mir-s3-cdn-cf.behance.net/project_modules/source/c65a3d221875125.67dbf0b74f297.png",
+  },
+  {
+    text: "UI/UX Design",
+    img: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/fdbff9214086227.67518caa785c7.png",
+  },
+  { text: "Web Development", img: "/images/clients/planto/1.png" },
+  { text: "Social Media Management", img: "/images/clients/rk/smm.png" },
+  { text: "Brand Identity", img: "/images/clients/sahayata/sahayata.png" },
+  { text: "Logo Design", img: "/images/clients/mmj/mmj2.png" },
 ];
 
 const Service = ({ service }) => {
   const [hover, setHover] = useState(false);
+  const router = useRouter();
   return (
     <>
       <motion.div
@@ -22,6 +30,7 @@ const Service = ({ service }) => {
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
         whileTap={{ scale: 0.96 }}
+        onClick={() => router.push("/our-work")}
       >
         <h3 className="group-hover:font-bold group-hover:scale-105 font-[BelfastMedium] md:text-[3vw] text-[6vw] md:-mt-3 w-[80%]">
           {service.text}
@@ -31,7 +40,7 @@ const Service = ({ service }) => {
         </h3>
         {hover ? (
           <motion.div
-            className="md:h-[250px] md:w-[250px] h-[150px] w-[150px] absolute md:-top-[60%] -top-[40%] right-[20%] z-50"
+            className="md:h-[250px] md:w-[350px] h-[150px] w-[150px] absolute md:-top-[60%] -top-[40%] right-[20%] z-50"
             variants={{
               hidden: { opacity: 0, y: 100 },
               visible: { opacity: 1, y: 0 },
@@ -42,8 +51,8 @@ const Service = ({ service }) => {
           >
             <Image
               src={`${service.img}`}
-              width={250}
-              height={250}
+              width={650}
+              height={650}
               className="w-[100%] h-[100%] shadow-[11px_11px_0px_0px_#d305b1] md:rounded-t-[60px] rounded-t-[40px]"
               alt="webfudge"
             />
