@@ -2,6 +2,7 @@ export const clients = [
     {
         id: 1,
         title: "Xtrawrkx",
+        link: "https://www.linkedin.com/company/xtrawrkx/",
         img_url: "https://mir-s3-cdn-cf.behance.net/project_modules/source/c65a3d221875125.67dbf0b74f297.png",
         project_imgs: [
             "https://mir-s3-cdn-cf.behance.net/project_modules/disp/ffc828221875125.67f692735b8e8.png",
