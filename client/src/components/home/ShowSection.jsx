@@ -83,7 +83,7 @@ const ClientShowcase = () => {
       >
         {clients.map((client) => (
           <SwiperSlide key={client.id}>
-            <div className="relative h-[800px] rounded-t-[40px] md:rounded-t-[160px] card-shadow overflow-visible">
+            <div className="relative md:h-[800px] h-[450px] rounded-t-[40px] md:rounded-t-[160px] card-shadow overflow-visible">
               <motion.div
                 className="w-full relative h-full"
                 initial={{ opacity: 0, scale: 0 }}

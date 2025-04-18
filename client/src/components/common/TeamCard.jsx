@@ -62,6 +62,7 @@ const TeamCard = ({ data }) => {
         width={1000}
         height={500}
         src={data.image}
+        alt={data.name}
         className="absolute inset-4 grid rounded-xl bg-white shadow-lg h-full object-cover grayscale"
       />
       <div

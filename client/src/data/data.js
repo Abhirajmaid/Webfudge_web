@@ -8,11 +8,11 @@ export const teamMembers = [
         socials: [
             {
                 platform: "instagram",
-                url: "https://instagram.com/abhirajmaid"
+                url: "https://www.instagram.com/abhirajmaid/"
             },
             {
                 platform: "linkedin",
-                url: "https://linkedin.com/in/abhirajmaid"
+                url: "https://www.linkedin.com/in/abhiraj-maid/"
             },
             {
                 platform: "facebook",
@@ -26,15 +26,15 @@ export const teamMembers = [
         nameID: "kishangyamlani",
         name: "Kishan Gyamlani",
         role: "Co-Founder & Strategy Lead",
-        image: "/images/team/kishan.jpg",
+        image: "/images/team/kishan1.jpeg",
         socials: [
             {
                 platform: "instagram",
-                url: "https://instagram.com/kishangyamlani"
+                url: "https://www.instagram.com/kishan.gyamlani/"
             },
             {
                 platform: "linkedin",
-                url: "https://linkedin.com/in/kishangyamlani"
+                url: "https://www.linkedin.com/in/kishangyamlani/"
             },
             {
                 platform: "facebook",

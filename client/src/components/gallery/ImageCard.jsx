@@ -1,10 +1,9 @@
 import React from "react";
 
-const ImageCard = async ({ img, text }) => {
+const ImageCard = async ({ img }) => {
   return (
-    <div className="flex flex-col gap-3 mb-[70px]">
-      <img src={img} alt="" className="rounded-lg " />
-      <p className="w-full md:text-[1vw] text=[4vw]">{text}</p>
+    <div className="flex flex-col gap-3 mb-[32px]">
+      <img src={img} alt="webfudge" className="rounded-lg " />
     </div>
   );
 };

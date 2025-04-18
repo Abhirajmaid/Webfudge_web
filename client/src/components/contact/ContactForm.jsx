@@ -79,7 +79,7 @@ const ContactForm = () => {
           <p style={{ lineHeight: "21px" }}>
             For any enquiries, please email us or complete our contact form.
           </p>
-          <span className="text-xl mt-[15px]">info@webfudge.com</span>
+          <span className="text-xl mt-[15px]">info@webfudge.in</span>
         </div>
         <div className="flex flex-col md:w-[65%] w-full bg-purple-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 px-[25px] py-[70px]">
           {thanksMsg ? (

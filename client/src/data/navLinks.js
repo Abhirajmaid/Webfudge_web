@@ -8,8 +8,13 @@ export const navLinks = [
   {
     id: 2,
     linkText: "About us",
-    // url: "/about-us",
+    url: "/about-us",
     subLinks: [
+      {
+        id: 24,
+        linkText: "Meet The Team",
+        url: "/team",
+      },
       {
         id: 21,
         linkText: "Webfudge Network",
@@ -24,11 +29,6 @@ export const navLinks = [
         id: 23,
         linkText: "Insight",
         url: "/insights",
-      },
-      {
-        id: 24,
-        linkText: "Meet The Team",
-        url: "/team",
       },
     ],
   },

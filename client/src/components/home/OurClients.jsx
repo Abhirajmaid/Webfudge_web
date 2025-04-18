@@ -35,7 +35,7 @@ const OurClients = () => {
                 src={item}
                 width={200}
                 height={250}
-                className="md:min-w-[150px] md:min-h-[150px] min-h-[100px] w-[100px] md:mr-[50px] mr-[20px] opacity-80 p-4 rounded-md bg-white object-contain "
+                className="md:min-w-[150px] md:min-h-[150px] min-h-[100px] w-[100px] md:mr-[50px] mr-[20px] p-4 rounded-md bg-white object-contain !opacity-100"
               />
             );
           })}
@@ -47,7 +47,7 @@ const OurClients = () => {
                 src={item}
                 width={220}
                 height={250}
-                className="md:min-w-[150px] md:min-h-[150px] min-h-[100px] w-[100px] md:mr-[50px] mr-[20px] opacity-80 p-4 rounded-md bg-white object-contain"
+                className="md:min-w-[150px] md:min-h-[150px] min-h-[100px] w-[100px] md:mr-[50px] mr-[20px] !opacity-100 p-4 rounded-md bg-white object-contain"
               />
             );
           })}

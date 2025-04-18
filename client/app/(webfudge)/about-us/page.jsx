@@ -1,4 +1,5 @@
 import React from "react";
+import { AboutPage } from "@src/components/SinglePages";
 
 export const metadata = {
   title: "About",
@@ -8,8 +9,8 @@ export const metadata = {
 
 const AboutUs = () => {
   return (
-    <div className="px-[3%] md:px-[6%]" style={{ paddingTop: "80px" }}>
-      AboutUs
+    <div className="px-[3%] md:px-[6%]" style={{ paddingTop: "110px" }}>
+      <AboutPage />
     </div>
   );
 };
