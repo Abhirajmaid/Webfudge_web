@@ -104,7 +104,7 @@ const Footer = () => {
           <Link href="/legals/terms-and-conditions.html">
             <span>TERMS & CONDITION</span>
           </Link>
-          <span>Copyright © 2024 Webfudge Agency. All rights reserved. </span>
+          <span>Copyright © 2025 Webfudge Agency. All rights reserved. </span>
           <Link href="/legals/privacy-policy.html">
             <span>PRIVACY POLICY</span>
           </Link>

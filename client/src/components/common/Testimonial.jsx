@@ -19,13 +19,13 @@ const TestimonialCard = ({ image, reviewText, name, role }) => {
         alt="webfudge user"
         width={100}
         height={100}
-        className=" object-cover md:w-[120px] h-auto w-[90px] mx-auto rounded-full"
+        className=" object-fill md:w-[120px] h-[120px] w-[90px] mx-auto"
       />
       <div className="flex gap-4 relative">
         <span>
           <Icon
             icon="bi:quote"
-            className=" md:static absolute text-[3rem] top-0 left-0 text-primary"
+            className=" md:static absolute text-[5rem] opacity-70 md:opacity-100 md:top-0 md:left-0 -top-10 -left-5 text-primary"
           />
         </span>
         <div className="md:text-right text-center text-base font-medium">

@@ -1,12 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
+import Model from "@src/components/common/Modal";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
+  const handleOnClose = () => {
+    setShowVideo(false);
+  };
   return (
     <>
       <motion.div
@@ -92,13 +98,13 @@ const Hero = () => {
             and transform your online presence today !
           </p>
         </div>
-        <div className="w-full flex flex-col md:flex-row md:justify-between gap-3 justify-center items-center absolute -bottom-[50px] md:bottom-0 z-50">
-          <Link
-            href="/contact-us"
+        <div className="w-full flex flex-col md:flex-row md:justify-between gap-3 justify-center items-center absolute -bottom-[65px] md:bottom-0 z-50">
+          <button
+            onClick={() => setShowVideo(true)}
             className="btn text-center !font-light w-[60%] border-[1px] text-[13px] md:text-xl md:!py-5 !py-3 !rounded-full border-solid dark:border-primary bg-primary text-white md:max-w-[25%]  hover:scale-110"
           >
-            <button>Start New Project! &rarr;</button>
-          </Link>
+            <div>Start New Project! &rarr;</div>
+          </button>
           <Link
             href="/our-work"
             className="btn text-center w-[60%] border-[1px] text-[13px] md:text-xl md:!py-5 !py-3 !rounded-full border-solid dark:border-black bg-white text-black md:max-w-[25%]  hover:scale-110"
@@ -153,6 +159,7 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
+      <Model onClose={handleOnClose} visible={showVideo} />
     </>
   );
 };
