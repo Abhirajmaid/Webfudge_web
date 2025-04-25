@@ -106,17 +106,9 @@ export const testimonials = [
             "We collaborated with Webfudge to build a superbike resale platform and they absolutely nailed it. The design feels premium, the user experience is smooth, and their backend integration was flawless. Highly recommended for startups!",
     },
     {
-        id: 4,
-        name: "Hiten",
-        role: "Founder, Sahayata NGO",
-        image: "/images/ClientLogos/8.png",
-        reviewText:
-            "Working with Webfudge was a breeze! They helped us design digital posters, event IDs, and social content that perfectly reflected the heart of our NGO. Their design sense is thoughtful and purposeful.",
-    },
-    {
         id: 5,
         name: "Arti Saklani",
-        role: "Co-founder, Xtrawrkx",
+        role: "Director, Xtrawrkx",
         image: "/images/ClientLogos/11.png",
         reviewText:
             "Webfudge played a key role in the success of our XSOS event. Their creative designs for event collateral, social media content, and branding truly elevated the experience. Their attention to detail and understanding of our event theme made all the difference in creating an impactful presence.",

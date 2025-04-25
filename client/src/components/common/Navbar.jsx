@@ -101,23 +101,19 @@ const Navbar = ({ isShowMode }) => {
           href="/"
           className="flex-shrink-0 flex-align-center gap-x-1 opacity-100"
         >
-          {theme == "dark" ? (
-            <Image
-              src="/images/webfudge_logo_white.png"
-              width={110}
-              height={100}
-              alt="Webfudge"
-              className="w-14 md:w-[100px] h-auto "
-            />
-          ) : (
-            <Image
-              src="/images/webfudge_logo_black.png"
-              width={100}
-              height={100}
-              alt="Webfudge"
-              className="w-14 md:w-[120px] h-auto "
-            />
-          )}
+          <Image
+            src={
+              theme === "dark"
+                ? "/images/webfudge_logo_white.png"
+                : "/images/webfudge_logo_black.png"
+            }
+            width={theme === "dark" ? 110 : 100}
+            height={100}
+            alt="Webfudge"
+            className={`h-auto ${
+              theme === "dark" ? "w-14 md:w-[100px]" : "w-14 md:w-[120px]"
+            }`}
+          />
         </Link>
 
         <div className="flex-align-center gap-x-4">
@@ -204,7 +200,10 @@ const Navbar = ({ isShowMode }) => {
             )}
 
             {/*------------------------------- Mobile Menu Toogle------------------------- */}
-            <div className="icon-box md:hidden z-10" onClick={toggleMenu}>
+            <div
+              className="icon-box text-3xl md:hidden z-10"
+              onClick={toggleMenu}
+            >
               <BiMenu />
             </div>
           </div>

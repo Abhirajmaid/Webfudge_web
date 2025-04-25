@@ -15,11 +15,11 @@ export const navLinks = [
         linkText: "Meet The Team",
         url: "/team",
       },
-      {
-        id: 21,
-        linkText: "Webfudge Network",
-        url: "/webfudge-network",
-      },
+      // {
+      //   id: 21,
+      //   linkText: "Webfudge Network",
+      //   url: "/webfudge-network",
+      // },
       // {
       //   id: 22,
       //   linkText: "Our Collaboration",

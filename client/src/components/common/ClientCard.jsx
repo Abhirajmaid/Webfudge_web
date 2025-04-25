@@ -12,7 +12,7 @@ const ClientCard = ({ data }) => {
   return (
     <>
       <motion.div
-        className="group relative w-full h-[350px] cursor-pointer overflow-hidden hover:rounded-br-[90px] transition-a"
+        className="group relative w-full h-[350px] cursor-pointer overflow-hidden hover:rounded-br-[90px] transition-a rounded-xl md:rounded-none"
         onMouseEnter={() => setHide(true)}
         onMouseLeave={() => setHide(false)}
         whileTap={{ scale: 0.9 }}

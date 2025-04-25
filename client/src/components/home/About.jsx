@@ -25,7 +25,7 @@ const About = () => {
     <>
       <motion.div
         ref={ref}
-        className="md:p-[160px] p-[40px] md:py-[160px] py-[60px] text-justify md:leading-[100px] leading-[40px] tracking-tight dark:bg-dark-light bg-gray  mt-[100px] font-[BelfastMedium] text-[5vw] relative"
+        className="hidden md:block md:p-[160px] p-[40px] md:py-[160px] py-[60px] text-justify md:leading-[100px] leading-[40px] tracking-tight dark:bg-dark-light bg-gray  mt-[100px] font-[BelfastMedium] text-[5vw] relative"
         variants={{
           hidden: { opacity: 0, y: 200 },
           visible: { opacity: 1, y: 0 },

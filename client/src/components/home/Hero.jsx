@@ -49,8 +49,8 @@ const Hero = () => {
             </motion.h1>
           </div>
           <div className="flex-col md:gap-7 gap-3 flex-align-center">
-            <div className=" md:w-[80%] w-[60%] md:max-h-[100px] max-h-10  rounded-full bg-[#D9D9D9] md:mt-[85px] p-3 py-[20px] flex items-center overflow-hidden relative">
-              <div className=" md:h-[85px] h-10 bg-white rounded-full md:w-[85px] w-10 border-solid md:border-[6px] border-[3px] border-gray cursor-pointer absolute md:block hidden">
+            <div className=" md:w-[80%] w-[60%] md:max-h-[100px] max-h-10  rounded-full bg-[#D9D9D9] md:mt-[85px] py-[20px] flex items-center overflow-hidden relative">
+              <div className=" md:h-[85px] h-10 bg-white rounded-full md:w-[85px] w-10 border-solid md:border-[6px] border-[3px] border-gray cursor-pointer absolute md:block hidden left-3">
                 <Icon icon="mdi:play" width="75" className=" text-primary " />
               </div>
               <video

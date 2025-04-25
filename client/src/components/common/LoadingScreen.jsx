@@ -36,7 +36,7 @@ const LoadingScreen = ({ setLoading }) => {
       <div className="flex justify-center items-center w-full h-[100vh] bg-primary overflow-hidden">
         <div ref={scope} className="w-auto pt-8">
           <motion.div
-            className="w-full md:text-[140px] text-6xl text-main-dark"
+            className="w-full md:text-[140px] text-[52px] text-main-dark"
             id="parent"
             initial="hidden"
             animate="visible"
