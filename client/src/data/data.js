@@ -21,28 +21,28 @@ export const teamMembers = [
         ],
         about: "Abhiraj is a design-driven entrepreneur with a passion for building brands that stand out. He leads the visual identity, UX, and creative strategy at Webfudge, blending aesthetics with functionality to create memorable digital experiences."
     },
-    {
-        id: 2,
-        nameID: "kishangyamlani",
-        name: "Kishan Gyamlani",
-        role: "Co-Founder & Strategy Lead",
-        image: "/images/team/kishan1.jpeg",
-        socials: [
-            {
-                platform: "instagram",
-                url: "https://www.instagram.com/kishan.gyamlani/"
-            },
-            {
-                platform: "linkedin",
-                url: "https://www.linkedin.com/in/kishangyamlani/"
-            },
-            {
-                platform: "facebook",
-                url: "https://facebook.com/kishangyamlani"
-            }
-        ],
-        about: "Kishan brings strategic thinking and social media expertise to the table. With a strong focus on growth and brand positioning, he ensures Webfudge clients get real traction and meaningful results from every campaign."
-    }
+    // {
+    //     id: 2,
+    //     nameID: "kishangyamlani",
+    //     name: "Kishan Gyamlani",
+    //     role: "Co-Founder & Strategy Lead",
+    //     image: "/images/team/kishan1.jpeg",
+    //     socials: [
+    //         {
+    //             platform: "instagram",
+    //             url: "https://www.instagram.com/kishan.gyamlani/"
+    //         },
+    //         {
+    //             platform: "linkedin",
+    //             url: "https://www.linkedin.com/in/kishangyamlani/"
+    //         },
+    //         {
+    //             platform: "facebook",
+    //             url: "https://facebook.com/kishangyamlani"
+    //         }
+    //     ],
+    //     about: "Kishan brings strategic thinking and social media expertise to the table. With a strong focus on growth and brand positioning, he ensures Webfudge clients get real traction and meaningful results from every campaign."
+    // }
 ];
 
 export const WebfudgeNetworkData = [
