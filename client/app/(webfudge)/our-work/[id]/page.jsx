@@ -4,7 +4,7 @@ import React from "react";
 import { clients } from "@/src/data/clients";
 import { SingleClientPage } from "@src/components/SinglePages";
 
-const page = () => {
+const Page = () => {
   const params = useParams();
   const client = clients.find((item) => {
     return item?.id == params?.id;
@@ -21,4 +21,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

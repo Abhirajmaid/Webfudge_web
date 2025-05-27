@@ -19,7 +19,7 @@ const About = () => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   return (
     <>

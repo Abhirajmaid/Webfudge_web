@@ -19,7 +19,7 @@ const OurProject = () => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
   return (
     <>
       <motion.div

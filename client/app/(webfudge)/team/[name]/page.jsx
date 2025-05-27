@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import { teamMembers } from "@src/data/data";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   const params = useParams();
 
   console.log(params);
@@ -22,4 +22,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

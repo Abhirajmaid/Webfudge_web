@@ -75,12 +75,12 @@ const SingleClientPage = ({ client, id }) => {
             <div className="flex gap-[2px] flex-wrap w-full">
               {client.services_offered?.map((item, i) => {
                 return (
-                  <>
+                  <React.Fragment key={item}>
                     <span className="font-Poppins text-lg tracking-wide">
                       {item}
                     </span>
                     <Icon icon="ci:line-l" width="24" />
-                  </>
+                  </React.Fragment>
                 );
               })}
             </div>

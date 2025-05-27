@@ -1,5 +1,6 @@
 import { InfiniteMarquee } from "@src/components/common";
 import { ContactForm, Faqs } from "@src/components/contact";
+import Image from "next/image";
 
 export const metadata = {
   title: "Contact",
@@ -11,10 +12,12 @@ const Contact = () => {
   return (
     <>
       <div className="px-[3%] md:px-[6%]" style={{ paddingTop: "80px" }}>
-        <img
+        <Image
           src="/images/universe_2.png"
           alt="contact"
+          fill
           className="h-screen w-full absolute left-0 top-0 object-cover"
+          style={{ objectFit: "cover" }}
         />
         <div className="w-full relative">
           <ContactForm />

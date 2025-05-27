@@ -65,12 +65,12 @@ const ClientCardMain = ({ data }) => {
         <div className="flex gap-[2px] flex-wrap w-full items-center text-primary">
           {data.services_offered?.map((item) => {
             return (
-              <>
+              <React.Fragment key={item}>
                 <span className="font-Poppins md:text-[1vw] text-[3vw]">
                   {item}
                 </span>
                 <Icon icon="ci:line-l" width="24" />
-              </>
+              </React.Fragment>
             );
           })}
         </div>

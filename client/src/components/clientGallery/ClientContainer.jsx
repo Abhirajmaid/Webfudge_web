@@ -23,7 +23,7 @@ const ClientContainer = () => {
       <div className="mt-[60px] ">
         <div className="flex flex-wrap w-full gap-8 gap-y-16 justify-between">
           {entries?.map((item) => {
-            return <ClientCardMain id={item.id} data={item} />;
+            return <ClientCardMain key={item.id} id={item.id} data={item} />;
           })}
         </div>
       </div>

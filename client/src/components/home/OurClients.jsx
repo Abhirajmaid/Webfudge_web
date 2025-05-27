@@ -29,28 +29,28 @@ const OurClients = () => {
       </h2>
       <div className="flex flex-col md:gap-12 gap-5">
         <Marquee speed={20}>
-          {ImageArray.map((item) => {
-            return (
-              <Image
-                src={item}
-                width={200}
-                height={250}
-                className="md:min-w-[150px] md:min-h-[150px] min-h-[100px] w-[100px] md:mr-[50px] mr-[20px] p-4 rounded-md bg-white object-contain !opacity-100"
-              />
-            );
-          })}
+          {ImageArray.map((item, idx) => (
+            <Image
+              key={`client-logo-1-${idx}`}
+              src={item}
+              alt="Client logo"
+              width={100}
+              height={100}
+              className="mx-4"
+            />
+          ))}
         </Marquee>
         <Marquee speed={50} direction="right">
-          {ImageArray.map((item) => {
-            return (
-              <Image
-                src={item}
-                width={220}
-                height={250}
-                className="md:min-w-[150px] md:min-h-[150px] min-h-[100px] w-[100px] md:mr-[50px] mr-[20px] !opacity-100 p-4 rounded-md bg-white object-contain"
-              />
-            );
-          })}
+          {ImageArray.map((item, idx) => (
+            <Image
+              key={`client-logo-2-${idx}`}
+              src={item}
+              alt="Client logo"
+              width={100}
+              height={100}
+              className="mx-4"
+            />
+          ))}
         </Marquee>
       </div>
     </div>

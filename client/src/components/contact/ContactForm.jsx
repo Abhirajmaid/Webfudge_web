@@ -75,7 +75,7 @@ const ContactForm = () => {
           <span className=" text-[22px] font-[700] text-primary ">
             CONTACT US
           </span>
-          <h1 className="text-[45px]">LET'S GET IN TOUCH!</h1>
+          <h1 className="text-[45px]">LET&apos;S GET IN TOUCH!</h1>
           <p style={{ lineHeight: "21px" }}>
             For any enquiries, please email us or complete our contact form.
           </p>

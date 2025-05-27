@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
             <div className="flex justify-center item-center">
               <h1 className="md:!text-[4vw] text-[7vw] dark:text-white md:leading-[80px] tracking-tight p-0 uppercase text-center ">
-                Let's Discuss <br /> Your Ideas
+                Let&apos;s Discuss <br /> Your Ideas
               </h1>
             </div>
             <div>
@@ -49,7 +49,7 @@ const Footer = () => {
                 className=" font-[BelfastMedium] text-sm !rounded-3xl font-bold md:text-inherit btn md:w-fit bg-white shadow-md dark:bg-black dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white !px-7 !py-4 text-[1.2vw]"
                 onClick={() => setShowVideo(true)}
               >
-                let's Talk on quote!
+                let&apos;s Talk on quote!
               </button>
             </div>
           </div>

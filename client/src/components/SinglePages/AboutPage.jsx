@@ -70,10 +70,11 @@ const AboutPage = () => {
                 experiences that leave a lasting impression.
               </p>
               <p className="text-muted-foreground font-Poppins">
-                Over the years, we've grown into a full-service creative agency,
-                working with clients from startups to Fortune 500 companies. Our
-                journey has been defined by our commitment to excellence,
-                innovation, and the relationships we've built along the way.
+                Over the years, we&apos;ve grown into a full-service creative
+                agency, working with clients from startups to Fortune 500
+                companies. Our journey has been defined by our commitment to
+                excellence, innovation, and the relationships we&apos;ve built
+                along the way.
               </p>
               <div className="pt-4">
                 <Link

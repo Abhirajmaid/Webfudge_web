@@ -55,18 +55,16 @@ const Member = ({ name, about, image, socials, role }) => {
           animate="visible"
           transition={{ ease: "easeInOut", duration: 1 }}
         >
-          {socials.map((item) => {
-            return (
-              <Link href={item.url} target="_blank">
-                <Icon
-                  icon={`bi:${item.platform}`}
-                  width={30}
-                  height={30}
-                  className="md:w-[30px] md:h-[30px] w-[20px] h-[20px]"
-                />
-              </Link>
-            );
-          })}
+          {socials.map((item) => (
+            <Link key={item.platform} href={item.url} target="_blank">
+              <Icon
+                icon={`bi:${item.platform}`}
+                width={30}
+                height={30}
+                className="md:w-[30px] md:h-[30px] w-[20px] h-[20px]"
+              />
+            </Link>
+          ))}
         </motion.div>
       </div>
       <motion.div
@@ -84,6 +82,7 @@ const Member = ({ name, about, image, socials, role }) => {
           width={1080}
           height={1080}
           className=" md:w-[800px] md:h-[700px] w-full h-[500px] object-cover card-shadow "
+          alt={name}
         />
       </motion.div>
     </div>
