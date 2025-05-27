@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://questionnaire.webfudge.in"),
+  metadataBase: new URL("https://webfudge.in"),
   title: {
     default: "Webfudge Sales Questionnaire",
     template: "%s | Webfudge Sales",
@@ -29,7 +29,7 @@ export const metadata = {
       "Build Brand Fast! Webfudge is Leading creative, media, and technology-driven digital agency based in Pune. Specializing in brand strategy and marketing, Web-design, transforming ideas into captivating online experiences.",
     images: [
       {
-        url: "https://www.questionnaire.webfudge.in/opengraph-image.png",
+        url: "https://www.webfudge.in/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Webfudge",
