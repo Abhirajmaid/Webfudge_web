@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://webfudge.in"),
+  metadataBase: new URL("https://questionnaire.webfudge.in/"),
   title: {
     default: "Webfudge Sales Questionnaire",
     template: "%s | Webfudge Sales",
