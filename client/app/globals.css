@@ -121,11 +121,11 @@ a.active {
 :root {
   --color-bg1: #6c00a2;
   --color-bg2: #001152;
-  --color1: 211, 5, 177; /* Pink */
-  --color2: 157, 5, 211; /* Purple */
-  --color3: 254, 61, 212; /* Light Pink */
-  --color4: 61, 78, 254; /* Blue */
-  --color5: 211, 5, 177; /* Pink */
+  --color1: 157, 5, 211;
+  --color2: 255, 0, 0;
+  --color3: 254, 61, 212;
+  --color4: 200, 50, 50;
+  --color5: 180, 180, 50;
   --color-interactive: 140, 100, 255;
   --circle-size: 400px;
   --blending: hard-light;

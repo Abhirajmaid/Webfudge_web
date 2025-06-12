@@ -16,7 +16,7 @@ const images = [
   "https://mir-s3-cdn-cf.behance.net/project_modules/source/d575da215917017.6776df9bc0042.png",
   "https://mir-s3-cdn-cf.behance.net/project_modules/disp/ffc828221875125.67f692735b8e8.png",
   "https://mir-s3-cdn-cf.behance.net/project_modules/fs/194e14221875125.67dbf1b63fd6f.png",
-  "/images/clients/rk.png",
+  // "/images/clients/rk.png",
   "https://mir-s3-cdn-cf.behance.net/project_modules/disp/6f2844221875125.67dbf0b429809.png",
   "https://mir-s3-cdn-cf.behance.net/project_modules/hd/2e5e7a221875125.67dbf1b6403f3.png",
   "https://mir-s3-cdn-cf.behance.net/project_modules/fs/b84463214084681.675187ff0014e.png",
@@ -30,6 +30,10 @@ const images = [
   "/images/clients/mmj/mmj2.png",
   "/images/clients/sahayata/1.png",
   "https://mir-s3-cdn-cf.behance.net/project_modules/fs/4ea980208135813.66e9b2674000b.png",
+  "https://res.cloudinary.com/df2ggvojv/image/upload/v1749762247/Group_1411_sh9ytr.png",
+  "https://res.cloudinary.com/df2ggvojv/image/upload/v1749762247/Instagram_post_-_1111_qicutu.png",
+  "https://res.cloudinary.com/df2ggvojv/image/upload/v1749762246/iPhone_16_Pro_-_4_qzsbjo.png",
+  "https://res.cloudinary.com/df2ggvojv/image/upload/v1749762245/Frame_1311_prsnmf.png",
 ];
 
 const shuffleArray = (arr) => {

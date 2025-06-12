@@ -99,7 +99,7 @@ const Hero = () => {
             scale up, and succeed online.
           </p>
         </div>
-        <div className="w-full flex flex-col md:flex-row md:justify-between gap-3 justify-center items-center absolute -bottom-[65px] md:bottom-0 z-50">
+        <div className="w-full flex flex-col md:flex-row md:justify-between gap-3 justify-center items-center absolute -bottom-[90px] md:bottom-0 z-50">
           <button
             onClick={() => setShowVideo(true)}
             className="btn text-center !font-light w-[60%] border-[1px] text-[13px] md:text-xl md:!py-5 !py-3 !rounded-full border-solid dark:border-primary bg-primary text-white md:max-w-[25%]  hover:scale-110"

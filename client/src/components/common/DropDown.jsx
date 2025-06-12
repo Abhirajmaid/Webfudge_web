@@ -11,7 +11,7 @@ const Dropdown = ({ subLinks }) => {
 
   return (
     <motion.div
-      className="z-[99] !bg-dark-gray p-6 rounded-lg shadow-lg w-[70vw] flex "
+      className="z-[99] !bg-dark-gray p-6 rounded-lg shadow-lg w-[20vw] flex "
       variants={{
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
@@ -20,8 +20,8 @@ const Dropdown = ({ subLinks }) => {
       animate="visible"
       transition={{ ease: "easeInOut", duration: 0.3 }}
     >
-      <div className="w-[25%]">
-        <ul className="gap-[20px] flex flex-col">
+      <div className="w-full">
+        <ul className="gap-[20px] flex flex-col w-full">
           {subLinks?.map(({ id, linkText, url }) => (
             <Link
               key={id}
@@ -34,7 +34,7 @@ const Dropdown = ({ subLinks }) => {
           ))}
         </ul>
       </div>
-      <div className="flex gap-4 w-[75%]">
+      {/* <div className="flex gap-4 w-[75%]">
         {randomClients?.slice(0, 2)?.map((item, i) => {
           return (
             <div key={i} className="md:w-fit w-full">
@@ -42,7 +42,7 @@ const Dropdown = ({ subLinks }) => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </motion.div>
   );
 };
