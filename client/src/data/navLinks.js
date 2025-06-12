@@ -36,8 +36,8 @@ export const navLinks = [
 export const mobileNavLinks = [
   {
     id: 1,
-    linkText: "Work",
-    url: "/our-work",
+    linkText: "Home",
+    url: "/",
   },
   {
     id: 2,
@@ -46,18 +46,18 @@ export const mobileNavLinks = [
   },
   {
     id: 3,
-    linkText: "Contact Us",
-    url: "/contact-us",
+    linkText: "Work",
+    url: "/our-work",
   },
   {
     id: 4,
-    linkText: "Insight",
-    url: "/insights",
+    linkText: "Gallery",
+    url: "/gallery",
   },
   {
     id: 5,
-    linkText: "Gallery",
-    url: "/gallery",
+    linkText: "Contact Us",
+    url: "/contact-us",
   },
   // {
   //   id: 5,
