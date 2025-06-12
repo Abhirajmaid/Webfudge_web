@@ -103,15 +103,15 @@ const Navbar = ({ isShowMode }) => {
         >
           <Image
             src={
-              theme === "dark"
-                ? "/images/webfudge_logo_white.png"
-                : "/images/webfudge_logo_black.png"
+              theme === "light"
+                ? "/images/webfudge_logo_black.png"
+                : "/images/webfudge_logo_white.png"
             }
-            width={theme === "dark" ? 110 : 100}
+            width={theme === "light" ? 100 : 110}
             height={100}
             alt="Webfudge"
             className={`h-auto ${
-              theme === "dark" ? "w-14 md:w-[100px]" : "w-14 md:w-[120px]"
+              theme === "light" ? "w-14 md:w-[120px]" : "w-14 md:w-[100px]"
             }`}
           />
         </Link>

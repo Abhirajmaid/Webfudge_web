@@ -88,14 +88,15 @@ const Hero = () => {
               />
             </div>
           </div>
-          <p className="md:w-[35%] w-[80%] mx-auto md:text-justify font-[BelfastMedium] md:absolute md:-bottom-2 right-0 md:text-[1vw] text-center text-[0.9rem] py-2">
+          <p className="md:w-[35%] w-[80%] mx-auto md:text-justify font-[BelfastMedium] md:absolute md:-bottom-2 right-0 md:text-[1.1vw] text-center text-[0.9rem] py-2">
             Welcome to{" "}
             <span className=" font-[BelfastGrotesk] md:text-[1.2vw] text-[1.2rem] ">
-              Webfudge
+              Webfudge,
             </span>{" "}
-            , the ultimate web design solution. Unleash your imagination and
-            build captivating websites with ease. Join our community of creators
-            and transform your online presence today !
+            we are a creative agency driven by innovation, design excellence,
+            website development, and a deep understanding of digital branding.
+            From startups to established enterprises, we help brands stand out,
+            scale up, and succeed online.
           </p>
         </div>
         <div className="w-full flex flex-col md:flex-row md:justify-between gap-3 justify-center items-center absolute -bottom-[65px] md:bottom-0 z-50">

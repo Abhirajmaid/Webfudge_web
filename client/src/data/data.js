@@ -113,6 +113,22 @@ export const testimonials = [
         reviewText:
             "Webfudge played a key role in the success of our XSOS event. Their creative designs for event collateral, social media content, and branding truly elevated the experience. Their attention to detail and understanding of our event theme made all the difference in creating an impactful presence.",
     },
+    {
+        id: 6,
+        name: "Jyoti Sahoo",
+        role: "Founder, Fluxx",
+        image: "/images/ClientLogos/12.png",
+        reviewText:
+            "Webfudge delivered exceptional UI/UX designs and frontend development for Fluxx Electric. Fast, creative, and on point with our brand needs!",
+    },
+    {
+        id: 7,
+        name: "Hiten Munnot",
+        role: "Co-Founder, Sahayata",
+        image: "/images/ClientLogos/8.png",
+        reviewText:
+            "We loved the new logo and the thoughtful website concept. The design truly reflects our mission and gives us a stronger identity online. The team captured our values beautifully.",
+    },
 ];
 
 export const faqs = [

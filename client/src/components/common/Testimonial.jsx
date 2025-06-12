@@ -17,9 +17,9 @@ const TestimonialCard = ({ image, reviewText, name, role }) => {
       <Image
         src={image}
         alt="webfudge user"
-        width={100}
-        height={100}
-        className=" object-fill md:w-[120px] md:h-[120px] h-[90px] w-[90px] mx-auto"
+        width={120}
+        height={120}
+        className="object-contain rounded-lg md:w-[120px] md:h-[120px] h-[90px] w-[90px] mx-auto"
       />
       <div className="flex gap-4 relative">
         <span>

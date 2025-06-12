@@ -28,7 +28,7 @@ const Home = () => {
         <ShowSection />
         <InfiniteMarquee txt="Let's Discuss" url="/contact-us" />
         <OurServices />
-        <About />
+        {/* <About /> */}
         <OurProject />
         <OurClients />
         <Testimonial />

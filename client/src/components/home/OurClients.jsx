@@ -15,6 +15,7 @@ const ImageArray = [
   "/images/ClientLogos/9.png",
   "/images/ClientLogos/10.png",
   "/images/ClientLogos/11.png",
+  "/images/ClientLogos/12.png",
 ];
 
 const CompanyImages = () => {
@@ -36,7 +37,8 @@ const OurClients = () => {
               alt="Client logo"
               width={100}
               height={100}
-              className="mx-4"
+              className="w-28 h-24 mx-4 bg-dark-light rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out transform hover:scale-105 object-contain"
+              loading="lazy"
             />
           ))}
         </Marquee>
@@ -48,7 +50,8 @@ const OurClients = () => {
               alt="Client logo"
               width={100}
               height={100}
-              className="mx-4"
+              className="w-28 h-24 mx-4 bg-dark-light rounded-lg p-3 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out transform hover:scale-105 object-contain"
+              loading="lazy"
             />
           ))}
         </Marquee>

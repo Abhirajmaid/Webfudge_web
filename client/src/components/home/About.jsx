@@ -86,7 +86,7 @@ const About = () => {
           </h3>
         </motion.div>
         <h3>
-          A CREATIVE{" "}
+          A WEBFUDGE{" "}
           <Image
             src="/images/abstract.png"
             width={120}
