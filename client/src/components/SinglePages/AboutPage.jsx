@@ -199,7 +199,7 @@ const AboutPage = () => {
               <h3 className="text-2xl font-bold mb-3">Business Growth</h3>
               <p className="font-Poppins text-gray-400">
                 Pitch Decks • Market Research • Business Strategy • Growth
-                Planning
+                Planning • Lead Generation
               </p>
             </motion.div>
 
