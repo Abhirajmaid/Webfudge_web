@@ -1,5 +1,6 @@
 import "./globals.css";
 import Head from "next/head";
+import Script from "next/script";
 import { Providers } from "@src/provider";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -43,6 +44,19 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <body>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-RM3QJ4WR9T"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RM3QJ4WR9T');
+          `}
+        </Script>
         <Providers>
           {children}
           <Analytics />
