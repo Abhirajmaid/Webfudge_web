@@ -1,7 +1,66 @@
 export const clients = [
     {
-        id: 1,
+        id: 9,
         title: "Xtrawrkx",
+        img_url: "/images/clients/xtrawrkx/xtrawrkx.png",
+        project_imgs: [
+            "/images/clients/xtrawrkx/xtrawrkx_ss.png",
+        ],
+        short_des: "Complete Website UI/UX Design and Development for Xtrawrkx",
+        services_offered: [
+            "UI/UX Design",
+            "Website Development",
+            "Firebase Authentication Integration",
+            "Firebase Storage Integration",
+            "Responsive Design",
+            "SEO Optimization",
+            "AWS Deployment",
+        ],
+        key_highlights: [
+            "Created a complete design system for Xtrawrkx",
+            "Designed a responsive website for Xtrawrkx",
+            "Integrated event registration and payment integration for the events",
+            "Developed a scalable design system for future use",
+            "Designed full website UI in Figma (desktop & mobile)",
+            "Deployed the entire solution on AWS for scalability and performance",
+        ],
+
+        introduction:
+            "Xtrawrkx needed a modern and professional website to showcase their products, consultancy services and events. With event registration and payment integration, they needed a website that was easy to navigate and had a modern look and feel.",
+        solution_offered:
+            "We designed and developed a full-stack website tailored to Xtrawrkx. The UI/UX focuses on clarity and speed, allowing users to browse, filter, and explore products and services easily. We built the backend on Firebase, enabling dynamic content management, and deployed the entire solution on AWS for scalability and performance. We also integrated event registration and payment integration for the events."
+    },
+    {
+        id: 8,
+        title: "Xtrawrkx Manufacturing Businesses",
+        img_url: "/images/clients/xmb/download.png",
+        project_imgs: [
+            "/images/clients/xmb/xmb_ss.png",
+        ],
+        short_des: "Complete Website UI/UX Design and Development for Xtrawrkx Manufacturing Businesses",
+        services_offered: [
+            "UI/UX Design",
+            "Website Development",
+            "Design System & Prototyping",
+            "Responsive Design",
+            "SEO Optimization",
+            "Firebase Database Integration",
+        ],
+        key_highlights: [
+            "Created a complete design system for Xtrawrkx Manufacturing Businesses",
+            "Designed a responsive website for Xtrawrkx Manufacturing Businesses",
+            "Developed a scalable design system for future use",
+            "Designed full website UI in Figma (desktop & mobile)",
+        ],
+
+        introduction:
+            "Xtrawrkx Manufacturing Businesses needed a modern and professional website to showcase their products and services. They needed a website that was easy to navigate and had a modern look and feel.",
+        solution_offered:
+            "We designed and developed a full-stack website tailored to the manufacturing businesses. The UI/UX focuses on clarity and speed, allowing users to browse, filter, and explore products and services easily. We built the backend on Firebase, enabling dynamic content management, and deployed the entire solution on AWS for scalability and performance."
+    },
+    {
+        id: 1,
+        title: "XSOS 2025",
         link: "https://www.linkedin.com/company/xtrawrkx/",
         img_url: "https://mir-s3-cdn-cf.behance.net/project_modules/source/c65a3d221875125.67dbf0b74f297.png",
         project_imgs: [
@@ -195,4 +254,5 @@ export const clients = [
         solution_offered:
             "We designed and developed a full-stack website tailored to the biking community. The UI/UX focuses on clarity and speed, allowing users to browse, filter, and explore bike models easily. We built the backend on Strapi CMS, enabling dynamic content management, and deployed the entire solution on AWS for scalability and performance."
     },
+
 ];

@@ -31,40 +31,90 @@ const LoadingScreen = ({ setLoading }) => {
     },
   };
 
+  const glowingTextStyle = {
+    WebkitTextStroke: "1px rgba(211, 5, 177, 0.3)",
+    textStroke: "1px rgba(211, 5, 177, 0.3)",
+    textShadow: `
+      0 0 10px rgba(211, 5, 177, 0.3),
+      0 0 20px rgba(211, 5, 177, 0.3),
+      0 0 30px rgba(211, 5, 177, 0.2),
+      0 0 40px rgba(211, 5, 177, 0.1)
+    `,
+  };
+
   return (
     <>
-      <div className="flex justify-center items-center w-full h-[100vh] bg-primary overflow-hidden">
-        <div ref={scope} className="w-auto pt-8">
+      <div className="relative flex justify-center items-center w-full h-[100vh] bg-main-dark overflow-hidden">
+        {/* Top Left Gradient */}
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-gradient-to-br from-primary via-primary/20 to-transparent rounded-br-full blur-3xl"></div>
+
+        {/* Bottom Left Gradient */}
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-primary via-primary/20 to-transparent rounded-tr-full blur-3xl"></div>
+
+        <div ref={scope} className="w-auto pt-8 relative z-10">
           <motion.div
-            className="w-full md:text-[140px] text-[52px] text-main-dark"
+            className="w-full md:text-[140px] text-[52px] text-white"
             id="parent"
             initial="hidden"
             animate="visible"
             transition={{ staggerChildren: 0.2 }}
             onAnimationComplete={() => hanndleAnimate()}
+            style={glowingTextStyle}
           >
-            <motion.span variants={defaultAnimations} className="inline-block">
+            <motion.span
+              variants={defaultAnimations}
+              className="inline-block"
+              style={glowingTextStyle}
+            >
               W
             </motion.span>
-            <motion.span variants={defaultAnimations} className="inline-block">
+            <motion.span
+              variants={defaultAnimations}
+              className="inline-block"
+              style={glowingTextStyle}
+            >
               E
             </motion.span>
-            <motion.span variants={defaultAnimations} className="inline-block">
+            <motion.span
+              variants={defaultAnimations}
+              className="inline-block"
+              style={glowingTextStyle}
+            >
               B
             </motion.span>
-            <motion.span variants={defaultAnimations} className="inline-block">
+            <motion.span
+              variants={defaultAnimations}
+              className="inline-block"
+              style={glowingTextStyle}
+            >
               F
             </motion.span>
-            <motion.span variants={defaultAnimations} className="inline-block">
+            <motion.span
+              variants={defaultAnimations}
+              className="inline-block"
+              style={glowingTextStyle}
+            >
               U
             </motion.span>
-            <motion.span variants={defaultAnimations} className="inline-block">
+            <motion.span
+              variants={defaultAnimations}
+              className="inline-block"
+              style={glowingTextStyle}
+            >
               D
             </motion.span>
-            <motion.span variants={defaultAnimations} className="inline-block">
+            <motion.span
+              variants={defaultAnimations}
+              className="inline-block"
+              style={glowingTextStyle}
+            >
               G
             </motion.span>
-            <motion.span variants={defaultAnimations} className="inline-block">
+            <motion.span
+              variants={defaultAnimations}
+              className="inline-block"
+              style={glowingTextStyle}
+            >
               E
             </motion.span>
           </motion.div>

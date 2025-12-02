@@ -1,18 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
-import Model from "@src/components/common/Modal";
 import { motion } from "framer-motion";
+import { useLeadForm } from "@src/context/LeadFormContext";
 
 const Hero = () => {
-  const [showVideo, setShowVideo] = useState(false);
-
-  const handleOnClose = () => {
-    setShowVideo(false);
-  };
+  const { openModal } = useLeadForm();
   return (
     <>
       <motion.div
@@ -48,20 +44,21 @@ const Hero = () => {
               <br /> AGENCY
             </motion.h1>
           </div>
-          <div className="flex-col md:gap-7 gap-3 flex-align-center">
-            <div className=" md:w-[80%] w-[60%] md:max-h-[100px] max-h-10  rounded-full bg-[#D9D9D9] md:mt-[85px] py-[20px] flex items-center overflow-hidden relative">
-              <div className=" md:h-[85px] h-10 bg-white rounded-full md:w-[85px] w-10 border-solid md:border-[6px] border-[3px] border-gray cursor-pointer absolute md:block hidden left-3">
+          <div className="w-full flex-col md:gap-7 gap-3 flex-align-center">
+            <div className=" md:w-[90%] w-[60%] md:h-[388px] h-[200px] rounded-[50px] bg-transparent md:mt-[85px] flex items-center overflow-hidden relative">
+              <div className=" md:h-[85px] h-10 bg-white rounded-full md:w-[85px] w-10 border-solid md:border-[6px] border-[3px] border-gray cursor-pointer absolute md:block hidden top-3 left-3 z-10">
                 <Icon icon="mdi:play" width="75" className=" text-primary " />
               </div>
               <video
-                className="videobackground"
+                className="videobackground w-full h-full object-cover rounded-3xl"
                 muted
+                // unmute={true}
                 autoPlay
                 loop={true}
                 poster=""
               >
-                <source src="video/Final Comp.mp4" type="video/mp4" />
-                <source src="video/Final Comp.3gpp" type="video/3gpp" />
+                <source src="video/Intro-V5.webm" type="video/mp4" />
+                <source src="video/Intro-V5.webm" type="video/webm" />
               </video>
             </div>
             <div className="flex justify-center items-center md:gap-[100px] gap-[40px] ">
@@ -88,20 +85,10 @@ const Hero = () => {
               />
             </div>
           </div>
-          <p className="md:w-[35%] w-[80%] mx-auto md:text-justify font-[BelfastMedium] md:absolute md:-bottom-2 right-0 md:text-[1.1vw] text-center text-[0.9rem] py-2">
-            Welcome to{" "}
-            <span className=" font-[BelfastGrotesk] md:text-[1.2vw] text-[1.2rem] ">
-              Webfudge,
-            </span>{" "}
-            we are a creative agency driven by innovation, design excellence,
-            website development, and a deep understanding of digital branding.
-            From startups to established enterprises, we help brands stand out,
-            scale up, and succeed online.
-          </p>
         </div>
         <div className="w-full flex flex-col md:flex-row md:justify-between gap-3 justify-center items-center absolute -bottom-[90px] md:bottom-0 z-50">
           <button
-            onClick={() => setShowVideo(true)}
+            onClick={openModal}
             className="btn text-center !font-light w-[60%] border-[1px] text-[13px] md:text-xl md:!py-5 !py-3 !rounded-full border-solid dark:border-primary bg-primary text-white md:max-w-[25%]  hover:scale-110"
           >
             <div>Start New Project! &rarr;</div>
@@ -160,7 +147,6 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
-      <Model onClose={handleOnClose} visible={showVideo} />
     </>
   );
 };

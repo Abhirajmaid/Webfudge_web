@@ -1,3 +1,5 @@
+import { getServicesForNavigation } from "./services";
+
 export const navLinks = [
   {
     id: 1,
@@ -6,31 +8,49 @@ export const navLinks = [
   },
   {
     id: 2,
-    linkText: "About us",
-    url: "/about-us",
+    linkText: "Services",
+    url: "/services",
+    subLinks: getServicesForNavigation(),
+    fullWidth: true, // Flag for full-width dropdown
   },
   {
     id: 3,
-    linkText: "Work",
+    linkText: "Projects",
     url: "/our-work",
   },
-
+  {
+    id: 31,
+    linkText: "Softwares",
+    url: "/projects",
+  },
   {
     id: 4,
-    linkText: "Gallery",
-    url: "/gallery",
+    linkText: "Company",
+    url: "#",
+    subLinks: [
+      {
+        id: 41,
+        linkText: "About Us",
+        url: "/about-us",
+      },
+      // {
+      //   id: 42,
+      //   linkText: "Team",
+      //   url: "/team",
+      // },
+      {
+        id: 44,
+        linkText: "Gallery",
+        url: "/gallery",
+      },
+      {
+        id: 43,
+        linkText: "Careers",
+        url: "https://webfudgeagency.zohorecruit.in/jobs/Careers",
+        target: "_blank",
+      },
+    ],
   },
-  {
-    id: 5,
-    linkText: "Contact Us",
-    url: "/contact-us",
-  },
-  // {
-  //   id: 4,
-  //   linkText: "Careers",
-  //   url: "https://webfudgeagency.zohorecruit.in/jobs/Careers",
-  //   target: "_blank"
-  // },
 ];
 
 export const mobileNavLinks = [
@@ -41,30 +61,52 @@ export const mobileNavLinks = [
   },
   {
     id: 2,
-    linkText: "About Us",
-    url: "/about-us",
+    linkText: "Services",
+    url: "/services",
+    subLink: getServicesForNavigation().map(service => ({
+      id: service.id,
+      linkText: service.linkText,
+      url: service.url,
+    })),
   },
   {
     id: 3,
-    linkText: "Work",
-    url: "/our-work",
+    linkText: "Projects",
+    url: "/projects",
   },
   {
     id: 4,
+    linkText: "Company",
+    url: "#",
+    subLink: [
+      {
+        id: 41,
+        linkText: "About Us",
+        url: "/about-us",
+      },
+      // {
+      //   id: 42,
+      //   linkText: "Team",
+      //   url: "/team",
+      // },
+      {
+        id: 43,
+        linkText: "Careers",
+        url: "https://webfudgeagency.zohorecruit.in/jobs/Careers",
+        target: "_blank",
+      },
+    ],
+  },
+  {
+    id: 5,
     linkText: "Gallery",
     url: "/gallery",
   },
   {
-    id: 5,
+    id: 6,
     linkText: "Contact Us",
     url: "/contact-us",
   },
-  // {
-  //   id: 5,
-  //   linkText: "Careers",
-  //   url: "https://webfudgeagency.zohorecruit.in/jobs/Careers",
-  //   target: "_blank"
-  // },
 ];
 
 

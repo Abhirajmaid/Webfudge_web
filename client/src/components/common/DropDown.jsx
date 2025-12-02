@@ -22,11 +22,12 @@ const Dropdown = ({ subLinks }) => {
     >
       <div className="w-full">
         <ul className="gap-[20px] flex flex-col w-full">
-          {subLinks?.map(({ id, linkText, url }) => (
+          {subLinks?.map(({ id, linkText, url, target }) => (
             <Link
               key={id}
               end
               href={url}
+              target={target}
               className="text-white opacity-100 font-[BelfastMedium] text-[25px] hover:opacity-70"
             >
               {linkText}

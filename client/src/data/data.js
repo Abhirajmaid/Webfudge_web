@@ -3,7 +3,8 @@ export const teamMembers = [
         id: 1,
         nameID: "abhirajmaid",
         name: "Abhiraj Maid",
-        role: "Co-Founder & Design Head",
+        role: "Co-Founder",
+        position: "Co-Founder",
         image: "/images/team/abhiraj.jpg",
         socials: [
             {
@@ -21,28 +22,106 @@ export const teamMembers = [
         ],
         about: "Abhiraj is a design-driven entrepreneur with a passion for building brands that stand out. He leads the visual identity, UX, and creative strategy at Webfudge, blending aesthetics with functionality to create memorable digital experiences."
     },
-    // {
-    //     id: 2,
-    //     nameID: "kishangyamlani",
-    //     name: "Kishan Gyamlani",
-    //     role: "Co-Founder & Strategy Lead",
-    //     image: "/images/team/kishan1.jpeg",
-    //     socials: [
-    //         {
-    //             platform: "instagram",
-    //             url: "https://www.instagram.com/kishan.gyamlani/"
-    //         },
-    //         {
-    //             platform: "linkedin",
-    //             url: "https://www.linkedin.com/in/kishangyamlani/"
-    //         },
-    //         {
-    //             platform: "facebook",
-    //             url: "https://facebook.com/kishangyamlani"
-    //         }
-    //     ],
-    //     about: "Kishan brings strategic thinking and social media expertise to the table. With a strong focus on growth and brand positioning, he ensures Webfudge clients get real traction and meaningful results from every campaign."
-    // }
+    {
+        id: 2,
+        nameID: "kishangyamlani",
+        name: "Kishan Gyamlani",
+        role: "Co-Founder",
+        position: "Co-Founder",
+        image: "/images/team/kishan.jpg",
+        socials: [
+            {
+                platform: "instagram",
+                url: "https://www.instagram.com/kishan.gyamlani/"
+            },
+            {
+                platform: "linkedin",
+                url: "https://www.linkedin.com/in/kishangyamlani/"
+            },
+            {
+                platform: "facebook",
+                url: "https://facebook.com/kishangyamlani"
+            }
+        ],
+        about: "Kishan brings strategic thinking and social media expertise to the table. With a strong focus on growth and brand positioning, he ensures Webfudge clients get real traction and meaningful results from every campaign."
+    },
+    {
+        id: 3,
+        nameID: "aryakulkarni",
+        name: "Arya Kulkarni",
+        role: "Developer",
+        position: "Developer",
+        image: "/images/team/arya-kulkarni.jpeg",
+        socials: [
+            {
+                platform: "linkedin",
+                url: "https://www.linkedin.com/in/arya-kulkarni-9b14a2258/"
+            }
+        ],
+        about: "Arya is a skilled developer contributing to Webfudge's technical projects with expertise in software development and coding."
+    },
+    {
+        id: 7,
+        nameID: "shivambarkule",
+        name: "Shivam Barkule",
+        role: "Developer",
+        position: "Developer",
+        image: "/images/team/shivam-barkule.png",
+        socials: [
+            {
+                platform: "linkedin",
+                url: "https://www.linkedin.com/in/shivambarkule/"
+            }
+        ],
+        about: "Shivam is a talented developer who contributes to Webfudge's technical excellence through innovative software solutions."
+    },
+    {
+        id: 5,
+        nameID: "imansarkar",
+        name: "Iman Sarkar",
+        role: "Graphics Designer",
+        position: "Graphics Designer",
+        image: "/images/team/iman-sarkar.jpeg",
+        socials: [
+            {
+                platform: "linkedin",
+                url: "https://www.linkedin.com/in/iman-sarkar/"
+            }
+        ],
+        about: "Iman is a creative graphics designer who brings visual excellence to Webfudge's design projects and brand identity."
+    },
+    {
+        id: 4,
+        nameID: "anjalichaudhari",
+        name: "Anjali Chaudhari",
+        role: "Founders Office",
+        position: "Founders Office",
+        image: "/images/team/anjali-chaudhari.png",
+        socials: [
+            {
+                platform: "linkedin",
+                url: "https://www.linkedin.com/in/anjali-chaudhari-a0ab54258/"
+            }
+        ],
+        about: "Anjali works closely with the founders, supporting strategic initiatives and ensuring smooth operations at Webfudge."
+    },
+
+    {
+        id: 6,
+        nameID: "oshanksaraswat",
+        name: "Oshank Saraswat",
+        role: "Video Editor and BD Team",
+        position: "Video Editor and BD Team",
+        image: "/images/team/oshank-saraswat.jpeg",
+        socials: [
+            {
+                platform: "linkedin",
+                url: "https://www.linkedin.com/in/oshanksaraswat/"
+            }
+        ],
+        about: "Oshank combines video editing expertise with business development skills, creating compelling visual content and driving growth at Webfudge."
+    },
+
 ];
 
 export const WebfudgeNetworkData = [

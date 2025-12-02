@@ -14,11 +14,12 @@ import { useTheme } from "next-themes";
 import { mobileNavLinks, navLinks } from "@/src/data/navLinks";
 import SingleLink from "./SingleLink";
 import MobileNavLink from "./MobileNavLink";
-import Modal from "./Modal";
+import { useLeadForm } from "@src/context/LeadFormContext";
 
 const Navbar = ({ isShowMode }) => {
   // Mobile Menu
   const [open, setOpen] = useState(false);
+  const { openModal } = useLeadForm();
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
   };
@@ -81,17 +82,10 @@ const Navbar = ({ isShowMode }) => {
     };
   }, []);
 
-  // Modal
-  const [showVideo, setShowVideo] = useState(false);
-
-  const handleOnClose = () => {
-    setShowVideo(false);
-  };
-
   return (
     <>
       <div
-        className={`md:h-[100px] fixed w-full z-[99] top-0 left-0 px-[2%]  md:px-[6%] flex-center-between !py-[20px] ${
+        className={`md:h-[100px] fixed w-full z-[99] top-[32px] md:top-[40px] left-0 px-[2%]  md:px-[6%] flex-center-between !py-[20px] ${
           navBg
             ? "bg-white/60 border-b backdrop-blur-sm dark:border-dark dark:bg-dark/60"
             : " dark:hero-dark "
@@ -183,7 +177,7 @@ const Navbar = ({ isShowMode }) => {
           <div className="space-x-2 flex-align-center">
             <button
               className="md:text-sm text-xs !rounded-3xl md:font-bold md:text-inherit btn md:w-fit bg-white shadow-md dark:bg-black md:!px-7 !px-4 !py-4 dark:hover:bg-white dark:hover:text-main-dark hover:bg-main-dark hover:text-white"
-              onClick={() => setShowVideo(true)}
+              onClick={openModal}
             >
               Start New Project!
             </button>
@@ -209,7 +203,6 @@ const Navbar = ({ isShowMode }) => {
           </div>
         </div>
       </div>
-      <Modal onClose={handleOnClose} visible={showVideo} />
     </>
   );
 };

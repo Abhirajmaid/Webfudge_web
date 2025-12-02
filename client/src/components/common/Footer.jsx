@@ -1,20 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import Marquee from "react-fast-marquee";
-import Model from "./Modal";
 import Link from "next/link";
+import { useLeadForm } from "@src/context/LeadFormContext";
 
 const Footer = () => {
-  const [showVideo, setShowVideo] = useState(false);
-
-  const handleOnClose = () => {
-    setShowVideo(false);
-  };
+  const { openModal } = useLeadForm();
   return (
     <>
-      <div className="mt-[120px] px-[3%] md:px-[6%]">
+      <div className="mt-[120px]">
         <div className="relative w-full flex justify-center">
           <div className="bg-primary md:h-[400px] h-[300px] w-full md:rounded-b-[120px] rounded-b-[40px] py-11 flex flex-col items-center md:gap-[40px] gap-[25px]">
             <div className="flex justify-center md:gap-[100px] gap-[30px] w-full items-center">
@@ -47,7 +43,7 @@ const Footer = () => {
             <div>
               <button
                 className=" font-[BelfastMedium] text-sm !rounded-3xl font-bold md:text-inherit btn md:w-fit bg-white shadow-md dark:bg-black dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white !px-7 !py-4 text-[1.2vw]"
-                onClick={() => setShowVideo(true)}
+                onClick={openModal}
               >
                 let&apos;s Talk on quote!
               </button>
@@ -100,7 +96,7 @@ const Footer = () => {
             </Marquee>
           </div>
         </div>
-        <div className=" font-[BelfastMedium] flex justify-between md:text-[1.2vw] text-[2.5vw] gap-3 md:mt-[200px] mt-[100px] mb-[80px] text-center">
+        <div className="md:px-[6%] px-3% font-[BelfastMedium] flex justify-between md:text-[1.2vw] text-[2.5vw] gap-3 md:mt-[200px] mt-[100px] mb-[80px] text-center">
           <Link href="/legals/terms-and-conditions.html">
             <span>TERMS & CONDITION</span>
           </Link>
@@ -110,7 +106,6 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <Model onClose={handleOnClose} visible={showVideo} />
     </>
   );
 };

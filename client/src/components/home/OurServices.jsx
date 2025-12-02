@@ -1,103 +1,21 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { useRouter } from "next/navigation";
-
-const ServicesList = [
-  {
-    text: "Graphic Design",
-    img: "https://mir-s3-cdn-cf.behance.net/project_modules/source/c65a3d221875125.67dbf0b74f297.png",
-  },
-  {
-    text: "UI/UX Design",
-    img: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/fdbff9214086227.67518caa785c7.png",
-  },
-  { text: "Web Development", img: "/images/clients/planto/1.png" },
-  { text: "Social Media Management", img: "/images/clients/rk/smm.png" },
-  { text: "Brand Identity", img: "/images/clients/sahayata/sahayata.png" },
-  { text: "Logo Design", img: "/images/clients/mmj/mmj2.png" },
-];
-
-const Service = ({ service }) => {
-  const [hover, setHover] = useState(false);
-  const router = useRouter();
-  return (
-    <>
-      <motion.div
-        className="group flex justify-between items-center md:p-8 p-6 border-t-4 dark:border-y-[#272727] border-y-[#C8C8C8] cursor-pointer dark:hover:bg-[#272727] hover:bg-[#C8C8C8] relative"
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        whileTap={{ scale: 0.96 }}
-        onClick={() => router.push("/our-work")}
-      >
-        <h3 className="group-hover:font-bold group-hover:scale-105 font-[BelfastMedium] md:text-[3vw] text-[6vw] md:-mt-3 w-[80%]">
-          {service.text}
-          <span className="text-primary md:opacity-0 opacity-100 group-hover:opacity-100 ml-2">
-            .
-          </span>
-        </h3>
-        {hover ? (
-          <motion.div
-            className="md:h-[250px] md:w-[350px] h-[150px] w-[150px] absolute md:-top-[60%] -top-[40%] right-[20%] z-50"
-            variants={{
-              hidden: { opacity: 0, y: 100 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 1.5, ease: "easeInOut", type: "spring" }}
-          >
-            <Image
-              src={`${service.img}`}
-              width={650}
-              height={650}
-              className="w-[100%] h-[100%] shadow-[11px_11px_0px_0px_#d305b1] md:rounded-t-[60px] rounded-t-[40px]"
-              alt="webfudge"
-            />
-            {/* <video
-              className="w-[100%] h-[100%] shadow-[11px_11px_0px_0px_#d305b1] rounded-t-[60px]"
-              muted
-              autoPlay
-              poster=""
-            >
-              <source src="video/Final Comp.mp4" type="video/mp4" />
-              <source src="video/Final Comp.3gpp" type="video/3gpp" />
-            </video> */}
-          </motion.div>
-        ) : (
-          <></>
-        )}
-        <div className="flex justify-center items-center cursor-pointer group-hover:bg-primary p-5 w-[20%] md:w-auto ">
-          {hover ? (
-            <Image
-              src="/images/arrow_dark.png"
-              width={50}
-              height={50}
-              alt="arrow"
-              className="w-[30px] md:w-[50px]"
-            />
-          ) : (
-            <Image
-              src="/images/arrow_light.png"
-              width={50}
-              height={50}
-              alt="arrow"
-              className="w-[30px] md:w-[50px]"
-            />
-          )}
-        </div>
-      </motion.div>
-    </>
-  );
-};
+import { Icon } from "@iconify/react";
+import { useLeadForm } from "@src/context/LeadFormContext";
+import { getServicesByCategory } from "@src/data/services";
 
 const OurServices = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
   const mainControls = useAnimation();
+  const { openModal } = useLeadForm();
+
+  // Get services from centralized data
+  const designServices = getServicesByCategory("Design");
+  const developmentServices = getServicesByCategory("Development");
 
   useEffect(() => {
     if (isInView) {
@@ -108,7 +26,7 @@ const OurServices = () => {
   return (
     <motion.div
       ref={ref}
-      className="md:mt-[275px] mt-[150px] border-y-4 border-[#252525] md:px-0 px-[3%]"
+      className="relative md:mt-[275px] mt-[150px] overflow-hidden"
       variants={{
         hidden: { opacity: 0, y: 200 },
         visible: { opacity: 1, y: 0 },
@@ -117,32 +35,188 @@ const OurServices = () => {
       animate={mainControls}
       transition={{ duration: 0.7, delay: 0.2 }}
     >
-      <div className="flex flex-col gap-2 mb-10">
-        <h2 className="md:text-[6vw] text-[8vw] tracking-tighter uppercase align-middle">
+      {/* Header Section */}
+      <div className="flex flex-col gap-2 mb-10 relative z-10">
+        <h2 className="md:text-[6vw] text-[8vw] tracking-tighter uppercase align-middle dark:text-white text-main-dark">
           Our Services <span className="text-[#D71EB9] !text-[8vw]">.</span>
         </h2>
-        <p className="font-Poppins md:text-[1.1vw] leading-5 text-sm w-[65%] text-gray">
+        <p className="font-Poppins md:text-[1.1vw] leading-5 text-sm w-[65%] text-gray dark:text-gray-300">
           Every one of us loves something unique. So, explore the world through{" "}
           <br />
           the lens of our visual capabilities and discover what you love.
         </p>
       </div>
-      {ServicesList.map((item, i) => {
-        return (
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: isInView ? 1 : 0, x: isInView ? 0 : -50 },
-            }}
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.5, delay: i * 0.4 }}
-            key={i}
-          >
-            <Service service={item} />
-          </motion.div>
-        );
-      })}
+
+      {/* White Card with Design and Development Sections */}
+      <motion.div
+        className="bg-white rounded-3xl md:rounded-[40px] p-4 md:p-6 mb-8 relative z-10"
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.7, delay: 0.4 }}
+      >
+        <div className="grid md:grid-cols-2 gap-4 md:gap-5 relative">
+          {/* Design Section */}
+          <div className="p-5 py-5 bg-[#F5F5F7] rounded-[40px] ">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="font-[BelfastMedium] text-black md:text-[4vw] text-[8vw] font-bold">
+                Design
+              </h3>
+              <Link
+                href="/services"
+                className="w-20 h-20 rounded-full bg-white border-[1.5px] border-black/50 flex items-center justify-center hover:bg-gray-100 transition-colors hover:bg-black"
+              >
+                <motion.div
+                  whileHover={{ x: 3, y: -3, scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
+                  <Icon
+                    icon="mdi:arrow-top-right"
+                    className="text-primary text-4xl hover:text-white"
+                  />
+                </motion.div>
+              </Link>
+            </div>
+            <div className="space-y-0">
+              {designServices.map((service) => {
+                return (
+                  <Link
+                    key={service.id}
+                    href={`/services/${service.slug}`}
+                    className="flex items-center justify-between py-6 px-5 md:py-10 border-b-2 border-black/20 last:border-b-0 group cursor-pointer group hover:opacity-80 transition-opacity hover:bg-[#dadada]"
+                  >
+                    <span className="font-Poppins text-black md:text-[2vw] text-base group-hover:scale-[1.02] transition-all duration-300">
+                      {service.title}
+                    </span>
+                    <motion.div
+                      className="opacity-0 group-hover:opacity-100"
+                      initial={{ x: -8, y: 8, scale: 0.8 }}
+                      animate={{
+                        x: 0,
+                        y: 0,
+                        scale: 1,
+                      }}
+                      whileHover={{
+                        x: 5,
+                        y: -5,
+                        scale: 1.15,
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 25,
+                        mass: 0.8,
+                      }}
+                    >
+                      <Icon
+                        icon="mdi:arrow-top-right"
+                        className="text-primary text-5xl"
+                      />
+                    </motion.div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Development Section */}
+          <div className="p-5 py-5 bg-[#F5F5F7] rounded-[40px]">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="font-[BelfastMedium] text-black md:text-[4vw] text-[8vw] font-bold">
+                Development
+              </h3>
+              <Link
+                href="/services"
+                className="w-20 h-20 rounded-full bg-white border-[1.5px] border-black/50 flex items-center justify-center hover:bg-gray-100 transition-colors hover:bg-black"
+              >
+                <motion.div
+                  whileHover={{ x: 3, y: -3, scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
+                  <Icon
+                    icon="mdi:arrow-top-right"
+                    className="text-primary text-4xl hover:text-white"
+                  />
+                </motion.div>
+              </Link>
+            </div>
+            <div className="space-y-0">
+              {developmentServices.map((service) => {
+                return (
+                  <Link
+                    key={service.id}
+                    href={`/services/${service.slug}`}
+                    className="flex items-center justify-between py-6 px-5 md:py-10 border-b-2 border-black/20 last:border-b-0 group cursor-pointer group hover:opacity-80 transition-opacity hover:bg-[#dadada]"
+                  >
+                    <span className="font-Poppins text-black md:text-[2vw] text-base group-hover:scale-[1.02] transition-all duration-300">
+                      {service.title}
+                    </span>
+                    <motion.div
+                      className="opacity-0 group-hover:opacity-100"
+                      initial={{ x: -8, y: 8, scale: 0.8 }}
+                      animate={{
+                        x: 0,
+                        y: 0,
+                        scale: 1,
+                      }}
+                      whileHover={{
+                        x: 5,
+                        y: -5,
+                        scale: 1.15,
+                      }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 25,
+                        mass: 0.8,
+                      }}
+                    >
+                      <Icon
+                        icon="mdi:arrow-top-right"
+                        className="text-primary text-5xl"
+                      />
+                    </motion.div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Call-to-Action Bar */}
+      <motion.div
+        className="bg-secondary rounded-2xl md:rounded-[30px] px-6 md:px-8 py-5 md:py-6 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10"
+        variants={{
+          hidden: { opacity: 0, y: 30 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.7, delay: 0.6 }}
+      >
+        <div className="flex items-center gap-4">
+          <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+            <Icon
+              icon="mdi:refresh"
+              className="text-white text-xl animate-spin-slow"
+            />
+          </div>
+          <p className="text-white font-Poppins md:text-[1.2vw] text-sm md:text-base">
+            Need bold design or reliable code or both? You&apos;re in the right
+            place.
+          </p>
+        </div>
+        <button
+          onClick={openModal}
+          className="bg-[#FFEB3B] hover:bg-[#FFD700] text-black font-[BelfastMedium] font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl transition-colors uppercase text-sm md:text-base whitespace-nowrap"
+        >
+          BOOK A CALL
+        </button>
+      </motion.div>
     </motion.div>
   );
 };

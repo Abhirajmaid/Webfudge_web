@@ -1,19 +1,22 @@
+"use client";
+
 import { ClientContainer, Filter } from "@src/components/clientGallery";
 import { PaginationControls } from "@src/components/common";
+import SoftwareProjectsCarousel from "@src/components/projects/SoftwareProjectsCarousel";
 import React from "react";
-
-export const metadata = {
-  title: "Clients",
-  description: "Webfudge' Clients Gallery",
-};
 
 const Clients = () => {
   return (
     <>
-      <div className="px-[3%] md:px-[6%]" style={{ paddingTop: "80px" }}>
-        <Filter />
-        <ClientContainer />
-        <PaginationControls />
+      <div style={{ paddingTop: "80px" }}>
+        {/* Existing Client Gallery */}
+        <div className="px-[3%] md:px-[6%]">
+          <Filter />
+          <ClientContainer />
+          <PaginationControls />
+          {/* Software Projects Carousel Banner */}
+          <SoftwareProjectsCarousel />
+        </div>
       </div>
     </>
   );

@@ -7,6 +7,7 @@ import {
   ShowSection,
 } from "@src/components/home";
 import { InfiniteMarquee, Testimonial } from "@src/components/common";
+import SoftwareProjectsCarousel from "@src/components/projects/SoftwareProjectsCarousel";
 
 export const metadata = {
   title: "Home",
@@ -29,6 +30,7 @@ const Home = () => {
         <InfiniteMarquee txt="Let's Discuss" url="/contact-us" />
         <OurServices />
         {/* <About /> */}
+        <SoftwareProjectsCarousel />
         <OurProject />
         <OurClients />
         <Testimonial />

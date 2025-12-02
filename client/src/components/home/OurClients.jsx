@@ -16,6 +16,12 @@ const ImageArray = [
   "/images/ClientLogos/10.png",
   "/images/ClientLogos/11.png",
   "/images/ClientLogos/12.png",
+  "/images/ClientLogos/13.png",
+  "/images/ClientLogos/14.jpg",
+  "/images/ClientLogos/15.png",
+  "/images/ClientLogos/16.png",
+  "/images/ClientLogos/17.png",
+  "/images/ClientLogos/18.png",
 ];
 
 const CompanyImages = () => {
