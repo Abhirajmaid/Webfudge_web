@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 import { getAllCategories } from "@/src/data/softwareProjects";

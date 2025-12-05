@@ -24,10 +24,13 @@ export const metadata = {
 const Home = () => {
   return (
     <>
-      <div className="md:px-[6%]" style={{ paddingTop: "80px" }}>
+      <div className="" style={{ paddingTop: "100px" }}>
         <Hero />
         <ShowSection />
         <InfiniteMarquee txt="Let's Discuss" url="/contact-us" />
+      </div>
+
+      <div className="md:px-[6%] px-[3%]" style={{ paddingTop: "50px" }}>
         <OurServices />
         {/* <About /> */}
         <SoftwareProjectsCarousel />

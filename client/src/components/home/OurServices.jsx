@@ -26,7 +26,7 @@ const OurServices = () => {
   return (
     <motion.div
       ref={ref}
-      className="relative md:mt-[275px] mt-[150px] overflow-hidden"
+      className="relative md:mt-[250px] mt-[100px] overflow-hidden"
       variants={{
         hidden: { opacity: 0, y: 200 },
         visible: { opacity: 1, y: 0 },
@@ -36,11 +36,11 @@ const OurServices = () => {
       transition={{ duration: 0.7, delay: 0.2 }}
     >
       {/* Header Section */}
-      <div className="flex flex-col gap-2 mb-10 relative z-10">
-        <h2 className="md:text-[6vw] text-[8vw] tracking-tighter uppercase align-middle dark:text-white text-main-dark">
-          Our Services <span className="text-[#D71EB9] !text-[8vw]">.</span>
+      <div className="flex flex-col gap-2 mb-6 relative z-10">
+        <h2 className="md:text-[4.5vw] text-[6vw] tracking-tighter uppercase align-middle dark:text-white text-main-dark">
+          Our Services <span className="text-[#D71EB9] !text-[6vw]">.</span>
         </h2>
-        <p className="font-Poppins md:text-[1.1vw] leading-5 text-sm w-[65%] text-gray dark:text-gray-300">
+        <p className="font-Poppins md:text-[0.9vw] leading-4 text-xs w-[65%] text-gray dark:text-gray-300">
           Every one of us loves something unique. So, explore the world through{" "}
           <br />
           the lens of our visual capabilities and discover what you love.
@@ -49,7 +49,7 @@ const OurServices = () => {
 
       {/* White Card with Design and Development Sections */}
       <motion.div
-        className="bg-white rounded-3xl md:rounded-[40px] p-4 md:p-6 mb-8 relative z-10"
+        className="bg-white rounded-3xl md:rounded-[40px] p-3 md:p-4 mb-6 relative z-10"
         variants={{
           hidden: { opacity: 0, y: 50 },
           visible: { opacity: 1, y: 0 },
@@ -58,16 +58,16 @@ const OurServices = () => {
         animate={mainControls}
         transition={{ duration: 0.7, delay: 0.4 }}
       >
-        <div className="grid md:grid-cols-2 gap-4 md:gap-5 relative">
+        <div className="grid md:grid-cols-2 gap-3 md:gap-4 relative">
           {/* Design Section */}
-          <div className="p-5 py-5 bg-[#F5F5F7] rounded-[40px] ">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="font-[BelfastMedium] text-black md:text-[4vw] text-[8vw] font-bold">
+          <div className="p-4 py-4 bg-[#F5F5F7] rounded-[30px] ">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="font-[BelfastMedium] text-black md:text-[3vw] text-[6vw] font-bold">
                 Design
               </h3>
               <Link
                 href="/services"
-                className="w-20 h-20 rounded-full bg-white border-[1.5px] border-black/50 flex items-center justify-center hover:bg-gray-100 transition-colors hover:bg-black"
+                className="w-16 h-16 rounded-full bg-white border-[1.5px] border-black/50 flex items-center justify-center hover:bg-gray-100 transition-colors hover:bg-black"
               >
                 <motion.div
                   whileHover={{ x: 3, y: -3, scale: 1.1 }}
@@ -75,7 +75,7 @@ const OurServices = () => {
                 >
                   <Icon
                     icon="mdi:arrow-top-right"
-                    className="text-primary text-4xl hover:text-white"
+                    className="text-primary text-3xl hover:text-white"
                   />
                 </motion.div>
               </Link>
@@ -86,9 +86,9 @@ const OurServices = () => {
                   <Link
                     key={service.id}
                     href={`/services/${service.slug}`}
-                    className="flex items-center justify-between py-6 px-5 md:py-10 border-b-2 border-black/20 last:border-b-0 group cursor-pointer group hover:opacity-80 transition-opacity hover:bg-[#dadada]"
+                    className="flex items-center justify-between py-4 px-4 md:py-6 border-b-2 border-black/20 last:border-b-0 group cursor-pointer group hover:opacity-80 transition-opacity hover:bg-[#dadada]"
                   >
-                    <span className="font-Poppins text-black md:text-[2vw] text-base group-hover:scale-[1.02] transition-all duration-300">
+                    <span className="font-Poppins text-black md:text-[1.5vw] text-xl group-hover:scale-[1.02] transition-all duration-300">
                       {service.title}
                     </span>
                     <motion.div
@@ -113,7 +113,7 @@ const OurServices = () => {
                     >
                       <Icon
                         icon="mdi:arrow-top-right"
-                        className="text-primary text-5xl"
+                        className="text-primary text-4xl"
                       />
                     </motion.div>
                   </Link>
@@ -123,14 +123,14 @@ const OurServices = () => {
           </div>
 
           {/* Development Section */}
-          <div className="p-5 py-5 bg-[#F5F5F7] rounded-[40px]">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="font-[BelfastMedium] text-black md:text-[4vw] text-[8vw] font-bold">
+          <div className="p-4 py-4 bg-[#F5F5F7] rounded-[30px]">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="font-[BelfastMedium] text-black md:text-[3vw] text-[6vw] font-bold">
                 Development
               </h3>
               <Link
                 href="/services"
-                className="w-20 h-20 rounded-full bg-white border-[1.5px] border-black/50 flex items-center justify-center hover:bg-gray-100 transition-colors hover:bg-black"
+                className="w-16 h-16 rounded-full bg-white border-[1.5px] border-black/50 flex items-center justify-center hover:bg-gray-100 transition-colors hover:bg-black"
               >
                 <motion.div
                   whileHover={{ x: 3, y: -3, scale: 1.1 }}
@@ -138,7 +138,7 @@ const OurServices = () => {
                 >
                   <Icon
                     icon="mdi:arrow-top-right"
-                    className="text-primary text-4xl hover:text-white"
+                    className="text-primary text-3xl hover:text-white"
                   />
                 </motion.div>
               </Link>
@@ -149,9 +149,9 @@ const OurServices = () => {
                   <Link
                     key={service.id}
                     href={`/services/${service.slug}`}
-                    className="flex items-center justify-between py-6 px-5 md:py-10 border-b-2 border-black/20 last:border-b-0 group cursor-pointer group hover:opacity-80 transition-opacity hover:bg-[#dadada]"
+                    className="flex items-center justify-between py-4 px-4 md:py-6 border-b-2 border-black/20 last:border-b-0 group cursor-pointer group hover:opacity-80 transition-opacity hover:bg-[#dadada]"
                   >
-                    <span className="font-Poppins text-black md:text-[2vw] text-base group-hover:scale-[1.02] transition-all duration-300">
+                    <span className="font-Poppins text-black md:text-[1.5vw] text-xl group-hover:scale-[1.02] transition-all duration-300">
                       {service.title}
                     </span>
                     <motion.div
@@ -176,7 +176,7 @@ const OurServices = () => {
                     >
                       <Icon
                         icon="mdi:arrow-top-right"
-                        className="text-primary text-5xl"
+                        className="text-primary text-4xl"
                       />
                     </motion.div>
                   </Link>
@@ -189,7 +189,7 @@ const OurServices = () => {
 
       {/* Call-to-Action Bar */}
       <motion.div
-        className="bg-secondary rounded-2xl md:rounded-[30px] px-6 md:px-8 py-5 md:py-6 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10"
+        className="bg-dark-gray rounded-2xl md:rounded-[30px] px-5 md:px-6 py-4 md:py-5 flex flex-col md:flex-row items-center justify-between gap-3 relative z-10"
         variants={{
           hidden: { opacity: 0, y: 30 },
           visible: { opacity: 1, y: 0 },
@@ -198,21 +198,21 @@ const OurServices = () => {
         animate={mainControls}
         transition={{ duration: 0.7, delay: 0.6 }}
       >
-        <div className="flex items-center gap-4">
-          <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
             <Icon
               icon="mdi:refresh"
-              className="text-white text-xl animate-spin-slow"
+              className="text-white text-lg animate-spin-slow"
             />
           </div>
-          <p className="text-white font-Poppins md:text-[1.2vw] text-sm md:text-base">
+          <p className="text-white font-Poppins md:text-[1vw] text-xs md:text-sm">
             Need bold design or reliable code or both? You&apos;re in the right
             place.
           </p>
         </div>
         <button
           onClick={openModal}
-          className="bg-[#FFEB3B] hover:bg-[#FFD700] text-black font-[BelfastMedium] font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl transition-colors uppercase text-sm md:text-base whitespace-nowrap"
+          className="bg-white hover:bg-primary text-black font-[BelfastMedium] font-bold px-5 md:px-6 py-2 md:py-3 rounded-xl md:rounded-2xl transition-colors uppercase text-xs md:text-sm whitespace-nowrap"
         >
           BOOK A CALL
         </button>

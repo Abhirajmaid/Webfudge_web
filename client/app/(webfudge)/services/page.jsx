@@ -61,9 +61,9 @@ export default function ServicesPage() {
           animate={mainControls}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          Transform your ideas into captivating digital experiences. From design to
-          development, we deliver solutions that drive results and accelerate your
-          growth.
+          Transform your ideas into captivating digital experiences. From design
+          to development, we deliver solutions that drive results and accelerate
+          your growth.
         </motion.p>
       </motion.div>
 
@@ -78,25 +78,25 @@ export default function ServicesPage() {
         animate={mainControls}
         transition={{ duration: 0.7, delay: 0.6 }}
       >
-        <div className="bg-white dark:bg-dark-gray rounded-3xl md:rounded-[40px] p-4 md:p-6 mb-8">
-          <div className="grid md:grid-cols-2 gap-4 md:gap-5">
+        <div className="bg-white dark:bg-dark-gray rounded-3xl md:rounded-[40px] p-3 md:p-4 mb-6">
+          <div className="grid md:grid-cols-2 gap-3 md:gap-4">
             {/* Design Section */}
-            <div className="p-10 py-5 bg-[#F5F5F7] dark:bg-gray-800 rounded-[40px]">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-[BelfastMedium] text-black dark:text-white md:text-[4vw] text-[8vw] font-bold">
+            <div className="p-4 py-4 bg-[#F5F5F7] dark:bg-gray-800 rounded-[30px]">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-[BelfastMedium] text-black md:text-[3vw] text-[6vw] font-bold">
                   Design
                 </h3>
                 <Link
                   href="/services"
-                  className="w-12 h-12 rounded-full bg-white dark:bg-dark-gray border-2 border-black dark:border-white flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  className="w-16 h-16 rounded-full bg-white border-[1.5px] border-black/50 flex items-center justify-center hover:bg-gray-100 transition-colors hover:bg-black"
                 >
                   <motion.div
-                    whileHover={{ x: 3, y: -3 }}
+                    whileHover={{ x: 3, y: -3, scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   >
                     <Icon
                       icon="mdi:arrow-top-right"
-                      className="text-black dark:text-white text-xl"
+                      className="text-primary text-3xl"
                     />
                   </motion.div>
                 </Link>
@@ -107,27 +107,41 @@ export default function ServicesPage() {
                     <Link
                       key={service.id}
                       href={`/services/${service.slug}`}
-                      className="flex items-center justify-between py-4 md:py-5 border-b-2 border-black/20 dark:border-white/20 last:border-b-0 group cursor-pointer hover:opacity-80 transition-opacity my-2"
+                      className="flex items-center justify-between py-4 px-4 md:py-6 border-b-2 dark:border-black last:border-b-0 group cursor-pointer group hover:opacity-80 transition-opacity hover:bg-[#dadada] dark:hover:bg-gray-700"
                     >
-                      <span className="font-Poppins text-black dark:text-white md:text-[1.5vw] text-base">
+                      <span className="font-Poppins text-gray-600 dark:text-black md:text-[1.5vw] text-sm group-hover:scale-[1.02] transition-all duration-300">
                         {service.title}
                       </span>
                       <motion.div
                         className="opacity-0 group-hover:opacity-100"
-                        initial={{ x: -5, y: 5 }}
-                        whileHover={{ x: 2, y: -2 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                        initial={{ x: -8, y: 8, scale: 0.8 }}
+                        animate={{
+                          x: 0,
+                          y: 0,
+                          scale: 1,
+                        }}
+                        whileHover={{
+                          x: 5,
+                          y: -5,
+                          scale: 1.15,
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 25,
+                          mass: 0.8,
+                        }}
                       >
                         <Icon
                           icon="mdi:arrow-top-right"
-                          className="text-black dark:text-white text-lg"
+                          className="text-primary text-4xl"
                         />
                       </motion.div>
                     </Link>
                   ))
                 ) : (
-                  <div className="py-4 md:py-5">
-                    <span className="font-Poppins text-black dark:text-white md:text-[1.5vw] text-base">
+                  <div className="py-4 px-4 md:py-6">
+                    <span className="font-Poppins text-gray-600 dark:text-black md:text-[1.5vw] text-sm">
                       UI/UX Design
                     </span>
                   </div>
@@ -136,22 +150,22 @@ export default function ServicesPage() {
             </div>
 
             {/* Development Section */}
-            <div className="p-10 py-5 bg-[#F5F5F7] dark:bg-gray-800 rounded-[40px]">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-[BelfastMedium] text-black dark:text-white md:text-[4vw] text-[8vw] font-bold">
+            <div className="p-4 py-4 bg-[#F5F5F7] dark:bg-gray-800 rounded-[30px]">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="font-[BelfastMedium] text-black md:text-[3vw] text-[6vw] font-bold">
                   Development
                 </h3>
                 <Link
                   href="/services"
-                  className="w-12 h-12 rounded-full bg-white dark:bg-dark-gray border-2 border-black dark:border-white flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  className="w-16 h-16 rounded-full bg-white border-[1.5px] border-black/50 flex items-center justify-center hover:bg-gray-100 transition-colors hover:bg-black"
                 >
                   <motion.div
-                    whileHover={{ x: 3, y: -3 }}
+                    whileHover={{ x: 3, y: -3, scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   >
                     <Icon
                       icon="mdi:arrow-top-right"
-                      className="text-black dark:text-white text-xl"
+                      className="text-primary text-3xl"
                     />
                   </motion.div>
                 </Link>
@@ -162,27 +176,41 @@ export default function ServicesPage() {
                     <Link
                       key={service.id}
                       href={`/services/${service.slug}`}
-                      className="flex items-center justify-between py-4 md:py-5 border-b-2 border-black/20 dark:border-white/20 last:border-b-0 group cursor-pointer hover:opacity-80 transition-opacity my-2"
+                      className="flex items-center justify-between py-4 px-4 md:py-6 border-b-2 border-gray-300 dark:border-black last:border-b-0 group cursor-pointer group hover:opacity-80 transition-opacity hover:bg-[#dadada] dark:hover:bg-gray-700"
                     >
-                      <span className="font-Poppins text-black dark:text-white md:text-[1.5vw] text-base">
+                      <span className="font-Poppins text-gray-600 dark:text-black md:text-[1.5vw] text-sm group-hover:scale-[1.02] transition-all duration-300">
                         {service.title}
                       </span>
                       <motion.div
                         className="opacity-0 group-hover:opacity-100"
-                        initial={{ x: -5, y: 5 }}
-                        whileHover={{ x: 2, y: -2 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                        initial={{ x: -8, y: 8, scale: 0.8 }}
+                        animate={{
+                          x: 0,
+                          y: 0,
+                          scale: 1,
+                        }}
+                        whileHover={{
+                          x: 5,
+                          y: -5,
+                          scale: 1.15,
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 25,
+                          mass: 0.8,
+                        }}
                       >
                         <Icon
                           icon="mdi:arrow-top-right"
-                          className="text-black dark:text-white text-lg"
+                          className="text-primary text-4xl"
                         />
                       </motion.div>
                     </Link>
                   ))
                 ) : (
-                  <div className="py-4 md:py-5">
-                    <span className="font-Poppins text-black dark:text-white md:text-[1.5vw] text-base">
+                  <div className="py-4 px-4 md:py-6">
+                    <span className="font-Poppins text-gray-600 dark:text-black md:text-[1.5vw] text-sm">
                       Coming Soon
                     </span>
                   </div>
@@ -194,7 +222,7 @@ export default function ServicesPage() {
 
         {/* Call-to-Action Bar */}
         <motion.div
-          className="bg-secondary rounded-2xl md:rounded-[30px] px-6 md:px-8 py-5 md:py-6 flex flex-col md:flex-row items-center justify-between gap-4"
+          className="bg-secondary rounded-2xl md:rounded-[30px] px-5 md:px-6 py-4 md:py-5 flex flex-col md:flex-row items-center justify-between gap-3"
           variants={{
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0 },
@@ -203,21 +231,21 @@ export default function ServicesPage() {
           animate={mainControls}
           transition={{ duration: 0.7, delay: 0.8 }}
         >
-          <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
               <Icon
                 icon="mdi:refresh"
-                className="text-white text-xl animate-spin-slow"
+                className="text-white text-lg animate-spin-slow"
               />
             </div>
-            <p className="text-white font-Poppins md:text-[1.2vw] text-sm md:text-base">
-              Need bold design or reliable code or both? You&apos;re in the right
-              place.
+            <p className="text-white font-Poppins md:text-[1vw] text-xs md:text-sm">
+              Need bold design or reliable code or both? You&apos;re in the
+              right place.
             </p>
           </div>
           <button
             onClick={openModal}
-            className="bg-[#FFEB3B] hover:bg-[#FFD700] text-black font-[BelfastMedium] font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl transition-colors uppercase text-sm md:text-base whitespace-nowrap"
+            className="bg-[#FFEB3B] hover:bg-[#FFD700] text-black font-[BelfastMedium] font-bold px-5 md:px-6 py-2 md:py-3 rounded-xl md:rounded-2xl transition-colors uppercase text-xs md:text-sm whitespace-nowrap"
           >
             BOOK A CALL
           </button>
@@ -236,4 +264,3 @@ export default function ServicesPage() {
     </div>
   );
 }
-

@@ -71,7 +71,7 @@ import { motion } from "framer-motion";
 
 const ClientShowcase = () => {
   return (
-    <div className="mt-[100px] w-full relative">
+    <div className="mt-[60px] w-full relative">
       <Swiper
         modules={[Pagination, Autoplay]}
         slidesPerView={1}
@@ -83,7 +83,7 @@ const ClientShowcase = () => {
       >
         {clients.map((client) => (
           <SwiperSlide key={client.id}>
-            <div className="relative md:h-[800px] h-[450px] rounded-t-[48px] md:rounded-t-[160px] card-shadow overflow-visible">
+            <div className="relative md:h-[500px] h-[300px] rounded-t-[32px] md:rounded-t-[100px] card-shadow overflow-visible">
               <motion.div
                 className="w-full relative h-full"
                 initial={{ opacity: 0, scale: 0 }}
@@ -95,7 +95,7 @@ const ClientShowcase = () => {
                   alt={client.title}
                   width={1920}
                   height={1080}
-                  className="w-full object-cover h-full md:rounded-t-[160px] rounded-t-[48px]"
+                  className="w-full object-cover h-full md:rounded-t-[100px] rounded-t-[32px]"
                 />
               </motion.div>
               <Link
@@ -104,7 +104,7 @@ const ClientShowcase = () => {
                 className="!opacity-100 !overflow-visible"
               >
                 <motion.div
-                  className="z-50 flex md:h-[230px] h-[100px] bg-white rounded-full md:w-[230px] w-[100px] border-solid md:border-[6px] border-[4px] justify-center items-center border-gray cursor-pointer absolute md:top-0 top-0 right-0 drop-shadow-lg"
+                  className="z-50 flex md:h-[150px] h-[70px] bg-white rounded-full md:w-[150px] w-[70px] border-solid md:border-[4px] border-[3px] justify-center items-center border-gray cursor-pointer absolute md:top-0 top-0 right-0 drop-shadow-lg"
                   variants={{
                     hidden: { opacity: 1, rotate: "0deg" },
                     visible: { opacity: 1, rotate: "360deg" },
@@ -122,7 +122,7 @@ const ClientShowcase = () => {
                     width={75}
                     height={78}
                     alt="arrow"
-                    className="w-10 md:w-[75px]"
+                    className="w-6 md:w-[50px]"
                   />
                 </motion.div>
               </Link>

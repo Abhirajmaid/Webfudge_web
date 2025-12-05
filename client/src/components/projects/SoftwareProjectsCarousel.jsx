@@ -19,15 +19,15 @@ const SoftwareProjectsCarousel = () => {
   if (!projects || projects.length === 0) return null;
 
   return (
-    <div className="w-full py-12 md:py-20 to-transparent relative overflow-hidden">
+    <div className="w-full py-8 md:py-12 to-transparent relative overflow-hidden">
       <div className="relative z-10">
         {/* Header */}
-        <div className="flex flex-col gap-2 mb-10 relative z-10">
-          <h2 className="md:text-[6vw] text-[8vw] tracking-tighter uppercase align-middle dark:text-white text-white">
+        <div className="flex flex-col gap-2 mb-6 relative z-10">
+          <h2 className="md:text-[4.5vw] text-[6vw] tracking-tighter uppercase align-middle dark:text-white text-white">
             Custom Softwares{" "}
-            <span className="text-[#D71EB9] !text-[8vw]">.</span>
+            <span className="text-[#D71EB9] !text-[6vw]">.</span>
           </h2>
-          <p className="font-Poppins md:text-[1.1vw] leading-5 text-sm w-[65%] text-white/70 dark:text-gray-300">
+          <p className="font-Poppins md:text-[0.9vw] leading-4 text-xs w-[65%] text-white/70 dark:text-gray-300">
             Explore our latest software development projects and discover <br />
             innovative solutions that drive business growth and success.
           </p>
@@ -63,45 +63,45 @@ const SoftwareProjectsCarousel = () => {
                   href={`/projects/${project.slug}`}
                   className="opacity-100"
                 >
-                  <motion.div className="rounded-2xl overflow-hidden shadow-2xl cursor-pointer group h-[500px]">
-                    <div className="grid md:grid-cols-2 gap-10 h-full">
+                  <motion.div className="rounded-2xl overflow-hidden shadow-2xl cursor-pointer group h-[400px]">
+                    <div className="grid md:grid-cols-2 gap-6 h-full">
                       {/* Left Section - Content */}
-                      <div className="p-6 md:p-10 bg-gray-50 rounded-r-2xl dark:bg-dark-gray flex flex-col justify-between">
+                      <div className="p-4 md:p-6 bg-gray-50 rounded-r-2xl dark:bg-dark-gray flex flex-col justify-between">
                         <div>
                           {/* Category Badge */}
-                          <div className="flex items-center gap-3 mb-4">
-                            <span className="px-4 py-1.5 bg-primary text-white text-xs md:text-sm font-Poppins font-semibold rounded-full uppercase">
+                          <div className="flex items-center gap-2 mb-3">
+                            <span className="px-3 py-1 bg-primary text-white text-xs font-Poppins font-semibold rounded-full uppercase">
                               {project.category}
                             </span>
-                            <span className="px-4 py-1.5 bg-white/20 dark:bg-white/10 text-white text-xs md:text-sm font-Poppins rounded-full">
+                            <span className="px-3 py-1 bg-white/20 dark:bg-white/10 text-white text-xs font-Poppins rounded-full">
                               {project.type}
                             </span>
                           </div>
 
                           {/* Title */}
-                          <h3 className="text-2xl md:text-4xl font-[BelfastMedium] text-main-dark dark:text-white mb-4 leading-tight">
+                          <h3 className="text-xl md:text-2xl font-[BelfastMedium] text-main-dark dark:text-white mb-3 leading-tight">
                             {project.title}
                           </h3>
 
                           {/* Description */}
-                          <p className="text-gray-600 dark:text-gray-300 font-Poppins text-sm md:text-base mb-6 line-clamp-3">
+                          <p className="text-gray-600 dark:text-gray-300 font-Poppins text-xs md:text-sm mb-4 line-clamp-3">
                             {project.short_des}
                           </p>
 
                           {/* Technologies Tags */}
-                          <div className="flex flex-wrap gap-2 mb-6">
+                          <div className="flex flex-wrap gap-2 mb-4">
                             {project.technologies
                               ?.slice(0, 4)
                               .map((tech, i) => (
                                 <span
                                   key={i}
-                                  className="px-3 py-1 bg-primary/10 dark:bg-white/10 text-primary dark:text-white text-xs rounded-full font-Poppins"
+                                  className="px-2 py-0.5 bg-primary/10 dark:bg-white/10 text-primary dark:text-white text-xs rounded-full font-Poppins"
                                 >
                                   {tech}
                                 </span>
                               ))}
                             {project.technologies?.length > 4 && (
-                              <span className="px-3 py-1 bg-primary/10 dark:bg-white/10 text-primary dark:text-white text-xs rounded-full font-Poppins">
+                              <span className="px-2 py-0.5 bg-primary/10 dark:bg-white/10 text-primary dark:text-white text-xs rounded-full font-Poppins">
                                 +{project.technologies.length - 4} more
                               </span>
                             )}
@@ -109,11 +109,11 @@ const SoftwareProjectsCarousel = () => {
                         </div>
 
                         {/* View Project Link */}
-                        <div className="flex items-center gap-2 text-primary font-[BelfastMedium] text-sm md:text-base group-hover:gap-4 transition-all">
+                        <div className="flex items-center gap-2 text-primary font-[BelfastMedium] text-xs md:text-sm group-hover:gap-3 transition-all">
                           View Project
                           <Icon
                             icon="mdi:arrow-right"
-                            className="text-xl group-hover:translate-x-1 transition-transform"
+                            className="text-lg group-hover:translate-x-1 transition-transform"
                           />
                         </div>
                       </div>
@@ -146,13 +146,13 @@ const SoftwareProjectsCarousel = () => {
           {/* Custom Navigation Buttons */}
           {projects.length > 1 && (
             <>
-              <button className="swiper-button-prev-custom absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors">
-                <Icon icon="mdi:chevron-left" className="text-white text-2xl" />
+              <button className="swiper-button-prev-custom absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors">
+                <Icon icon="mdi:chevron-left" className="text-white text-xl" />
               </button>
-              <button className="swiper-button-next-custom absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors">
+              <button className="swiper-button-next-custom absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors">
                 <Icon
                   icon="mdi:chevron-right"
-                  className="text-white text-2xl"
+                  className="text-white text-xl"
                 />
               </button>
             </>
@@ -160,26 +160,26 @@ const SoftwareProjectsCarousel = () => {
 
           {/* Custom Pagination */}
           {projects.length > 1 && (
-            <div className="swiper-pagination-custom flex justify-center gap-2 mt-8"></div>
+            <div className="swiper-pagination-custom flex justify-center gap-2 mt-6"></div>
           )}
         </div>
 
         {/* Mobile View All Button */}
-        <div className="md:hidden mt-6 text-center">
+        <div className="md:hidden mt-4 text-center">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-full font-[BelfastMedium] transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary hover:bg-primary/90 text-white rounded-full font-[BelfastMedium] transition-colors text-sm"
           >
             View All Projects
-            <Icon icon="mdi:arrow-right" className="text-xl" />
+            <Icon icon="mdi:arrow-right" className="text-lg" />
           </Link>
         </div>
       </div>
 
       <style jsx global>{`
         .swiper-pagination-bullet-custom {
-          width: 40px;
-          height: 4px;
+          width: 30px;
+          height: 3px;
           background: rgba(255, 255, 255, 0.3);
           border-radius: 2px;
           opacity: 1;
@@ -187,7 +187,7 @@ const SoftwareProjectsCarousel = () => {
         }
         .swiper-pagination-bullet-active-custom {
           background: #d71eb9;
-          width: 60px;
+          width: 45px;
         }
       `}</style>
     </div>

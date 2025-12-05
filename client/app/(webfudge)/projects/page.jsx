@@ -1,16 +1,12 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { ProjectCard, ProjectFilter } from "@src/components/projects";
-import {
-  getAllProjects,
-  getProjectsByCategory,
-} from "@/src/data/softwareProjects";
+import { ProjectCard } from "@src/components/projects";
+import { getAllProjects } from "@/src/data/softwareProjects";
 
 export default function ProjectsPage() {
-  const [activeCategory, setActiveCategory] = useState(null);
-  const [filteredProjects, setFilteredProjects] = useState(getAllProjects());
+  const projects = getAllProjects();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -20,18 +16,6 @@ export default function ProjectsPage() {
       mainControls.start("visible");
     }
   }, [isInView, mainControls]);
-
-  useEffect(() => {
-    if (activeCategory === null) {
-      setFilteredProjects(getAllProjects());
-    } else {
-      setFilteredProjects(getProjectsByCategory(activeCategory));
-    }
-  }, [activeCategory]);
-
-  const handleFilterChange = (category) => {
-    setActiveCategory(category);
-  };
 
   return (
     <div className="px-[3%] md:px-[6%]" style={{ paddingTop: "80px" }}>
@@ -57,7 +41,7 @@ export default function ProjectsPage() {
           animate={mainControls}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          Software Projects{" "}
+          Our Custom Softwares{" "}
           <span className="text-[#D71EB9] md:!text-[8vw] !text-[10vw]">.</span>
         </motion.h1>
         <motion.p
@@ -76,22 +60,6 @@ export default function ProjectsPage() {
         </motion.p>
       </motion.div>
 
-      {/* Filter Section */}
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 30 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.7, delay: 0.6 }}
-      >
-        <ProjectFilter
-          activeCategory={activeCategory}
-          onFilterChange={handleFilterChange}
-        />
-      </motion.div>
-
       {/* Projects List - Full Width Cards */}
       <motion.div
         className="flex flex-col gap-6 md:gap-8 mb-12"
@@ -107,7 +75,7 @@ export default function ProjectsPage() {
         initial="hidden"
         animate={mainControls}
       >
-        {filteredProjects.map((project, index) => (
+        {projects.map((project, index) => (
           <motion.div
             key={project.id}
             className="w-full"
@@ -122,7 +90,7 @@ export default function ProjectsPage() {
         ))}
       </motion.div>
 
-      {filteredProjects.length === 0 && (
+      {projects.length === 0 && (
         <motion.div
           className="text-center py-20"
           variants={{

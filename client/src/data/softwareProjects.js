@@ -1,7 +1,7 @@
 export const softwareProjects = [
     {
         id: 1,
-        slug: "xmc-crm",
+        slug: "crm-system",
         title: "Customer Relationship Management System (CRM)",
         category: "CRM",
         type: "Software Development",
@@ -66,8 +66,8 @@ export const softwareProjects = [
     },
     {
         id: 2,
-        slug: "xmc-pm",
-        title: "XMC PM",
+        slug: "project-management-system",
+        title: "Project Management System",
         category: "Project Management",
         type: "Software Development",
         img_url: "/images/projects/pm/pm-hero.png",
@@ -124,66 +124,6 @@ export const softwareProjects = [
         },
         date: "2024"
     },
-    {
-        id: 3,
-        slug: "xtrawrkx-global-accounts",
-        title: "Xtrawrkx Global Accounts",
-        category: "Enterprise",
-        type: "Software Development",
-        img_url: "/images/projects/xtrawrkx/xtrawrkx-hero.png",
-        project_imgs: [
-            "/images/projects/xtrawrkx/xtrawrkx-dashboard.png",
-            "/images/projects/xtrawrkx/xtrawrkx-accounts.png",
-            "/images/projects/xtrawrkx/xtrawrkx-analytics.png",
-        ],
-        short_des: "Enterprise-grade global accounts management system with multi-currency support and advanced reporting",
-        technologies: [
-            "Vue.js",
-            "Laravel",
-            "MySQL",
-            "Redis",
-            "AWS",
-            "Docker",
-            "Microservices"
-        ],
-        services_offered: [
-            "Enterprise Software Development",
-            "Multi-currency System",
-            "Global Account Management",
-            "Financial Reporting",
-            "Cloud Infrastructure",
-            "Security & Compliance"
-        ],
-        key_highlights: [
-            "Multi-currency and multi-region account management",
-            "Real-time financial reporting and analytics",
-            "Automated reconciliation and transaction processing",
-            "Role-based access control with audit trails",
-            "Integration with banking and payment systems",
-            "Scalable architecture supporting millions of transactions"
-        ],
-        introduction: "A comprehensive global accounts management system designed for enterprises operating across multiple regions. The platform handles complex financial operations, multi-currency transactions, and provides real-time insights into global account activities.",
-        solution_offered: "We developed an enterprise-grade accounts management system with support for multiple currencies, regions, and compliance requirements. The system includes automated reconciliation, advanced reporting, and seamless integration with banking systems.",
-        features: [
-            "Global Account Management",
-            "Multi-currency Support",
-            "Transaction Processing",
-            "Financial Reporting & Analytics",
-            "Automated Reconciliation",
-            "Audit Trails & Compliance",
-            "Banking Integrations",
-            "Role-based Access Control",
-            "Real-time Notifications",
-            "Mobile Dashboard"
-        ],
-        stats: {
-            accounts: "100,000+",
-            transactions: "10M+/month",
-            currencies: "50+",
-            uptime: "99.99%"
-        },
-        date: "2024"
-    }
 ];
 
 export const getProjectBySlug = (slug) => {

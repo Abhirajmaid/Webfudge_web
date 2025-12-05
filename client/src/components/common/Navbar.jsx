@@ -176,13 +176,13 @@ const Navbar = ({ isShowMode }) => {
 
           <div className="space-x-2 flex-align-center">
             <button
-              className="md:text-sm text-xs !rounded-3xl md:font-bold md:text-inherit btn md:w-fit bg-white shadow-md dark:bg-black md:!px-7 !px-4 !py-4 dark:hover:bg-white dark:hover:text-main-dark hover:bg-main-dark hover:text-white"
+              className="md:text-sm text-xs !rounded-3xl md:font-bold md:text-inherit btn md:w-fit bg-dark shadow-md dark:bg-white dark:text-black hover:scale-105 md:!px-7 !px-4 !py-4 dark:hover:bg-white hover:bg-main-dark hover:text-white"
               onClick={openModal}
             >
               Start New Project!
             </button>
             {/*----------------------------- Dark mode toggle-------------------------------------------------- */}
-            {showMode ? (
+            {/* {showMode ? (
               <div
                 className="bg-white shadow-md icon-box dark:bg-black hover:shadow-lg hover:bg-transparent z-10"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -191,7 +191,7 @@ const Navbar = ({ isShowMode }) => {
               </div>
             ) : (
               <></>
-            )}
+            )} */}
 
             {/*------------------------------- Mobile Menu Toogle------------------------- */}
             <div

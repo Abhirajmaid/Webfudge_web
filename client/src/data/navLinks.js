@@ -46,8 +46,7 @@ export const navLinks = [
       {
         id: 43,
         linkText: "Careers",
-        url: "https://webfudgeagency.zohorecruit.in/jobs/Careers",
-        target: "_blank",
+        url: "/careers",
       },
     ],
   },
@@ -75,37 +74,24 @@ export const mobileNavLinks = [
     url: "/projects",
   },
   {
-    id: 4,
-    linkText: "Company",
-    url: "#",
-    subLink: [
-      {
-        id: 41,
-        linkText: "About Us",
-        url: "/about-us",
-      },
-      // {
-      //   id: 42,
-      //   linkText: "Team",
-      //   url: "/team",
-      // },
-      {
-        id: 43,
-        linkText: "Careers",
-        url: "https://webfudgeagency.zohorecruit.in/jobs/Careers",
-        target: "_blank",
-      },
-    ],
+    id: 41,
+    linkText: "About Us",
+    url: "/about-us",
   },
+  // {
+  //   id: 42,
+  //   linkText: "Team",
+  //   url: "/team",
+  // },
   {
     id: 5,
     linkText: "Gallery",
     url: "/gallery",
   },
   {
-    id: 6,
-    linkText: "Contact Us",
-    url: "/contact-us",
+    id: 43,
+    linkText: "Careers",
+    url: "/careers",
   },
 ];
 

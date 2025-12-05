@@ -9,7 +9,10 @@ export const metadata = {
 
 const AboutUs = () => {
   return (
-    <div className="px-[3%] md:px-[6%]" style={{ paddingTop: "110px" }}>
+    <div
+      className="px-[3%] md:px-[6%] overflow-x-hidden"
+      style={{ paddingTop: "80px" }}
+    >
       <AboutPage />
     </div>
   );

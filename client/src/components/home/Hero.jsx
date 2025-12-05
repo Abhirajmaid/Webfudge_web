@@ -1,18 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useLeadForm } from "@src/context/LeadFormContext";
+import VideoModal from "@src/components/common/VideoModal";
 
 const Hero = () => {
   const { openModal } = useLeadForm();
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   return (
     <>
       <motion.div
-        className="relative md:h-[550px] h-[400px] mt-[20px] "
+        className="relative md:h-[550px] h-[400px] mt-[20px] mb-[140px] md:mb-0"
         variants={{
           hidden: { opacity: 0, y: 75 },
           visible: { opacity: 1, y: 0 },
@@ -45,10 +47,18 @@ const Hero = () => {
             </motion.h1>
           </div>
           <div className="w-full flex-col md:gap-7 gap-3 flex-align-center">
-            <div className=" md:w-[90%] w-[60%] md:h-[388px] h-[200px] rounded-[50px] bg-transparent md:mt-[85px] flex items-center overflow-hidden relative">
-              <div className=" md:h-[85px] h-10 bg-white rounded-full md:w-[85px] w-10 border-solid md:border-[6px] border-[3px] border-gray cursor-pointer absolute md:block hidden top-3 left-3 z-10">
-                <Icon icon="mdi:play" width="75" className=" text-primary " />
-              </div>
+            <div className=" md:w-[90%] w-full md:h-[388px] h-[200px] rounded-[50px] bg-transparent mt-[20px] md:mt-[85px] flex items-center overflow-hidden relative">
+              <button
+                onClick={() => setIsVideoModalOpen(true)}
+                className=" md:h-[85px] h-10 bg-white rounded-full md:w-[85px] w-10 border-solid md:border-[6px] border-[3px] border-gray cursor-pointer absolute top-3 left-3 z-10 hover:scale-110 transition-transform flex items-center justify-center"
+                aria-label="Play video"
+              >
+                <Icon
+                  icon="mdi:play"
+                  width="75"
+                  className="text-primary md:w-[75px] w-[20px]"
+                />
+              </button>
               <video
                 className="videobackground w-full h-full object-cover rounded-3xl"
                 muted
@@ -86,7 +96,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col md:flex-row md:justify-between gap-3 justify-center items-center absolute -bottom-[90px] md:bottom-0 z-50">
+        <div className="w-full flex flex-col md:flex-row md:justify-between gap-3 justify-center items-center absolute md:bottom-0 -bottom-[120px] z-50 md:mb-0 mb-4">
           <button
             onClick={openModal}
             className="btn text-center !font-light w-[60%] border-[1px] text-[13px] md:text-xl md:!py-5 !py-3 !rounded-full border-solid dark:border-primary bg-primary text-white md:max-w-[25%]  hover:scale-110"
@@ -147,6 +157,11 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
+      <VideoModal
+        visible={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videoSrc="/video/Intro-V5.webm"
+      />
     </>
   );
 };
