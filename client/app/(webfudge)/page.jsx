@@ -24,7 +24,7 @@ export const metadata = {
 const Home = () => {
   return (
     <>
-      <div className="" style={{ paddingTop: "100px" }}>
+      <div className="md:px-[6%] px-[0]" style={{ paddingTop: "100px" }}>
         <Hero />
         <ShowSection />
         <InfiniteMarquee txt="Let's Discuss" url="/contact-us" />
