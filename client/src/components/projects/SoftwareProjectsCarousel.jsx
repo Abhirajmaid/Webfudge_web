@@ -63,7 +63,7 @@ const SoftwareProjectsCarousel = () => {
                   href={`/projects/${project.slug}`}
                   className="opacity-100"
                 >
-                  <motion.div className="rounded-2xl overflow-hidden shadow-2xl cursor-pointer group h-[400px]">
+                  <motion.div className="rounded-2xl overflow-hidden shadow-2xl cursor-pointer group h-auto">
                     <div className="grid md:grid-cols-2 gap-6 h-full">
                       {/* Left Section - Content */}
                       <div className="p-4 md:p-6 bg-gray-50 rounded-r-2xl dark:bg-dark-gray flex flex-col justify-between">
@@ -119,7 +119,7 @@ const SoftwareProjectsCarousel = () => {
                       </div>
 
                       {/* Right Section - Image */}
-                      <div className="relative h-[300px] !rounded-2xl md:h-auto bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
+                      <div className="relative !h-[250px] !rounded-2xl md:h-auto bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
                         {project.img_url ? (
                           <Image
                             src={project.img_url}
@@ -150,10 +150,7 @@ const SoftwareProjectsCarousel = () => {
                 <Icon icon="mdi:chevron-left" className="text-white text-xl" />
               </button>
               <button className="swiper-button-next-custom absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors">
-                <Icon
-                  icon="mdi:chevron-right"
-                  className="text-white text-xl"
-                />
+                <Icon icon="mdi:chevron-right" className="text-white text-xl" />
               </button>
             </>
           )}

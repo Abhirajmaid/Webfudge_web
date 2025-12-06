@@ -2,6 +2,8 @@
 
 import React from "react";
 import ServicesHero from "./ServicesHero";
+import ServiceTrustedBy from "./ServiceTrustedBy";
+import ServiceProjects from "./ServiceProjects";
 import ServiceChallenges from "./ServiceChallenges";
 import ServiceProcess from "./ServiceProcess";
 import ServiceReasons from "./ServiceReasons";
@@ -22,7 +24,7 @@ const SingleServicePage = ({ service }) => {
       {/* Trust Indicators / Stats Section */}
       {service.stats && (
         <motion.div
-          className="md:my-16 my-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
+          className="md:my-16 my-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 px-[3%]"
           variants={{
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0 },
@@ -32,8 +34,8 @@ const SingleServicePage = ({ service }) => {
           transition={{ duration: 0.7 }}
         >
           {service.stats.projects && (
-            <div className="text-center">
-              <div className="font-[BelfastMedium] text-3xl md:text-4xl font-bold text-primary mb-2">
+            <div className="text-center p-4 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20">
+              <div className="font-[BelfastMedium] text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-2">
                 {service.stats.projects}
               </div>
               <div className="font-Poppins text-gray dark:text-gray-400 text-sm md:text-base">
@@ -42,8 +44,8 @@ const SingleServicePage = ({ service }) => {
             </div>
           )}
           {service.stats.users && (
-            <div className="text-center">
-              <div className="font-[BelfastMedium] text-3xl md:text-4xl font-bold text-primary mb-2">
+            <div className="text-center p-4 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20">
+              <div className="font-[BelfastMedium] text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-2">
                 {service.stats.users}
               </div>
               <div className="font-Poppins text-gray dark:text-gray-400 text-sm md:text-base">
@@ -52,8 +54,8 @@ const SingleServicePage = ({ service }) => {
             </div>
           )}
           {service.stats.fundsRaised && (
-            <div className="text-center">
-              <div className="font-[BelfastMedium] text-3xl md:text-4xl font-bold text-primary mb-2">
+            <div className="text-center p-4 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20">
+              <div className="font-[BelfastMedium] text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-2">
                 {service.stats.fundsRaised}
               </div>
               <div className="font-Poppins text-gray dark:text-gray-400 text-sm md:text-base">
@@ -62,8 +64,8 @@ const SingleServicePage = ({ service }) => {
             </div>
           )}
           {service.stats.launchSpeed && (
-            <div className="text-center">
-              <div className="font-[BelfastMedium] text-3xl md:text-4xl font-bold text-primary mb-2">
+            <div className="text-center p-4 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20">
+              <div className="font-[BelfastMedium] text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-2">
                 {service.stats.launchSpeed}
               </div>
               <div className="font-Poppins text-gray dark:text-gray-400 text-sm md:text-base">
@@ -72,8 +74,8 @@ const SingleServicePage = ({ service }) => {
             </div>
           )}
           {service.stats.costReduction && (
-            <div className="text-center">
-              <div className="font-[BelfastMedium] text-3xl md:text-4xl font-bold text-primary mb-2">
+            <div className="text-center p-4 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20">
+              <div className="font-[BelfastMedium] text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-2">
                 {service.stats.costReduction}
               </div>
               <div className="font-Poppins text-gray dark:text-gray-400 text-sm md:text-base">
@@ -82,8 +84,8 @@ const SingleServicePage = ({ service }) => {
             </div>
           )}
           {service.stats.scalingEfficiency && (
-            <div className="text-center">
-              <div className="font-[BelfastMedium] text-3xl md:text-4xl font-bold text-primary mb-2">
+            <div className="text-center p-4 rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20">
+              <div className="font-[BelfastMedium] text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-2">
                 {service.stats.scalingEfficiency}
               </div>
               <div className="font-Poppins text-gray dark:text-gray-400 text-sm md:text-base">
@@ -93,6 +95,12 @@ const SingleServicePage = ({ service }) => {
           )}
         </motion.div>
       )}
+
+      {/* Trusted By Section */}
+      <ServiceTrustedBy />
+
+      {/* Service Projects Section */}
+      <ServiceProjects service={service} />
 
       {/* Challenges Section */}
       {service.challenges && service.challenges.length > 0 && (

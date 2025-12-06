@@ -6,10 +6,10 @@ import { useLeadForm } from "@src/context/LeadFormContext";
 
 const ServicesHero = ({ hero }) => {
   const { openModal } = useLeadForm();
-  
+
   return (
     <motion.div
-      className="relative md:mt-[80px] mt-[50px] mb-16"
+      className="relative md:mt-[80px] mt-[50px] mb-16 px-[3%]"
       variants={{
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 },
@@ -29,9 +29,11 @@ const ServicesHero = ({ hero }) => {
           animate="visible"
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          {hero.headline}
+          <span className="bg-white bg-clip-text text-transparent">
+            {hero.headline}
+          </span>
         </motion.h1>
-        
+
         <motion.p
           className="font-Poppins md:text-[1.5vw] text-lg text-gray dark:text-gray-300"
           variants={{
@@ -44,7 +46,7 @@ const ServicesHero = ({ hero }) => {
         >
           {hero.subheadline}
         </motion.p>
-        
+
         {hero.supportingText && (
           <motion.p
             className="font-Poppins md:text-[1.2vw] text-base text-gray dark:text-gray-400"
@@ -72,7 +74,7 @@ const ServicesHero = ({ hero }) => {
         >
           <button
             onClick={openModal}
-            className="bg-[#FFEB3B] hover:bg-[#FFD700] text-black font-[BelfastMedium] font-bold px-8 md:px-10 py-4 md:py-5 rounded-xl md:rounded-2xl transition-colors uppercase text-sm md:text-base"
+            className="bg-gradient-to-r from-primary via-primary/90 to-primary hover:from-primary/90 hover:via-primary hover:to-primary/90 text-white font-[BelfastMedium] font-bold px-8 md:px-10 py-4 md:py-5 rounded-xl md:rounded-2xl transition-all uppercase text-sm md:text-base shadow-lg shadow-primary/30 hover:shadow-primary/50"
           >
             {hero.ctaText || "BOOK A CALL"}
           </button>
@@ -83,4 +85,3 @@ const ServicesHero = ({ hero }) => {
 };
 
 export default ServicesHero;
-

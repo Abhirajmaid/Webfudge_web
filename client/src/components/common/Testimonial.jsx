@@ -111,7 +111,7 @@ const Testimonial = () => {
         Client Reviews{" "}
         <span className="text-[#D71EB9] md:!text-[4vw] !text-[8vw]">.</span>
       </h2>
-      <div className="rounded-3xl md:rounded-[40px] p-6 md:p-8">
+      <div className="rounded-3xl md:rounded-[40px] p-2 md:p-8">
         <Swiper
           spaceBetween={24}
           slidesPerView={1}

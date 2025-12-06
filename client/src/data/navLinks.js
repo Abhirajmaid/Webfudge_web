@@ -71,6 +71,11 @@ export const mobileNavLinks = [
   {
     id: 3,
     linkText: "Projects",
+    url: "/our-work",
+  },
+  {
+    id: 31,
+    linkText: "Softwares",
     url: "/projects",
   },
   {

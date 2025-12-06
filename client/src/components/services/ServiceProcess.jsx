@@ -37,7 +37,7 @@ const ServiceProcess = ({ process, serviceTitle = "UI/UX DESIGN" }) => {
       transition={{ duration: 0.7 }}
     >
       {/* Dark background */}
-      <div className="rounded-3xl md:rounded-[40px] p-8 md:p-12 relative overflow-hidden">
+      <div className="rounded-3xl md:rounded-[40px] px-[3%] py-6 md:p-12 relative overflow-hidden bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30">
         {/* Title Section */}
         <motion.div
           className="mb-8 md:mb-12"
@@ -49,22 +49,71 @@ const ServiceProcess = ({ process, serviceTitle = "UI/UX DESIGN" }) => {
           animate={mainControls}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <h2 className="md:text-[4vw] text-[6vw] tracking-tighter uppercase font-[BelfastMedium] mb-4 text-white">
-            <span className="text-white">OUR INNOVATIVE</span>{" "}
-            <span className="bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">
-              {serviceTitle} PROCESS
-            </span>
-          </h2>
-          <p className="font-Poppins text-white/80 md:text-lg text-base max-w-3xl leading-relaxed">
-            From start to finish, our process transforms your ideas into
-            intuitive user experiences that achieve your business goals and set
-            your product apart in the market.
-          </p>
+          <div className="flex flex-col gap-2">
+            <h2 className="md:text-[4vw] text-[6vw] md:leading-[0.8] leading-8 tracking-tighter uppercase align-middle text-white">
+              <span className="bg-white bg-clip-text text-transparent">
+                Our Innovative {serviceTitle} Process
+              </span>{" "}
+              <span className="text-[#D71EB9] !text-[6vw]">.</span>
+            </h2>
+            <p className="font-Poppins md:text-[1.3vw] md:leading-6 leading-4 md:mt-6 mt-3 text-xs md:w-[65%] w-[80%] text-white/80 dark:text-gray-300">
+              From start to finish, our process transforms your ideas into
+              intuitive user experiences that achieve your business goals and
+              set your product apart in the market.
+            </p>
+          </div>
         </motion.div>
 
         {/* Horizontal Process Steps */}
         <div className="relative mt-12 md:mt-16">
-          <div className="flex flex-col md:flex-row items-start md:items-stretch gap-0 relative">
+          {/* Mobile: Horizontal Scroll Container */}
+          <div className="md:hidden overflow-x-auto overflow-y-visible pb-4 scrollbar-hide -mx-8 px-8 md:mx-0 md:px-0">
+            <div className="flex gap-6 min-w-max">
+              {process.map((step, index) => {
+                const gradient = stepGradients[index] || stepGradients[0];
+
+                return (
+                  <motion.div
+                    key={step.step}
+                    className="flex flex-col items-center w-[200px] flex-shrink-0 relative"
+                    variants={{
+                      hidden: { opacity: 0, y: 30 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    initial="hidden"
+                    animate={mainControls}
+                    transition={{ duration: 0.6, delay: 0.3 + index * 0.15 }}
+                  >
+                    {/* Step Number */}
+                    <div className="mb-4">
+                      <span className="text-white font-[BelfastMedium] font-bold text-sm uppercase">
+                        STEP #{step.step}
+                      </span>
+                    </div>
+
+                    {/* Step Title */}
+                    <div className="mb-6 text-center px-3">
+                      <h3 className="font-[BelfastMedium] text-white font-bold text-sm">
+                        {step.title}
+                      </h3>
+                    </div>
+
+                    {/* Gradient Bar with Plus Icon */}
+                    <div className="relative w-full px-3">
+                      <div
+                        className={`h-10 rounded-xl bg-gradient-to-r ${gradient} flex items-center justify-center relative shadow-lg cursor-pointer transition-transform duration-300 active:scale-105`}
+                      >
+                        <Icon icon="mdi:plus" className="text-white text-3xl" />
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Desktop: Original Layout */}
+          <div className="hidden md:flex flex-row items-stretch gap-0 relative">
             {process.map((step, index) => {
               const isLast = index === process.length - 1;
               const gradient = stepGradients[index] || stepGradients[0];
@@ -115,19 +164,6 @@ const ServiceProcess = ({ process, serviceTitle = "UI/UX DESIGN" }) => {
                     </div>
                   </motion.div>
                 </React.Fragment>
-              );
-            })}
-          </div>
-
-          {/* Mobile connecting lines */}
-          <div className="md:hidden mt-6 space-y-6">
-            {process.map((step, index) => {
-              if (index === process.length - 1) return null;
-              return (
-                <div
-                  key={`mobile-line-${step.step}`}
-                  className="h-0.5 bg-white/20 w-full"
-                />
               );
             })}
           </div>

@@ -47,16 +47,16 @@ const Hero = () => {
             </motion.h1>
           </div>
           <div className="w-full flex-col md:gap-7 gap-3 flex-align-center">
-            <div className=" md:w-[90%] w-full md:h-[388px] h-[200px] rounded-[50px] bg-transparent mt-[20px] md:mt-[85px] flex items-center overflow-hidden relative">
+            <div className=" md:w-[90%] w-full md:h-[388px] h-[200px] md:rounded-[50px] rounded-[25px] bg-transparent mt-[20px] md:mt-[85px] flex items-center overflow-hidden relative px-[3%]">
               <button
                 onClick={() => setIsVideoModalOpen(true)}
-                className=" md:h-[85px] h-10 bg-white rounded-full md:w-[85px] w-10 border-solid md:border-[6px] border-[3px] border-gray cursor-pointer absolute top-3 left-3 z-10 hover:scale-110 transition-transform flex items-center justify-center"
+                className=" md:h-[85px] h-[60px] bg-white rounded-full md:w-[85px] w-[60px] border-solid md:border-[6px] border-[3px] border-gray cursor-pointer absolute md:top-3 top-0 md:left-3 right-3 z-10 hover:scale-110 transition-transform flex items-center justify-center"
                 aria-label="Play video"
               >
                 <Icon
                   icon="mdi:play"
                   width="75"
-                  className="text-primary md:w-[75px] w-[20px]"
+                  className="text-primary md:w-[75px] w-[30px]"
                 />
               </button>
               <video

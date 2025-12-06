@@ -60,10 +60,10 @@ const ServiceChallenges = ({ challenges }) => {
       transition={{ duration: 0.7 }}
     >
       {/* Gradient Background */}
-      <div className=" rounded-3xl md:rounded-[40px] p-8 md:p-12 relative overflow-hidden">
+      <div className="rounded-3xl md:rounded-[40px] px-[3%] py-6 md:p-12 relative overflow-hidden bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30">
         {/* Title Section */}
-        <motion.h2
-          className="md:text-[4vw] text-[6vw] tracking-tighter uppercase font-[BelfastMedium] mb-12 text-center"
+        <motion.div
+          className="mb-8 md:mb-12"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
@@ -72,11 +72,19 @@ const ServiceChallenges = ({ challenges }) => {
           animate={mainControls}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <span className="bg-gradient-to-r from-purple-300 via-purple-200 to-white bg-clip-text text-transparent">
-            THE MOST POPULAR
-          </span>{" "}
-          <span className="text-white">ISSUES</span>
-        </motion.h2>
+          <div className="flex flex-col gap-2">
+            <h2 className="md:text-[4vw] text-[6vw] md:leading-[0.8] leading-8 tracking-tighter uppercase align-middle text-white">
+              <span className="bg-white bg-clip-text text-transparent">
+                The Most Popular Issues
+              </span>{" "}
+              <span className="text-[#D71EB9] !text-[6vw]">.</span>
+            </h2>
+            <p className="font-Poppins md:text-[1.3vw] md:leading-6 leading-4 md:mt-6 mt-3 text-xs md:w-[65%] w-[80%] text-white/80">
+              Understanding common challenges helps us create better solutions.
+              Explore the issues we help businesses overcome every day.
+            </p>
+          </div>
+        </motion.div>
 
         {/* Challenges Carousel */}
         <div className="relative w-full overflow-hidden">

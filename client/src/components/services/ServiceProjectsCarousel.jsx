@@ -152,11 +152,26 @@ const ServiceProjectsCarousel = ({ service }) => {
 
   return (
     <motion.div
-      className="md:my-20 my-12 relative"
+      className="md:my-20 my-12 relative px-[3%]"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
     >
+      {/* Header Section */}
+      <div className="flex flex-col gap-2 mb-8 md:mb-12">
+        <h2 className="md:text-[4vw] text-[6vw] md:leading-[0.8] leading-8 tracking-tighter uppercase align-middle dark:text-white text-main-dark">
+          <span className="bg-white bg-clip-text text-transparent">
+            Our Work
+          </span>{" "}
+          <span className="text-[#D71EB9] !text-[6vw]">.</span>
+        </h2>
+        <p className="font-Poppins md:text-[1.3vw] md:leading-6 leading-4 md:mt-6 mt-3 text-xs md:w-[65%] w-[80%] text-gray dark:text-gray-300">
+          Explore our portfolio of successful projects and see how we've helped
+          businesses achieve their goals through innovative design and
+          development.
+        </p>
+      </div>
+
       {/* Carousel Container */}
       <div className="relative">
         {/* Navigation Buttons */}
@@ -183,7 +198,7 @@ const ServiceProjectsCarousel = ({ service }) => {
         </button>
 
         {/* White Card Background */}
-        <div className="bg-white dark:bg-dark-gray rounded-3xl md:rounded-[40px] p-6 md:p-8 shadow-xl">
+        <div className="bg-white dark:bg-dark-gray rounded-3xl md:rounded-[40px] p-4 md:p-8 shadow-xl border border-primary/20 bg-gradient-to-br from-white via-primary/5 to-white dark:from-dark-gray dark:via-primary/10 dark:to-dark-gray">
           <Swiper
             modules={[Navigation, Autoplay]}
             spaceBetween={30}
@@ -209,13 +224,13 @@ const ServiceProjectsCarousel = ({ service }) => {
                         </h3>
 
                         {/* Description */}
-                        <p className="text-gray-600 dark:text-gray-300 font-Poppins text-sm md:text-base mb-6">
+                        <p className="text-gray-600 text-center dark:text-gray-300 font-Poppins text-sm md:text-base mb-6">
                           {item.short_des}
                         </p>
                       </div>
 
                       {/* Image Section */}
-                      <div className="relative aspect-[16/9] w-[70%] mx-auto rounded-3xl overflow-hidden bg-gray-100 dark:bg-gray-800">
+                      <div className="relative md:aspect-[16/9] md:w-[70%] aspect-[4/3] w-full mx-auto rounded-3xl overflow-hidden bg-gray-100 dark:bg-gray-800">
                         <Image
                           src={item.img_url}
                           alt={item.title}

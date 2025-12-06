@@ -8,11 +8,18 @@ const ServiceFAQ = ({ faqs }) => {
 
   return (
     <div className="md:my-20 my-12 md:px-[6%] px-[3%]">
-      <h2 className="md:text-[4vw] text-[7vw] tracking-tighter uppercase font-[BelfastMedium] mb-8 dark:text-white text-main-dark">
-        FAQ
-      </h2>
+      <div className="flex flex-col gap-2 mb-8">
+        <h2 className="md:text-[4vw] text-[7vw] md:leading-[0.8] leading-8 tracking-tighter uppercase align-middle dark:text-white text-main-dark">
+          <span className="bg-white bg-clip-text text-transparent">FAQ</span>{" "}
+          <span className="text-[#D71EB9] !text-[7vw]">.</span>
+        </h2>
+        <p className="font-Poppins md:text-[1.3vw] md:leading-6 leading-4 md:mt-6 mt-3 text-xs md:w-[65%] w-[80%] text-gray dark:text-gray-300">
+          Find answers to the most commonly asked questions about our services,
+          process, and how we can help bring your vision to life.
+        </p>
+      </div>
 
-      <div className="w-full m-auto md:p-[20px] p-[10px] rounded-2xl gap-[20px]">
+      <div className="w-full m-auto md:p-[20px] p-[10px] rounded-2xl gap-[20px] bg-gradient-to-br from-primary/5 via-transparent to-primary/5 border border-primary/20">
         {faqs.map((faq) => (
           <FAQItem key={faq.id} question={faq.question} answer={faq.answer} />
         ))}
