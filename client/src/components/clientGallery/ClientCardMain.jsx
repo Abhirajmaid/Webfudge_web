@@ -69,7 +69,7 @@ const ClientCardMain = ({ data }) => {
                 <span className="font-Poppins md:text-[1vw] text-[3vw]">
                   {item}
                 </span>
-                <Icon icon="ci:line-l" width="24" />
+                <Icon icon="ci:line-l" width="24" className="last:hidden" />
               </React.Fragment>
             );
           })}

@@ -1,34 +1,32 @@
 export const clients = [
     {
         id: 9,
-        title: "Xtrawrkx",
-        img_url: "/images/clients/xtrawrkx/xtrawrkx.png",
+        title: "Xtrawrkx Website",
+        img_url: "/images/clients/xtrawrkx/Frame11x.png",
         project_imgs: [
             "/images/clients/xtrawrkx/xtrawrkx_ss.png",
         ],
         short_des: "Complete Website UI/UX Design and Development for Xtrawrkx",
         services_offered: [
-            "UI/UX Design",
             "Website Development",
-            "Firebase Authentication Integration",
-            "Firebase Storage Integration",
+            "UI/UX Design",
+            "CMS Development",
             "Responsive Design",
             "SEO Optimization",
             "AWS Deployment",
         ],
         key_highlights: [
-            "Created a complete design system for Xtrawrkx",
-            "Designed a responsive website for Xtrawrkx",
-            "Integrated event registration and payment integration for the events",
-            "Developed a scalable design system for future use",
-            "Designed full website UI in Figma (desktop & mobile)",
-            "Deployed the entire solution on AWS for scalability and performance",
+            "Designed a responsive website for Xtrawrkx that led to a 40% increase in event registrations",
+            "Boosted online engagement by over 35% through modern UI/UX and optimized CTAs",
+            "Integrated Firebase Authentication for user management",
+            "Implemented a scalable Content Management System (CMS) for dynamic content updates",
+            "Integrated seamless event registration and payment features, resulting in a significant rise in event participation",
         ],
 
         introduction:
             "Xtrawrkx needed a modern and professional website to showcase their products, consultancy services and events. With event registration and payment integration, they needed a website that was easy to navigate and had a modern look and feel.",
         solution_offered:
-            "We designed and developed a full-stack website tailored to Xtrawrkx. The UI/UX focuses on clarity and speed, allowing users to browse, filter, and explore products and services easily. We built the backend on Firebase, enabling dynamic content management, and deployed the entire solution on AWS for scalability and performance. We also integrated event registration and payment integration for the events."
+            "We designed and developed a full-stack website tailored to Xtrawrkx. The UI/UX focuses on clarity and speed, allowing users to browse, filter, and explore events and consultancy services, resources easily.  We built the backend on Firebase, enabling dynamic content management, and deployed the entire solution on AWS for scalability and performance. We also integrated event registration and payment integration for the events."
     },
     {
         id: 8,
@@ -39,18 +37,18 @@ export const clients = [
         ],
         short_des: "Complete Website UI/UX Design and Development for Xtrawrkx Manufacturing Businesses",
         services_offered: [
-            "UI/UX Design",
             "Website Development",
-            "Design System & Prototyping",
+            "UI/UX Design",
+            "CMS Development",
             "Responsive Design",
             "SEO Optimization",
-            "Firebase Database Integration",
         ],
         key_highlights: [
-            "Created a complete design system for Xtrawrkx Manufacturing Businesses",
             "Designed a responsive website for Xtrawrkx Manufacturing Businesses",
-            "Developed a scalable design system for future use",
-            "Designed full website UI in Figma (desktop & mobile)",
+            "Increased the number of conversions by 30%",
+            "Increased the number of leads by 20%",
+            "Content Management System (CMS) for the website",
+            "Deployed the entire solution on AWS for scalability and performance",
         ],
 
         introduction:
@@ -168,47 +166,72 @@ export const clients = [
     },
     {
         id: 5,
-        title: "Mukund Maid Jewellers",
-        img_url: "/images/clients/mmj/mmj2.png",
+        title: "Mukund Maid Jewellers Website",
+        img_url: "/images/clients/mmj/7.png",
         project_imgs: [
             "/images/clients/mmj/7.png",
+        ],
+        short_des: "Complete Ecommerce Website Design and Development for Mukund Maid Jewellers",
+        services_offered: [
+            "E-commerce Development",
+            "UI/UX Design",
+            "CMS Development",
+            "Responsive Design",
+            "SEO Optimization",
+        ],
+        key_highlights: [
+            "Designed a responsive ecommerce website for Mukund Maid Jewellers",
+            "Created a complete design system for Mukund Maid Jewellers",
+            "Payment gateway integration for secure transactions",
+            "200+ Products Listed in the Website",
+            "1000+ Orders Placed in the Website Monthly",
+            "500,000+ Monthly Visitors Scalability",
+        ],
+        introduction:
+            "Mukund Maid Jewellers, a legacy jewelry brand, needed a modern ecommerce website to showcase their products and services. They needed a website that was easy to navigate and had a modern look and feel.",
+        solution_offered:
+            "We designed and developed a responsive ecommerce website tailored to Mukund Maid Jewellers. The UI/UX focuses on clarity and speed, allowing users to browse, filter, and explore products easily. We built the backend on Strapi CMS, enabling dynamic content management, and deployed the entire solution on AWS for scalability and performance. We also integrated payment gateway integration for secure transactions.",
+        singleColumnDesktop: true,
+    },
+    {
+        id: 51,
+        title: "Branding and Logo Design for Mukund Maid Jewellers",
+        img_url: "/images/clients/mmj/mmj2.png",
+        project_imgs: [
             "/images/clients/mmj/1.png",
             "/images/clients/mmj/2.png",
             "/images/clients/mmj/3.png",
             "/images/clients/mmj/4.png",
             "/images/clients/mmj/5.png",
         ],
-        short_des: "Complete branding and website UI/UX design for a premium jewelry brand.",
+        short_des: "Complete branding and logo design for a premium jewelry brand.",
         services_offered: [
-            "Brand Identity Design",
+            "Branding",
             "Logo Design",
             "Color Palette Development",
-            "UI/UX Design",
-            "Responsive Website Design",
-            "Design System & Prototyping"
+            "Brand Guidelines",
         ],
         key_highlights: [
             "Created a timeless luxury logo mark",
             "Crafted a unique color scheme – Royal Blue & Gold",
-            "Developed scalable design system for future use",
-            "Designed full website UI in Figma (desktop & mobile)",
+            "100,000+ Monthly visibility online and offline",
+            "Boosted brand recognition by 40%",
         ],
         introduction:
-            "Mukund Maid Jewellers, a legacy jewelry brand, needed a modern digital identity and online presence that would reflect their rich heritage, craftsmanship, and luxury appeal. The goal was to build a unified brand experience that works beautifully both online and offline.",
+            "Mukund Maid Jewellers, a legacy jewelry brand, needed a modern digital identity and online presence that would reflect their rich heritage, craftsmanship, and luxury appeal. They needed a brand identity that was easy to understand and had a modern look and feel.",
         solution_offered:
-            "We started with the brand—from logo design, type selection, and color palette (deep royal blue and classic gold) to a comprehensive visual identity. The website UI/UX was designed with a luxury-first mindset, ensuring elegant visuals, smooth navigation, and clear CTAs. A responsive layout, interactive elements, and a structured design system in Figma were delivered for future scalability.",
+            "We designed a comprehensive brand identity for Mukund Maid Jewellers. The logo is a timeless luxury mark, crafted with deep royal blue and classic gold. The color palette is a unique blend of royal blue and gold, which is used throughout the brand identity. The brand guidelines are a set of rules that guide the use of the brand identity in different contexts. We also designed a responsive website for Mukund Maid Jewellers, which is designed with a luxury-first mindset, ensuring elegant visuals, smooth navigation, and clear CTAs.",
         singleColumnDesktop: true,
     },
 
     {
         id: 6,
-        title: "Sahayata NGO",
+        title: "Branding and Logo Design for Sahayata NGO",
         img_url: "/images/clients/sahayata/sahayata.png",
-        link: "https://www.instagram.com/_sahayata_/",
         project_imgs: [
             "/images/clients/sahayata/1.png",
         ],
-        short_des: "Built a heartfelt brand identity and digital experience for a community-focused NGO.",
+        short_des: "Complete branding and logo design for a community-focused NGO.",
         services_offered: [
             "Branding",
             "Logo Design",
@@ -216,15 +239,16 @@ export const clients = [
         ],
         key_highlights: [
             "Mission-Led Visual Identity",
+            "100,000+ Monthly visibility online and offline",
             "Compassionate Brand Messaging",
             "Clean, Impactful Logo Design",
-            "Logo and Branding Boosted Recognition by 40%",
+            "Boosted Recognition by 50%",
         ],
 
         introduction:
-            "Sahayata is a grassroots NGO making a real difference by feeding the hungry and organizing local events that uplift communities. They came to us looking for more than just a logo — they wanted a full brand identity that could speak to people’s hearts and inspire action.",
+            "Sahayata is a grassroots NGO making a real difference by feeding the hungry and organizing local events that uplift communities. They needed a brand identity that was easy to understand and had a modern look and feel.",
         solution_offered:
-            "We created a visual identity that feels warm, approachable, and grounded in care. From the logo and color palette to brand messaging, everything was crafted to reflect Sahayata’s mission. We also designed a clean, intuitive website that makes it easy for users to learn about their work, get involved, or donate — all while feeling the impact behind the cause."
+            "We designed a comprehensive brand identity for Sahayata NGO. The logo is a warm, approachable mark, crafted with a unique color palette that is used throughout the brand identity. The brand guidelines are a set of rules that guide the use of the brand identity in different contexts.",
     },
     {
         id: 7,
@@ -253,6 +277,236 @@ export const clients = [
             "Netgarage is a premium superbike reselling company that connects bike enthusiasts with high-end machines. They needed a digital platform that could reflect the luxury of their inventory while being robust enough to handle listings, inquiries, and seller interactions.",
         solution_offered:
             "We designed and developed a full-stack website tailored to the biking community. The UI/UX focuses on clarity and speed, allowing users to browse, filter, and explore bike models easily. We built the backend on Strapi CMS, enabling dynamic content management, and deployed the entire solution on AWS for scalability and performance."
+    },
+    {
+        id: 10,
+        title: "XSOS Logo",
+        img_url: "/images/clients/xsos/Frame 19.png",
+        project_imgs: [
+            "/images/clients/xsos/logo_mark.png",
+            "/images/clients/xsos/logo_white.png",
+            "/images/clients/xsos/banner_mockup.png",
+            "/images/clients/xsos/id_mockup.png",
+            "/images/clients/xsos/shirt_mockup.png",
+            "/images/clients/xsos/shirt_mockup2.png",
+            "/images/clients/xsos/appIcon_mockup.png",
+            "/images/clients/xsos/Frame 17.png"
+        ],
+        short_des: "Comprehensive branding and logo design for XSOS, including visual identity, color palette, and usage guidelines.",
+        services_offered: [
+            "Logo Design",
+            "Brand Strategy",
+            "Brand Guidelines",
+            "Visual Identity System",
+            "Color Palette Development",
+            "Typography Selection",
+            "Brand Collateral Design",
+            "Usage Manual Creation"
+        ],
+        key_highlights: [
+            "Developed a modern, versatile logo mark adaptable across digital and print media",
+            "Crafted a comprehensive visual identity including colors, typography, and supporting graphics",
+            "Created detailed brand guidelines for consistency across all mediums",
+            "Designed business cards, app icons, banners, and event IDs as part of the branding suite",
+            "Ensured logo scalability for web, apparel, and signage",
+            "Established a cohesive color palette and brand imagery for XSOS"
+        ],
+        introduction: "The XSOS branding project entailed creating a distinctive, memorable logo and a unified visual identity to build recognition and trust. The brand needed assets to be deployed consistently across digital touchpoints and events.",
+        solution_offered: "We delivered a unique logo symbolizing XSOS's core values, supported by an extensive visual identity system. The project included development of usage guidelines, color palette, stationery design, digital assets, and scalable branding materials to ensure cohesive representation across web, mobile, merchandise, and event collateral."
+    },
+    {
+        id: 13,
+        title: "Greenways EVI Creatives",
+        img_url: "https://res.cloudinary.com/doguvqxgl/image/upload/v1765037904/Greenways/poster_1_qnjiky.jpg",
+        project_imgs: [
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765037897/Greenways/Instagram_post_-_51_qnjxqm.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765037915/Greenways/poster_3_teal_kmhilf.jpg   ",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765037908/Greenways/poster_4_black_nhrrkw.jpg",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765037913/Greenways/poster_3_white_emc4he.jpg",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765037913/Greenways/poster_6_shspdm.jpg",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765037895/Greenways/Frame_3_kberuw.jpg",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765037895/Greenways/A5_-_53_zwrjaj.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765037896/Greenways/Instagram_post_-_7_a9cjby.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765037901/Greenways/poster_1_2_y1js8o.jpg"
+        ],
+        short_des: "Creative design for Greenways EVI, driving measurable brand growth.",
+        services_offered: [
+            "Graphic Design",
+            "Creative Design",
+            "Brand Collateral"
+        ],
+        key_highlights: [
+            "Delivered 15+ unique creative assets for print and digital",
+            "Helped improve brand social engagement by 40%",
+            "Designed 5 new marketing collateral pieces resulting in a 25% increase in campaign reach"
+        ],
+        introduction: "Creative design project for Greenways EVI focused on boosting visual impact and measurable campaign performance.",
+        solution_offered: "Produced over 15 brand-aligned creative designs and marketing collateral, directly contributing to a 40% increase in social engagement and a 25% uplift in campaign effectiveness for Greenways EVI."
+    },
+    {
+        id: 12,
+        title: "Plantozone SMM",
+        img_url: "",
+        project_imgs: [],
+        short_des: "Social media marketing and creatives for Plantozone",
+        services_offered: [
+            "Social Media Marketing",
+            "Content Creation",
+            "Social Media Design",
+            "Campaign Management"
+        ],
+        key_highlights: [
+            "Social media strategy",
+            "Engaging content creation",
+            "Campaign management"
+        ],
+        introduction: "Social media marketing services for Plantozone to enhance their digital presence and engagement.",
+        solution_offered: "Developed and executed social media marketing strategies including content creation, campaign management, and community engagement for Plantozone."
+    },
+
+    {
+        id: 14,
+        title: "Abshan Logo and Branding",
+        img_url: "https://res.cloudinary.com/doguvqxgl/image/upload/v1765045109/abshan/7b7eeaf0-a955-4e9f-ab50-682389857cff.png",
+        project_imgs: [
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044772/abshan/Brief_Brand_Board_for_abshan_page-0001_bzl37c.jpg",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044769/abshan/Brief_Brand_Board_for_abshan_page-0003_a86qso.jpg",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044767/abshan/Brief_Brand_Board_for_abshan_page-0002_hfdo0s.jpg",
+
+        ],
+        short_des: "Brand identity project for Abshan, resulting in improved brand recognition and audience recall.",
+        services_offered: [
+            "Branding",
+            "Brand Identity",
+            "Logo Design",
+            "Brand Identity Design",
+            "Brand Guidelines Documentation",
+        ],
+        key_highlights: [
+            "Increased brand recognition by 40% after launch",
+            "Consistency in marketing materials across platforms",
+            "Positive client feedback on visual guidelines",
+            "Created a cohesive visual identity for Abshan",
+        ],
+        introduction: "Partnered with Abshan to design and implement a cohesive brand identity. The project focused on logo design, visual assets, and brand documentation, leading to measurable improvements in brand recall and stakeholder alignment.",
+        solution_offered: "Delivered a comprehensive branding system that included logo sets, an accessible color palette, documented typography, and brand guidelines. Post-launch analytics reported a 40% uptick in brand recall and unified design use across channels."
+    },
+    {
+        id: 15,
+        title: "Evify Presentation",
+        img_url: "",
+        project_imgs: [],
+        short_des: "Presentation design for Evify",
+        services_offered: [
+            "Presentation Design",
+            "Slide Design",
+            "Visual Communication"
+        ],
+        key_highlights: [
+            "Professional presentation design",
+            "Engaging visual communication",
+            "Brand-aligned slides"
+        ],
+        introduction: "Presentation design project for Evify.",
+        solution_offered: "Created a professional and engaging presentation design with brand-aligned visuals and clear communication for Evify."
+    },
+    {
+        id: 16,
+        title: "Fluxx Dashboard",
+        img_url: "",
+        project_imgs: [],
+        short_des: "Dashboard UI/UX design for Fluxx",
+        services_offered: [
+            "UI/UX Design",
+            "Dashboard Design",
+            "Data Visualization",
+            "Interface Design"
+        ],
+        key_highlights: [
+            "Intuitive dashboard design",
+            "Data visualization",
+            "User-friendly interface"
+        ],
+        introduction: "Dashboard UI/UX design project for Fluxx.",
+        solution_offered: "Designed an intuitive and user-friendly dashboard interface with effective data visualization and clear navigation for Fluxx."
+    },
+    {
+        id: 18,
+        title: "Pratik Agrawal Logo and Branding",
+        img_url: "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044417/PA/Frame_29_fv8toy.png",
+        project_imgs: [
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765042215/PA/dark_front_rsftvo.jpg",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765043077/PA/121cadd8-1b2b-42ba-9cb9-4494449f357b.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765043128/PA/6c35c1bb-78be-4e7a-84d6-7ee4ce83177d.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765043482/PA/Instagram_post_-_1_yrnjpp.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765042239/PA/Letterhead_d6xz6j.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765043366/PA/9490a9ab-8d2f-47ce-b4d6-0926f21d7dcf.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765042258/PA/mockups_auknyy.png",
+        ],
+        short_des: "Branding and logo design for Pratik Agrawal, a professional lawyer.",
+        services_offered: [
+            "Logo Design",
+            "Personal Branding",
+            "Legal Brand Identity",
+            "Brand Guidelines"
+        ],
+        key_highlights: [
+            "Crafted a unique and modern logo",
+            "Developed a cohesive personal brand identity",
+            "Boosted brand recognition by 50%",
+            "Delivered detailed brand guidelines and mockups"
+        ],
+        introduction: "Pratik Agrawal is an accomplished lawyer seeking to establish a strong professional presence. The project focused on creating branding that reflects integrity, expertise, and credibility in the legal profession.",
+        solution_offered: "We designed a distinguished visual identity for lawyer Pratik Agrawal, including a unique logo, appropriate color scheme, and brand materials that communicate professionalism and trust, suitable for legal clients and stakeholders."
+    },
+    {
+        id: 21,
+        title: "Vasileios Logo",
+        img_url: "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044171/Vasileios/Logo_presentation_template_-_3_m8je7b.png",
+        project_imgs: [
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044176/Vasileios/Vasileios_znn8ox.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044169/Vasileios/5_wqvune.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044167/Vasileios/4_gvghvc.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044164/Vasileios/3_mc3sm8.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044163/Vasileios/2_grmrlq.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044171/Vasileios/Logo_presentation_template_-_3_m8je7b.png",
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044173/Vasileios/magicpattern-seamless-patterns-1714669426291_gboqx1.png",
+        ],
+        short_des: "Branding and logo design for Vasileios, a modern clothing company.",
+        services_offered: [
+            "Logo Design",
+            "Brand Identity",
+            "Clothing Brand Strategy",
+            "Fashion Marketing Assets"
+        ],
+        key_highlights: [
+            "Developed a stylish and modern logo reflecting the fashion industry",
+            "Created a cohesive visual identity for a clothing brand",
+            "Designed brand materials for apparel and online presence",
+            "Enhanced brand recognition among target fashion audiences"
+        ],
+        introduction: "Vasileios is a clothing company looking to stand out in the competitive fashion market. The project aimed to create a unique visual identity that captures the essence of the brand and appeals to its style-conscious customers.",
+        solution_offered: "We crafted a distinctive logo and comprehensive brand identity system for Vasileios, including marketing assets tailored for the fashion industry and apparel applications, to strengthen its presence and recognition in the clothing market."
+    },
+    {
+        id: 22,
+        title: "Yashraj Website",
+        img_url: "",
+        project_imgs: [],
+        short_des: "Website design and development for Yashraj",
+        services_offered: [
+            "UI/UX Design",
+            "Website Development",
+            "Responsive Design",
+            "SEO Optimization"
+        ],
+        key_highlights: [
+            "Modern website design",
+            "Responsive layout",
+            "SEO optimized"
+        ],
+        introduction: "Website design and development project for Yashraj.",
+        solution_offered: "Designed and developed a modern, responsive website with optimized user experience and SEO for Yashraj."
     },
 
 ];

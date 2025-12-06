@@ -132,14 +132,6 @@ const ServiceChallenges = ({ challenges }) => {
                     <p className="font-Poppins text-white/80 text-xs md:text-sm leading-relaxed text-center flex-grow line-clamp-4 md:line-clamp-5">
                       {challenge.description}
                     </p>
-
-                    {/* Plus Icon in Bottom Right */}
-                    <div className="absolute bottom-3 right-3 md:bottom-4 md:right-4 w-7 h-7 md:w-8 md:h-8 rounded-full border-2 border-white/40 flex items-center justify-center group-hover:border-white group-hover:bg-white/10 transition-all duration-300">
-                      <Icon
-                        icon="mdi:plus"
-                        className="text-white text-sm md:text-lg"
-                      />
-                    </div>
                   </div>
                 </motion.div>
               ))}

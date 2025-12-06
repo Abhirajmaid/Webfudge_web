@@ -199,13 +199,7 @@ const OurServices = () => {
         transition={{ duration: 0.7, delay: 0.6 }}
       >
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-            <Icon
-              icon="mdi:refresh"
-              className="text-white text-lg animate-spin-slow"
-            />
-          </div>
-          <p className="text-white font-Poppins md:text-[1vw] text-xs md:text-sm">
+          <p className="text-white text-center md:text-left font-Poppins md:text-[1vw] text-xs md:text-sm">
             Need bold design or reliable code or both? You&apos;re in the right
             place.
           </p>

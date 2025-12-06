@@ -30,18 +30,6 @@ const ServiceCTA = ({
       transition={{ duration: 0.7 }}
     >
       <div className="flex items-center gap-4">
-        {icon && (
-          <div
-            className={`w-10 h-10 rounded-full flex items-center justify-center ${
-              isPrimary ? "bg-white/10" : "bg-primary/10"
-            }`}
-          >
-            <Icon
-              icon={icon}
-              className={`text-xl ${isPrimary ? "text-white" : "text-primary"}`}
-            />
-          </div>
-        )}
         <div>
           {title && (
             <h3

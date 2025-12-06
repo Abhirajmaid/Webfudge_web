@@ -154,7 +154,7 @@ const Navbar = ({ isShowMode }) => {
                     initial="initial"
                     animate="open"
                     exit="initial"
-                    className="flex flex-col h-full justify-center font-lora items-center gap-4 "
+                    className="flex flex-col h-full justify-center mb-10 font-lora items-center gap-4 "
                   >
                     {mobileNavLinks.map((link, index) => {
                       return (
@@ -176,7 +176,7 @@ const Navbar = ({ isShowMode }) => {
 
           <div className="space-x-2 flex-align-center">
             <button
-              className="md:text-sm text-xs !rounded-3xl md:font-bold md:text-inherit btn md:w-fit bg-dark shadow-md dark:bg-white dark:text-black hover:scale-105 md:!px-7 !px-4 !py-4 dark:hover:bg-white hover:bg-main-dark hover:text-white"
+              className="md:block hidden md:text-sm text-xs !rounded-3xl md:font-bold md:text-inherit btn md:w-fit bg-dark shadow-md dark:bg-white dark:text-black hover:scale-105 md:!px-7 !px-3 !py-3 dark:hover:bg-white hover:bg-main-dark hover:text-white"
               onClick={openModal}
             >
               Start New Project!

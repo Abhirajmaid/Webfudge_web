@@ -276,7 +276,7 @@ const ServiceProjects = ({ service }) => {
       transition={{ duration: 0.7 }}
     >
       {/* Header Section */}
-      <motion.div
+      {/* <motion.div
         className="mb-8 md:mb-12"
         variants={{
           hidden: { opacity: 0, y: 20 },
@@ -299,7 +299,7 @@ const ServiceProjects = ({ service }) => {
             exceptional results using our expertise in this service.
           </p>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Projects List - Grid Layout like our-work page */}
       {filteredProjects && filteredProjects.length > 0 ? (

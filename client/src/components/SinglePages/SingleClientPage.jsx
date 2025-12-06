@@ -79,7 +79,7 @@ const SingleClientPage = ({ client, id }) => {
                     <span className="font-Poppins text-lg tracking-wide">
                       {item}
                     </span>
-                    <Icon icon="ci:line-l" width="24" />
+                    <Icon icon="ci:line-l" width="24" className="last:hidden" />
                   </React.Fragment>
                 );
               })}

@@ -235,7 +235,7 @@ const ServiceProjectsCarousel = ({ service }) => {
                           src={item.img_url}
                           alt={item.title}
                           fill
-                          className="object-cover"
+                          className="object-cover object-top"
                         />
                       </div>
                     </div>

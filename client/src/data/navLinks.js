@@ -59,6 +59,11 @@ export const mobileNavLinks = [
     url: "/",
   },
   {
+    id: 41,
+    linkText: "About Us",
+    url: "/about-us",
+  },
+  {
     id: 2,
     linkText: "Services",
     url: "/services",
@@ -78,11 +83,7 @@ export const mobileNavLinks = [
     linkText: "Softwares",
     url: "/projects",
   },
-  {
-    id: 41,
-    linkText: "About Us",
-    url: "/about-us",
-  },
+
   // {
   //   id: 42,
   //   linkText: "Team",

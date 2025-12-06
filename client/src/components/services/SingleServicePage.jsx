@@ -22,7 +22,7 @@ const SingleServicePage = ({ service }) => {
       <ServicesHero hero={service.hero} />
 
       {/* Trust Indicators / Stats Section */}
-      {service.stats && (
+      {/* {service.stats && (
         <motion.div
           className="md:my-16 my-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 px-[3%]"
           variants={{
@@ -94,10 +94,7 @@ const SingleServicePage = ({ service }) => {
             </div>
           )}
         </motion.div>
-      )}
-
-      {/* Trusted By Section */}
-      <ServiceTrustedBy />
+      )} */}
 
       {/* Service Projects Section */}
       <ServiceProjects service={service} />
@@ -123,7 +120,6 @@ const SingleServicePage = ({ service }) => {
           description="Starting from scratch or refreshing an existing product? We can help."
           ctaText="BOOK A FREE CALL"
           ctaLink="https://calendly.com/webfudgeagency"
-          icon="mdi:refresh"
         />
       </motion.div>
 
@@ -143,8 +139,8 @@ const SingleServicePage = ({ service }) => {
       {/* Projects Carousel Section */}
       <ServiceProjectsCarousel service={service} />
 
-      {/* Testimonials Section */}
-      <Testimonial />
+      {/* Trusted By Section */}
+      <ServiceTrustedBy />
 
       {/* FAQ Section */}
       {service.faqs && service.faqs.length > 0 && (

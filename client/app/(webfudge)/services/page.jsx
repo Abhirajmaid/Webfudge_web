@@ -222,30 +222,24 @@ export default function ServicesPage() {
 
         {/* Call-to-Action Bar */}
         <motion.div
-          className="bg-secondary rounded-2xl md:rounded-[30px] px-5 md:px-6 py-4 md:py-5 flex flex-col md:flex-row items-center justify-between gap-3"
+          className="bg-dark-gray rounded-2xl md:rounded-[30px] px-5 md:px-6 py-4 md:py-5 flex flex-col md:flex-row items-center justify-between gap-3 relative z-10"
           variants={{
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0 },
           }}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 0.7, delay: 0.8 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
         >
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-              <Icon
-                icon="mdi:refresh"
-                className="text-white text-lg animate-spin-slow"
-              />
-            </div>
-            <p className="text-white font-Poppins md:text-[1vw] text-xs md:text-sm">
+            <p className="text-white text-center md:text-left font-Poppins md:text-[1vw] text-xs md:text-sm">
               Need bold design or reliable code or both? You&apos;re in the
               right place.
             </p>
           </div>
           <button
             onClick={openModal}
-            className="bg-[#FFEB3B] hover:bg-[#FFD700] text-black font-[BelfastMedium] font-bold px-5 md:px-6 py-2 md:py-3 rounded-xl md:rounded-2xl transition-colors uppercase text-xs md:text-sm whitespace-nowrap"
+            className="bg-white hover:bg-primary text-black font-[BelfastMedium] font-bold px-5 md:px-6 py-2 md:py-3 rounded-xl md:rounded-2xl transition-colors uppercase text-xs md:text-sm whitespace-nowrap"
           >
             BOOK A CALL
           </button>

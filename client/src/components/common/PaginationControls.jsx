@@ -1,5 +1,6 @@
 "use client";
 import { useRouter, useSearchParams } from "next/navigation";
+import { clients } from "@src/data/clients";
 
 const PaginationControls = () => {
   const router = useRouter();
@@ -8,7 +9,8 @@ const PaginationControls = () => {
   const page = searchParams.get("page") ?? "1";
   const per_page = searchParams.get("per_page") ?? "6";
 
-  const max_limit = Math.ceil(10 / Number(per_page));
+  const totalClients = clients.length;
+  const max_limit = Math.ceil(totalClients / Number(per_page));
 
   return (
     <div className="mt-[80px] flex gap-4 items-center justify-center">
@@ -30,7 +32,7 @@ const PaginationControls = () => {
       )}
 
       <div>
-        {page} / {Math.ceil(10 / Number(per_page))}
+        {page} / {max_limit}
       </div>
 
       {page < max_limit ? (
