@@ -70,6 +70,8 @@ import "swiper/css/pagination";
 import { motion } from "framer-motion";
 
 const ClientShowcase = () => {
+  const favoriteClients = clients.filter((client) => client.fav === true);
+
   return (
     <div className="mt-[60px] w-full relative">
       <Swiper
@@ -81,7 +83,7 @@ const ClientShowcase = () => {
         loop
         className="w-full !overflow-hidden"
       >
-        {clients.map((client) => (
+        {favoriteClients.map((client) => (
           <SwiperSlide key={client.id}>
             <div className="relative md:h-[700px] h-[300px] rounded-t-[32px] md:rounded-t-[100px] card-shadow overflow-visible">
               <motion.div
@@ -101,7 +103,7 @@ const ClientShowcase = () => {
               <Link
                 href={`/our-work/${client.id}`}
                 target="_blank"
-                className="!opacity-100 !overflow-visible"
+                className="!opacity-100 "
               >
                 <motion.div
                   className="z-50 flex md:h-[150px] h-[70px] bg-white rounded-full md:w-[150px] w-[70px] border-solid md:border-[4px] border-[3px] justify-center items-center border-gray cursor-pointer absolute md:top-0 top-0 right-0 drop-shadow-lg"

@@ -23,7 +23,7 @@ export const metadata = {
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <div className="md:px-[6%] px-[0]" style={{ paddingTop: "100px" }}>
         <Hero />
         <ShowSection />
@@ -38,7 +38,7 @@ const Home = () => {
         <OurClients />
         <Testimonial />
       </div>
-    </>
+    </div>
   );
 };
 

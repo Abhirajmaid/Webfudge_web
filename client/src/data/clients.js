@@ -2,6 +2,7 @@ export const clients = [
     {
         id: 9,
         title: "Xtrawrkx Website",
+        fav: true,
         img_url: "/images/clients/xtrawrkx/Frame11x.png",
         project_imgs: [
             "/images/clients/xtrawrkx/xtrawrkx_ss.png",
@@ -11,9 +12,7 @@ export const clients = [
             "Website Development",
             "UI/UX Design",
             "CMS Development",
-            "Responsive Design",
             "SEO Optimization",
-            "AWS Deployment",
         ],
         key_highlights: [
             "Designed a responsive website for Xtrawrkx that led to a 40% increase in event registrations",
@@ -39,8 +38,6 @@ export const clients = [
         services_offered: [
             "Website Development",
             "UI/UX Design",
-            "CMS Development",
-            "Responsive Design",
             "SEO Optimization",
         ],
         key_highlights: [
@@ -59,6 +56,7 @@ export const clients = [
     {
         id: 1,
         title: "XSOS 2025",
+        fav: true,
         link: "https://www.linkedin.com/company/xtrawrkx/",
         img_url: "https://mir-s3-cdn-cf.behance.net/project_modules/source/c65a3d221875125.67dbf0b74f297.png",
         project_imgs: [
@@ -78,8 +76,7 @@ export const clients = [
         short_des: "We worked closely with Xtrawrkx to provide graphic design support across multiple verticals, including their major event XSOS 2025 — designing everything from ID cards and sunboards to banners and large-scale installations.",
         services_offered: [
             "Graphic Design",
-            "Event Collateral Design (XSOS 2025)",
-            "Social Growth Strategy"
+            "Event Collateral Design",
         ],
         key_highlights: [
             "XSOS Event",
@@ -93,12 +90,20 @@ export const clients = [
 
     {
         id: 2,
-        title: "Plantozone Green India",
+        title: "Plantozone Green India Website",
+        fav: true,
         img_url: "/images/clients/planto/1.png",
         link: "https://www.plantozone.com/",
-        project_imgs: ["https://mir-s3-cdn-cf.behance.net/project_modules/fs/b84463214084681.675187ff0014e.png"],
+        project_imgs: [
+            "https://mir-s3-cdn-cf.behance.net/project_modules/fs/b84463214084681.675187ff0014e.png"],
         short_des: "Built a seamless and nature-inspired website experience to grow Plantozone’s digital presence.",
-        services_offered: ["UI/UX Design", "Responsive Website Development", "E-commerce Integration", "CMS Setup", "SEO Optimization", "Performance & Accessibility Audit"],
+        services_offered: [
+            "Website Development",
+            "E-commerce Development",
+            "UI/UX Design",
+            "CMS Development",
+            "SEO Optimization",
+        ],
         key_highlights: ["Improved Avg. Session Duration by 3x", "Reduced Bounce Rate by 47%", "Delivered in 21 Days", "Optimized for 90+ Google Lighthouse Score"],
         introduction: "Plantozone needed a digital space as vibrant and intuitive as the greenery it promotes. We collaborated to craft a visually soothing and functionally strong website — aligning every pixel and interaction with the brand’s core values of sustainability, accessibility, and style. The goal? To turn every visitor into a plant parent.",
         solution_offered: "Our team handled end-to-end web design and development — starting with brand-aligned UI/UX mockups, mobile-first responsive layouts, and integrating a scalable CMS for easy content updates. We optimized loading speed, improved navigation flows, and ensured SEO best practices were baked in. From product listings to contact forms, every interaction was designed to delight and convert."
@@ -115,8 +120,7 @@ export const clients = [
         ],
         short_des: "Complete website UI/UX revamp tailored for a premium real estate presence.",
         services_offered: [
-            "Website UI/UX Design",
-            "Mobile-First Responsive Design",
+            "UI/UX Design",
             "Wireframing & Prototyping",
             "Design System Development"
         ],
@@ -135,6 +139,7 @@ export const clients = [
     {
         id: 4,
         title: "RK Chai",
+        fav: true,
         img_url: "/images/clients/rk/rk.png",
         link: "https://rkchai.vercel.app/",
         project_imgs: [
@@ -145,12 +150,9 @@ export const clients = [
         ],
         short_des: "Designed and developed a vibrant, animated website for a modern chai brand.",
         services_offered: [
-            "UI/UX Design",
             "Website Development",
-            "Brand Storytelling",
-            "Responsive Design",
+            "UI/UX Design",
             "SEO Optimization",
-            "Custom Animations"
         ],
         key_highlights: [
             "Built with Next.js & Tailwind CSS",
@@ -167,16 +169,17 @@ export const clients = [
     {
         id: 5,
         title: "Mukund Maid Jewellers Website",
+        fav: true,
         img_url: "/images/clients/mmj/7.png",
         project_imgs: [
             "/images/clients/mmj/7.png",
         ],
         short_des: "Complete Ecommerce Website Design and Development for Mukund Maid Jewellers",
         services_offered: [
+            "Website Development",
             "E-commerce Development",
             "UI/UX Design",
             "CMS Development",
-            "Responsive Design",
             "SEO Optimization",
         ],
         key_highlights: [
@@ -213,7 +216,7 @@ export const clients = [
         ],
         key_highlights: [
             "Created a timeless luxury logo mark",
-            "Crafted a unique color scheme – Royal Blue & Gold",
+            "Crafted a unique color scheme Royal Blue & Gold",
             "100,000+ Monthly visibility online and offline",
             "Boosted brand recognition by 40%",
         ],
@@ -236,6 +239,7 @@ export const clients = [
             "Branding",
             "Logo Design",
             "Complete Brand Identity",
+            "Brand Guidelines",
         ],
         key_highlights: [
             "Mission-Led Visual Identity",
@@ -259,11 +263,10 @@ export const clients = [
         ],
         short_des: "Complete web design and development for a superbike reselling platform.",
         services_offered: [
-            "Website UI/UX Design",
-            "Full-Stack Web Development",
-            "CMS Integration",
+            "Website Development",
+            "CMS Development",
+            "SEO Optimization",
             "AWS Deployment",
-            "User Dashboard Design"
         ],
         key_highlights: [
             "40+ Premium Bikes Listed in Launch Phase",
@@ -281,6 +284,7 @@ export const clients = [
     {
         id: 10,
         title: "XSOS Logo",
+        fav: true,
         img_url: "/images/clients/xsos/Frame 19.png",
         project_imgs: [
             "/images/clients/xsos/logo_mark.png",
@@ -295,21 +299,14 @@ export const clients = [
         short_des: "Comprehensive branding and logo design for XSOS, including visual identity, color palette, and usage guidelines.",
         services_offered: [
             "Logo Design",
-            "Brand Strategy",
-            "Brand Guidelines",
-            "Visual Identity System",
             "Color Palette Development",
-            "Typography Selection",
-            "Brand Collateral Design",
             "Usage Manual Creation"
         ],
         key_highlights: [
-            "Developed a modern, versatile logo mark adaptable across digital and print media",
-            "Crafted a comprehensive visual identity including colors, typography, and supporting graphics",
-            "Created detailed brand guidelines for consistency across all mediums",
-            "Designed business cards, app icons, banners, and event IDs as part of the branding suite",
-            "Ensured logo scalability for web, apparel, and signage",
-            "Established a cohesive color palette and brand imagery for XSOS"
+            "Increased brand recall by 60% through a memorable new visual identity rollout",
+            "6+ brand assets: logo mark, business cards, app icons, banners, event IDs, and more designed",
+            "100,000+ Monthly visibility online and offline",
+            "Enabled 100% consistency across 5+ event touchpoints and all digital channels",
         ],
         introduction: "The XSOS branding project entailed creating a distinctive, memorable logo and a unified visual identity to build recognition and trust. The brand needed assets to be deployed consistently across digital touchpoints and events.",
         solution_offered: "We delivered a unique logo symbolizing XSOS's core values, supported by an extensive visual identity system. The project included development of usage guidelines, color palette, stationery design, digital assets, and scalable branding materials to ensure cohesive representation across web, mobile, merchandise, and event collateral."
@@ -317,6 +314,7 @@ export const clients = [
     {
         id: 13,
         title: "Greenways EVI Creatives",
+        fav: true,
         img_url: "https://res.cloudinary.com/doguvqxgl/image/upload/v1765037904/Greenways/poster_1_qnjiky.jpg",
         project_imgs: [
             "https://res.cloudinary.com/doguvqxgl/image/upload/v1765037897/Greenways/Instagram_post_-_51_qnjxqm.png",
@@ -345,15 +343,18 @@ export const clients = [
     },
     {
         id: 12,
-        title: "Plantozone SMM",
-        img_url: "",
-        project_imgs: [],
+        title: "Plantozone Social Media Management",
+        img_url: "https://res.cloudinary.com/doguvqxgl/image/upload/v1765110330/Plantozone/Untitled_design_i0khrl.png",
+        project_imgs: [
+            "https://res.cloudinary.com/doguvqxgl/image/upload/v1765110222/Plantozone/PLANTOZONE_8_zoim6g.jpg",
+        ],
         short_des: "Social media marketing and creatives for Plantozone",
         services_offered: [
-            "Social Media Marketing",
+            "Graphic Design",
+            "Creative Design",
             "Content Creation",
             "Social Media Design",
-            "Campaign Management"
+            "Social Media Management"
         ],
         key_highlights: [
             "Social media strategy",
@@ -367,6 +368,7 @@ export const clients = [
     {
         id: 14,
         title: "Abshan Logo and Branding",
+        fav: true,
         img_url: "https://res.cloudinary.com/doguvqxgl/image/upload/v1765045109/abshan/7b7eeaf0-a955-4e9f-ab50-682389857cff.png",
         project_imgs: [
             "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044772/abshan/Brief_Brand_Board_for_abshan_page-0001_bzl37c.jpg",
@@ -391,48 +393,49 @@ export const clients = [
         introduction: "Partnered with Abshan to design and implement a cohesive brand identity. The project focused on logo design, visual assets, and brand documentation, leading to measurable improvements in brand recall and stakeholder alignment.",
         solution_offered: "Delivered a comprehensive branding system that included logo sets, an accessible color palette, documented typography, and brand guidelines. Post-launch analytics reported a 40% uptick in brand recall and unified design use across channels."
     },
-    {
-        id: 15,
-        title: "Evify Presentation",
-        img_url: "",
-        project_imgs: [],
-        short_des: "Presentation design for Evify",
-        services_offered: [
-            "Presentation Design",
-            "Slide Design",
-            "Visual Communication"
-        ],
-        key_highlights: [
-            "Professional presentation design",
-            "Engaging visual communication",
-            "Brand-aligned slides"
-        ],
-        introduction: "Presentation design project for Evify.",
-        solution_offered: "Created a professional and engaging presentation design with brand-aligned visuals and clear communication for Evify."
-    },
-    {
-        id: 16,
-        title: "Fluxx Dashboard",
-        img_url: "",
-        project_imgs: [],
-        short_des: "Dashboard UI/UX design for Fluxx",
-        services_offered: [
-            "UI/UX Design",
-            "Dashboard Design",
-            "Data Visualization",
-            "Interface Design"
-        ],
-        key_highlights: [
-            "Intuitive dashboard design",
-            "Data visualization",
-            "User-friendly interface"
-        ],
-        introduction: "Dashboard UI/UX design project for Fluxx.",
-        solution_offered: "Designed an intuitive and user-friendly dashboard interface with effective data visualization and clear navigation for Fluxx."
-    },
+    // {
+    //     id: 15,
+    //     title: "Evify Presentation",
+    //     img_url: "",
+    //     project_imgs: [],
+    //     short_des: "Presentation design for Evify",
+    //     services_offered: [
+    //         "Presentation Design",
+    //         "Slide Design",
+    //         "Visual Communication"
+    //     ],
+    //     key_highlights: [
+    //         "Professional presentation design",
+    //         "Engaging visual communication",
+    //         "Brand-aligned slides"
+    //     ],
+    //     introduction: "Presentation design project for Evify.",
+    //     solution_offered: "Created a professional and engaging presentation design with brand-aligned visuals and clear communication for Evify."
+    // },
+    // {
+    //     id: 16,
+    //     title: "Fluxx Dashboard",
+    //     img_url: "",
+    //     project_imgs: [],
+    //     short_des: "Dashboard UI/UX design for Fluxx",
+    //     services_offered: [
+    //         "UI/UX Design",
+    //         "Dashboard Design",
+    //         "Data Visualization",
+    //         "Interface Design"
+    //     ],
+    //     key_highlights: [
+    //         "Intuitive dashboard design",
+    //         "Data visualization",
+    //         "User-friendly interface"
+    //     ],
+    //     introduction: "Dashboard UI/UX design project for Fluxx.",
+    //     solution_offered: "Designed an intuitive and user-friendly dashboard interface with effective data visualization and clear navigation for Fluxx."
+    // },
     {
         id: 18,
         title: "Pratik Agrawal Logo and Branding",
+        fav: true,
         img_url: "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044417/PA/Frame_29_fv8toy.png",
         project_imgs: [
             "https://res.cloudinary.com/doguvqxgl/image/upload/v1765042215/PA/dark_front_rsftvo.jpg",
@@ -462,6 +465,7 @@ export const clients = [
     {
         id: 21,
         title: "Vasileios Logo",
+        fav: true,
         img_url: "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044171/Vasileios/Logo_presentation_template_-_3_m8je7b.png",
         project_imgs: [
             "https://res.cloudinary.com/doguvqxgl/image/upload/v1765044176/Vasileios/Vasileios_znn8ox.png",
@@ -475,7 +479,6 @@ export const clients = [
         short_des: "Branding and logo design for Vasileios, a modern clothing company.",
         services_offered: [
             "Logo Design",
-            "Brand Identity",
             "Clothing Brand Strategy",
             "Fashion Marketing Assets"
         ],
@@ -488,25 +491,24 @@ export const clients = [
         introduction: "Vasileios is a clothing company looking to stand out in the competitive fashion market. The project aimed to create a unique visual identity that captures the essence of the brand and appeals to its style-conscious customers.",
         solution_offered: "We crafted a distinctive logo and comprehensive brand identity system for Vasileios, including marketing assets tailored for the fashion industry and apparel applications, to strengthen its presence and recognition in the clothing market."
     },
-    {
-        id: 22,
-        title: "Yashraj Website",
-        img_url: "",
-        project_imgs: [],
-        short_des: "Website design and development for Yashraj",
-        services_offered: [
-            "UI/UX Design",
-            "Website Development",
-            "Responsive Design",
-            "SEO Optimization"
-        ],
-        key_highlights: [
-            "Modern website design",
-            "Responsive layout",
-            "SEO optimized"
-        ],
-        introduction: "Website design and development project for Yashraj.",
-        solution_offered: "Designed and developed a modern, responsive website with optimized user experience and SEO for Yashraj."
-    },
+    // {
+    //     id: 22,
+    //     title: "Yashraj Website",
+    //     img_url: "",
+    //     project_imgs: [],
+    //     short_des: "Website design and development for Yashraj",
+    //     services_offered: [
+    //         "Website Development",
+    //         "CMS Development",
+    //         "SEO Optimization"
+    //     ],
+    //     key_highlights: [
+    //         "Modern website design",
+    //         "Responsive layout",
+    //         "SEO optimized"
+    //     ],
+    //     introduction: "Website design and development project for Yashraj.",
+    //     solution_offered: "Designed and developed a modern, responsive website with optimized user experience and SEO for Yashraj."
+    // },
 
 ];

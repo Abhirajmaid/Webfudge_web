@@ -41,6 +41,7 @@ const ClientCard = ({ data }) => {
                 src="/images/arrow_dark.png"
                 width={50}
                 height={50}
+                className="w-[50px] h-[50px] object-contain flex-shrink-0"
                 alt="arrow"
               />
             </div>

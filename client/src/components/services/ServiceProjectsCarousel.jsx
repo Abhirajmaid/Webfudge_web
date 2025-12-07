@@ -37,10 +37,9 @@ const getServiceMatches = (serviceTitle) => {
     "Brand Identity Design": [
       "Brand Identity",
       "Branding",
-      "Logo Design",
       "Brand Identity Design",
     ],
-    "Logo Design": ["Logo Design", "Brand Identity", "Brand Identity Design"],
+    "Logo Design": ["Logo Design"],
     "Graphic & Creative Design": [
       "Graphic Design",
       "Creative Design",
@@ -70,13 +69,7 @@ const getServiceMatches = (serviceTitle) => {
       "Webflow",
       "CMS",
     ],
-    "Custom Software Development": [
-      "Software Development",
-      "Full-Stack Development",
-      "Custom Software",
-      "Full-Stack Development",
-      "API Development",
-    ],
+    "Custom Software Development": ["Software Development", "Custom Software"],
   };
 
   // Return all possible matches for the service, including the title itself
@@ -118,12 +111,31 @@ const filterByService = (items, service) => {
   });
 };
 
-const ServiceProjectsCarousel = ({ service }) => {
+const ServiceProjectsCarousel = ({ service, showAll = false }) => {
   const allProjects = getAllProjects();
   const allClients = clients;
 
   // Filter projects and clients based on service
   const filteredItems = useMemo(() => {
+    // If showAll is true, return all projects and clients
+    if (showAll) {
+      const combined = [
+        ...allProjects.map((project) => ({
+          ...project,
+          type: "project",
+          link: `/projects/${project.slug}`,
+        })),
+        ...allClients.map((client) => ({
+          ...client,
+          type: "client",
+          link: `/our-work/${client.id}`,
+          slug: client.title.toLowerCase().replace(/\s+/g, "-"),
+        })),
+      ];
+      return combined;
+    }
+
+    // Otherwise, filter by service
     const filteredProjects = filterByService(allProjects, service);
     const filteredClients = filterByService(allClients, service);
 
@@ -143,7 +155,7 @@ const ServiceProjectsCarousel = ({ service }) => {
     ];
 
     return combined;
-  }, [service, allProjects, allClients]);
+  }, [service, allProjects, allClients, showAll]);
 
   const [swiperInstance, setSwiperInstance] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -258,7 +270,7 @@ const ServiceProjectsCarousel = ({ service }) => {
                 className={`h-1 transition-all duration-300 rounded-full ${
                   activeIndex === index
                     ? "w-8 bg-primary dark:bg-primary"
-                    : "w-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
+                    : "w-2 bg-gray-300 dark:bg-white/40 hover:bg-gray-400 dark:hover:bg-gray-500"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

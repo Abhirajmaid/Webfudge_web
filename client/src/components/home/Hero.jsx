@@ -47,10 +47,10 @@ const Hero = () => {
             </motion.h1>
           </div>
           <div className="w-full flex-col md:gap-7 gap-3 flex-align-center">
-            <div className=" md:w-[90%] w-full md:h-[388px] h-[200px] md:rounded-[50px] rounded-[25px] bg-transparent mt-[20px] md:mt-[85px] flex items-center overflow-hidden relative px-[3%]">
+            <div className=" md:w-[90%] w-full md:h-[388px] h-[200px] rounded-[25px] bg-transparent mt-[20px] md:mt-[85px] flex items-center overflow-hidden relative px-[3%]">
               <button
                 onClick={() => setIsVideoModalOpen(true)}
-                className=" md:h-[85px] h-[60px] bg-white rounded-full md:w-[85px] w-[60px] border-solid md:border-[6px] border-[3px] border-gray cursor-pointer absolute md:top-3 top-0 md:left-3 right-3 z-10 hover:scale-110 transition-transform flex items-center justify-center"
+                className=" md:h-[85px] h-[60px] bg-white rounded-full md:w-[85px] w-[60px] border-solid md:border-[6px] border-[3px] border-gray cursor-pointer absolute md:top-3 left-7 z-10 hover:scale-110 transition-transform flex items-center justify-center"
                 aria-label="Play video"
               >
                 <Icon
@@ -60,7 +60,7 @@ const Hero = () => {
                 />
               </button>
               <video
-                className="videobackground w-full h-full object-cover rounded-3xl"
+                className="videobackground w-full h-full object-cover rounded-[30px]"
                 muted
                 // unmute={true}
                 autoPlay

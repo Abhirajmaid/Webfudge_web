@@ -64,66 +64,66 @@ export const softwareProjects = [
         },
         date: "2024"
     },
-    {
-        id: 2,
-        slug: "project-management-system",
-        title: "Project Management System",
-        category: "Project Management",
-        type: "Software Development",
-        img_url: "/images/projects/pm/pm-hero.png",
-        project_imgs: [
-            "/images/projects/pm/pm-dashboard.png",
-            "/images/projects/pm/pm-tasks.png",
-            "/images/projects/pm/pm-timeline.png",
-        ],
-        short_des: "Advanced project management platform with collaboration tools and real-time updates",
-        technologies: [
-            "Next.js",
-            "TypeScript",
-            "MongoDB",
-            "Socket.io",
-            "GraphQL",
-            "AWS Lambda",
-            "Serverless Architecture"
-        ],
-        services_offered: [
-            "Full-Stack Development",
-            "Real-time Collaboration",
-            "Cloud Infrastructure",
-            "Mobile App Development",
-            "Third-party Integrations",
-            "Performance Optimization"
-        ],
-        key_highlights: [
-            "Real-time collaboration with live updates and notifications",
-            "Advanced Gantt charts and timeline visualization",
-            "Resource allocation and capacity planning tools",
-            "Integrated time tracking and reporting",
-            "Custom workflow builder for different project types",
-            "Mobile apps for iOS and Android"
-        ],
-        introduction: "A powerful project management platform that enables teams to plan, track, and deliver projects efficiently. Features include real-time collaboration, advanced scheduling, and comprehensive reporting.",
-        solution_offered: "We built a comprehensive project management solution with real-time collaboration features, advanced task management, resource planning, and analytics. The platform supports multiple project methodologies and integrates with popular tools.",
-        features: [
-            "Task & Subtask Management",
-            "Gantt Charts & Timeline View",
-            "Real-time Collaboration",
-            "File Sharing & Document Management",
-            "Time Tracking & Reporting",
-            "Resource Management",
-            "Custom Workflows",
-            "Team Communication",
-            "Mobile Apps (iOS & Android)",
-            "Third-party Integrations"
-        ],
-        stats: {
-            projects: "50,000+",
-            tasks: "5M+",
-            users: "100,000+",
-            uptime: "99.95%"
-        },
-        date: "2024"
-    },
+    // {
+    //     id: 2,
+    //     slug: "project-management-system",
+    //     title: "Project Management System",
+    //     category: "Project Management",
+    //     type: "Software Development",
+    //     img_url: "/images/projects/pm/pm-hero.png",
+    //     project_imgs: [
+    //         "/images/projects/pm/pm-dashboard.png",
+    //         "/images/projects/pm/pm-tasks.png",
+    //         "/images/projects/pm/pm-timeline.png",
+    //     ],
+    //     short_des: "Advanced project management platform with collaboration tools and real-time updates",
+    //     technologies: [
+    //         "Next.js",
+    //         "TypeScript",
+    //         "MongoDB",
+    //         "Socket.io",
+    //         "GraphQL",
+    //         "AWS Lambda",
+    //         "Serverless Architecture"
+    //     ],
+    //     services_offered: [
+    //         "Full-Stack Development",
+    //         "Real-time Collaboration",
+    //         "Cloud Infrastructure",
+    //         "Mobile App Development",
+    //         "Third-party Integrations",
+    //         "Performance Optimization"
+    //     ],
+    //     key_highlights: [
+    //         "Real-time collaboration with live updates and notifications",
+    //         "Advanced Gantt charts and timeline visualization",
+    //         "Resource allocation and capacity planning tools",
+    //         "Integrated time tracking and reporting",
+    //         "Custom workflow builder for different project types",
+    //         "Mobile apps for iOS and Android"
+    //     ],
+    //     introduction: "A powerful project management platform that enables teams to plan, track, and deliver projects efficiently. Features include real-time collaboration, advanced scheduling, and comprehensive reporting.",
+    //     solution_offered: "We built a comprehensive project management solution with real-time collaboration features, advanced task management, resource planning, and analytics. The platform supports multiple project methodologies and integrates with popular tools.",
+    //     features: [
+    //         "Task & Subtask Management",
+    //         "Gantt Charts & Timeline View",
+    //         "Real-time Collaboration",
+    //         "File Sharing & Document Management",
+    //         "Time Tracking & Reporting",
+    //         "Resource Management",
+    //         "Custom Workflows",
+    //         "Team Communication",
+    //         "Mobile Apps (iOS & Android)",
+    //         "Third-party Integrations"
+    //     ],
+    //     stats: {
+    //         projects: "50,000+",
+    //         tasks: "5M+",
+    //         users: "100,000+",
+    //         uptime: "99.95%"
+    //     },
+    //     date: "2024"
+    // },
 ];
 
 export const getProjectBySlug = (slug) => {

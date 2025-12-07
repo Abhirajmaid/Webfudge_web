@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Icon } from "@iconify/react";
 
-const ServiceChallenges = ({ challenges }) => {
+const ServiceChallenges = ({ challenges, title, description }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const mainControls = useAnimation();
@@ -75,13 +75,12 @@ const ServiceChallenges = ({ challenges }) => {
           <div className="flex flex-col gap-2">
             <h2 className="md:text-[4vw] text-[6vw] md:leading-[0.8] leading-8 tracking-tighter uppercase align-middle text-white">
               <span className="bg-white bg-clip-text text-transparent">
-                The Most Popular Issues
+                {title || "The Most Popular Issues"}
               </span>{" "}
               <span className="text-[#D71EB9] !text-[6vw]">.</span>
             </h2>
             <p className="font-Poppins md:text-[1.3vw] md:leading-6 leading-4 md:mt-6 mt-3 text-xs md:w-[65%] w-[80%] text-white/80">
-              Understanding common challenges helps us create better solutions.
-              Explore the issues we help businesses overcome every day.
+              {description || "Understanding common challenges helps us create better solutions. Explore the issues we help businesses overcome every day."}
             </p>
           </div>
         </motion.div>

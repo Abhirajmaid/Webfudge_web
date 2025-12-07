@@ -180,7 +180,7 @@ const ProjectCardWrapper = ({ data }) => {
   // We need to modify ClientCardMain to handle project links, or create a custom version
   // For now, let's create a custom card that matches ClientCardMain style but links to /projects
   return (
-    <div className="md:w-[31%] w-full flex flex-col gap-5">
+    <div className="w-full flex flex-col gap-5">
       <Link href={`/projects/${data.slug}`} className="opacity-100">
         <div className="relative w-full cursor-pointer group">
           <Image
@@ -233,7 +233,7 @@ const ServiceProjects = ({ service }) => {
   const allProjects = getAllProjects();
   const allClients = clients;
 
-  // Filter projects and clients, then combine and get top 3
+  // Filter projects and clients, then combine and get 2 random projects
   const filteredProjects = useMemo(() => {
     if (!service || !service.title) {
       return [];
@@ -260,7 +260,9 @@ const ServiceProjects = ({ service }) => {
       })),
     ];
 
-    return combined.slice(0, 2); // Get only top 2
+    // Shuffle array randomly and get 2 random projects
+    const shuffled = [...combined].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 2);
   }, [service, allProjects, allClients]);
 
   return (
@@ -304,7 +306,7 @@ const ServiceProjects = ({ service }) => {
       {/* Projects List - Grid Layout like our-work page */}
       {filteredProjects && filteredProjects.length > 0 ? (
         <motion.div
-          className="flex md:flex-row flex-col w-full gap-8 gap-y-16 justify-between"
+          className="flex md:flex-row flex-col w-full gap-8 gap-y-16"
           variants={{
             hidden: { opacity: 0 },
             visible: {
@@ -320,6 +322,7 @@ const ServiceProjects = ({ service }) => {
           {filteredProjects.map((item, index) => (
             <motion.div
               key={item.id}
+              className="md:w-[calc(50%-16px)] w-full flex-1"
               variants={{
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },
