@@ -154,7 +154,7 @@ const Navbar = ({ isShowMode }) => {
                     initial="initial"
                     animate="open"
                     exit="initial"
-                    className="flex flex-col h-full justify-center mb-10 font-lora items-center gap-4 "
+                    className="flex flex-col h-full justify-center mb-16 font-lora items-center gap-4 "
                   >
                     {mobileNavLinks.map((link, index) => {
                       return (
