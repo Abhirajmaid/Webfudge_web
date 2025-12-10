@@ -5,7 +5,7 @@ import { LeadFormProvider } from "@src/context/LeadFormContext";
 
 export function Providers({ children }) {
     return (
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
             <ToastContextProvider>
                 <LeadFormProvider>
                     {children}

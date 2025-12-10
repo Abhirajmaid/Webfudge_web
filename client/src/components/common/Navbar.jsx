@@ -3,13 +3,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import { useEffect, useState } from "react";
-import { FiMoon, FiSun } from "react-icons/fi";
 import { BiMenu } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Link from "next/link";
 import Image from "next/image";
-import { useTheme } from "next-themes";
 
 import { mobileNavLinks, navLinks } from "@/src/data/navLinks";
 import SingleLink from "./SingleLink";
@@ -59,14 +57,6 @@ const Navbar = ({ isShowMode }) => {
     },
   };
 
-  // Theme
-  const { theme, setTheme } = useTheme();
-
-  // dark Mode btn
-  const [showMode, setShowMode] = useState(true);
-  useEffect(() => {
-    setShowMode(isShowMode);
-  }, []);
 
   //Nav bg
   const [navBg, setNavBg] = useState(false);
@@ -87,8 +77,8 @@ const Navbar = ({ isShowMode }) => {
       <div
         className={`md:h-[100px] fixed w-full z-[99] top-[32px] md:top-[40px] left-0 px-[2%]  md:px-[6%] flex-center-between !py-[20px] ${
           navBg
-            ? "bg-white/60 border-b backdrop-blur-sm dark:border-dark dark:bg-dark/60"
-            : " dark:hero-dark "
+            ? "border-b backdrop-blur-sm border-dark bg-dark/60"
+            : "hero-dark"
         } `}
       >
         <Link
@@ -96,17 +86,11 @@ const Navbar = ({ isShowMode }) => {
           className="flex-shrink-0 flex-align-center gap-x-1 opacity-100"
         >
           <Image
-            src={
-              theme === "light"
-                ? "/images/webfudge_logo_black.png"
-                : "/images/webfudge_logo_white.png"
-            }
-            width={theme === "light" ? 100 : 110}
+            src="/images/webfudge_logo_white.png"
+            width={110}
             height={100}
             alt="Webfudge"
-            className={`h-auto ${
-              theme === "light" ? "w-14 md:w-[120px]" : "w-14 md:w-[100px]"
-            }`}
+            className="h-auto w-14 md:w-[100px]"
           />
         </Link>
 
@@ -176,22 +160,11 @@ const Navbar = ({ isShowMode }) => {
 
           <div className="space-x-2 flex-align-center">
             <button
-              className="md:block hidden md:text-sm text-xs !rounded-3xl md:font-bold md:text-inherit btn md:w-fit bg-dark shadow-md dark:bg-white dark:text-black hover:scale-105 md:!px-7 !px-3 !py-3 dark:hover:bg-white hover:bg-main-dark hover:text-white"
+              className="md:block hidden md:text-sm text-xs !rounded-3xl md:font-bold md:text-inherit btn md:w-fit bg-white text-black shadow-md hover:scale-105 md:!px-7 !px-3 !py-3 hover:bg-white hover:text-black"
               onClick={openModal}
             >
               Start New Project!
             </button>
-            {/*----------------------------- Dark mode toggle-------------------------------------------------- */}
-            {/* {showMode ? (
-              <div
-                className="bg-white shadow-md icon-box dark:bg-black hover:shadow-lg hover:bg-transparent z-10"
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              >
-                {theme == "dark" ? <FiSun /> : <FiMoon />}
-              </div>
-            ) : (
-              <></>
-            )} */}
 
             {/*------------------------------- Mobile Menu Toogle------------------------- */}
             <div

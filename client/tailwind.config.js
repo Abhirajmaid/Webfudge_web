@@ -25,7 +25,6 @@ module.exports = {
         primary: "#D305B1",
         secondary: "#470049",
         secondaryPurple: "#CF57BB",
-        "main-bg": "#fff",
         "hero-dark": "#0D0D0D",
         "main-dark": "#1e0219",
         "card-dark": "#362536",

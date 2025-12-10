@@ -46,7 +46,7 @@ const Modal = ({ visible, onClose, url }) => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.9 }}
-              className=" font-[BelfastMedium] text-sm !rounded-3xl font-bold md:text-inherit btn md:w-fit shadow-md bg-white hover:bg-primary dark:text-black text-black hover:dark:text-white hover:text-white !px-7 !py-4 text-[1.2vw]  "
+              className=" font-[BelfastMedium] text-sm !rounded-3xl font-bold md:text-inherit btn md:w-fit shadow-md bg-white hover:bg-primary text-black hover:text-white !px-7 !py-4 text-[1.2vw]  "
             >
               Book a Call
             </motion.button>
@@ -55,7 +55,7 @@ const Modal = ({ visible, onClose, url }) => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.9 }}
-              className=" font-[BelfastMedium] text-sm !rounded-3xl font-bold md:text-inherit btn md:w-fit shadow-md bg-white hover:bg-primary dark:text-black text-black hover:dark:text-white hover:text-white !px-7 !py-4 text-[1.2vw]  "
+              className=" font-[BelfastMedium] text-sm !rounded-3xl font-bold md:text-inherit btn md:w-fit shadow-md bg-white hover:bg-primary text-black hover:text-white !px-7 !py-4 text-[1.2vw]  "
             >
               Get a quote!
             </motion.button>

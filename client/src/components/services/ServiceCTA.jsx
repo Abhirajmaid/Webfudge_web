@@ -19,7 +19,7 @@ const ServiceCTA = ({
   return (
     <motion.div
       className={`rounded-2xl md:rounded-[30px] px-6 md:px-8 py-5 md:py-6 flex flex-col md:flex-row items-center justify-between gap-4 ${
-        isPrimary ? "bg-secondary" : "bg-white dark:bg-dark-gray shadow-md"
+        isPrimary ? "bg-secondary" : "bg-dark-gray shadow-md"
       }`}
       variants={{
         hidden: { opacity: 0, y: 30 },
@@ -34,7 +34,7 @@ const ServiceCTA = ({
           {title && (
             <h3
               className={`font-[BelfastMedium] font-bold md:text-xl text-lg mb-2 ${
-                isPrimary ? "text-white" : "dark:text-white text-main-dark"
+                isPrimary ? "text-white" : "text-white"
               }`}
             >
               {title}
@@ -43,7 +43,7 @@ const ServiceCTA = ({
           {description && (
             <p
               className={`font-Poppins md:text-[1.2vw] text-sm md:text-base ${
-                isPrimary ? "text-white" : "text-gray dark:text-gray-300"
+                isPrimary ? "text-white" : "text-gray-300"
               }`}
             >
               {description}

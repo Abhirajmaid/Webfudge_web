@@ -189,28 +189,28 @@ const ServiceProjectsCarousel = ({ service, showAll = false }) => {
         {/* Navigation Buttons */}
         <button
           onClick={() => swiperInstance?.slidePrev()}
-          className="absolute left-5 top-1/2 -translate-y-1/2 z-20 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white dark:bg-dark-gray border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 shadow-lg hover:scale-110"
+          className="absolute left-5 top-1/2 -translate-y-1/2 z-20 w-14 h-14 md:w-16 md:h-16 rounded-full bg-dark-gray border-2 border-gray-600 flex items-center justify-center hover:bg-gray-700 transition-all duration-300 shadow-lg hover:scale-110"
           aria-label="Previous slide"
         >
           <Icon
             icon="mdi:chevron-left"
-            className="text-gray-700 dark:text-white text-2xl md:text-3xl"
+            className="text-white text-2xl md:text-3xl"
           />
         </button>
 
         <button
           onClick={() => swiperInstance?.slideNext()}
-          className="absolute right-5 top-1/2 -translate-y-1/2 z-20 w-14 h-14 md:w-16 md:h-16 rounded-full bg-white dark:bg-dark-gray border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 shadow-lg hover:scale-110"
+          className="absolute right-5 top-1/2 -translate-y-1/2 z-20 w-14 h-14 md:w-16 md:h-16 rounded-full bg-dark-gray border-2 border-gray-600 flex items-center justify-center hover:bg-gray-700 transition-all duration-300 shadow-lg hover:scale-110"
           aria-label="Next slide"
         >
           <Icon
             icon="mdi:chevron-right"
-            className="text-gray-700 dark:text-white text-2xl md:text-3xl"
+            className="text-white text-2xl md:text-3xl"
           />
         </button>
 
         {/* White Card Background */}
-        <div className="bg-white dark:bg-dark-gray rounded-3xl md:rounded-[40px] p-4 md:p-8 shadow-xl border border-primary/20 bg-gradient-to-br from-white via-primary/5 to-white dark:from-dark-gray dark:via-primary/10 dark:to-dark-gray">
+        <div className="bg-dark-gray rounded-3xl md:rounded-[40px] p-4 md:p-8 shadow-xl border border-primary/20 bg-gradient-to-br from-dark-gray via-primary/10 to-dark-gray">
           <Swiper
             modules={[Navigation, Autoplay]}
             spaceBetween={30}
@@ -231,18 +231,18 @@ const ServiceProjectsCarousel = ({ service, showAll = false }) => {
                     <div className="grid md:grid-cols-1 gap-6 md:gap-10">
                       <div className="flex flex-col justify-center items-center">
                         {/* Title */}
-                        <h3 className="text-2xl md:text-4xl font-[BelfastMedium] text-main-dark dark:text-white mb-4 leading-tight">
+                        <h3 className="text-2xl md:text-4xl font-[BelfastMedium] text-white mb-4 leading-tight">
                           {item.title}
                         </h3>
 
                         {/* Description */}
-                        <p className="text-gray-600 text-center dark:text-gray-300 font-Poppins text-sm md:text-base mb-6">
+                        <p className="text-gray-300 text-center font-Poppins text-sm md:text-base mb-6">
                           {item.short_des}
                         </p>
                       </div>
 
                       {/* Image Section */}
-                      <div className="relative md:aspect-[16/9] md:w-[70%] aspect-[4/3] w-full mx-auto rounded-3xl overflow-hidden bg-gray-100 dark:bg-gray-800">
+                      <div className="relative md:aspect-[16/9] md:w-[70%] aspect-[4/3] w-full mx-auto rounded-3xl overflow-hidden bg-gray-800">
                         <Image
                           src={item.img_url}
                           alt={item.title}
@@ -269,8 +269,8 @@ const ServiceProjectsCarousel = ({ service, showAll = false }) => {
                 }}
                 className={`h-1 transition-all duration-300 rounded-full ${
                   activeIndex === index
-                    ? "w-8 bg-primary dark:bg-primary"
-                    : "w-2 bg-gray-300 dark:bg-white/40 hover:bg-gray-400 dark:hover:bg-gray-500"
+                    ? "w-8 bg-primary"
+                    : "w-2 bg-white/40 hover:bg-gray-500"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

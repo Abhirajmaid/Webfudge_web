@@ -36,13 +36,13 @@ const Footer = () => {
               <hr className="h-[2px] w-[30%] bg-gray" />
             </div>
             <div className="flex justify-center item-center">
-              <h1 className="md:!text-[4vw] text-[7vw] dark:text-white md:leading-[80px] tracking-tight p-0 uppercase text-center ">
+              <h1 className="md:!text-[4vw] text-[7vw] text-white md:leading-[80px] tracking-tight p-0 uppercase text-center ">
                 Let&apos;s Discuss <br /> Your Ideas
               </h1>
             </div>
             <div>
               <button
-                className=" font-[BelfastMedium] text-sm !rounded-3xl font-bold md:text-inherit btn md:w-fit bg-white shadow-md dark:bg-black dark:hover:bg-white dark:hover:text-black hover:bg-black hover:text-white !px-7 !py-4 text-[1.2vw]"
+                className=" font-[BelfastMedium] text-sm !rounded-3xl font-bold md:text-inherit btn md:w-fit bg-black shadow-md hover:bg-white hover:text-black !px-7 !py-4 text-[1.2vw]"
                 onClick={openModal}
               >
                 let&apos;s Talk on quote!
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
           <div className="md:w-[120%] w-[100%] absolute md:-bottom-[160px] -bottom-[80px]">
             <Marquee>
-              <div className=" flex justify-between py-[0.2rem] md:text-[6vw] text-[40px] items-center  dark:text-[#d4c5e199] text-gray/50 ">
+              <div className=" flex justify-between py-[0.2rem] md:text-[6vw] text-[40px] items-center text-[#d4c5e199] ">
                 <div className="flex items-center gap-8">
                   <Image
                     src="/images/star1.png"

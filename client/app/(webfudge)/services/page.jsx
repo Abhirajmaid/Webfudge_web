@@ -78,7 +78,7 @@ export default function ServicesPage() {
         animate={mainControls}
         transition={{ duration: 0.7, delay: 0.6 }}
       >
-        <div className="bg-white dark:bg-dark-gray rounded-3xl md:rounded-[40px] p-3 md:p-4 mb-6">
+        <div className="bg-dark-gray rounded-3xl md:rounded-[40px] p-3 md:p-4 mb-6">
           <div className="grid md:grid-cols-2 gap-3 md:gap-4">
             {/* Design Section */}
             <div className="p-4 py-4 bg-[#F5F5F7] dark:bg-gray-800 rounded-[30px]">

@@ -71,20 +71,20 @@ const SingleProjectPage = ({ project }) => {
             <span className="px-4 py-2 bg-primary text-white text-sm font-Poppins rounded-full">
               {project.category}
             </span>
-            <span className="px-4 py-2 bg-secondary/20 dark:bg-dark-gray text-secondary dark:text-white text-sm font-Poppins rounded-full">
+            <span className="px-4 py-2 bg-dark-gray text-white text-sm font-Poppins rounded-full">
               {project.type}
             </span>
           </div>
-          <h1 className="uppercase md:text-[3vw] text-[6vw] font-[BelfastMedium] underline underline-offset-8 dark:text-white text-main-dark">
+          <h1 className="uppercase md:text-[3vw] text-[6vw] font-[BelfastMedium] underline underline-offset-8 text-white">
             {project.title}
           </h1>
         </div>
-        <p className="text-gray dark:text-gray-400">{project?.date}</p>
+        <p className="text-gray-400">{project?.date}</p>
         {project?.link && (
           <Link
             href={project.link}
             target="_blank"
-            className="btn w-[20%] !rounded-none md:text-[1vw] text-sm py-2 px-2 md:px-4 md:w-[10%] dark:bg-white bg-black text-white dark:text-black font-bold font-Poppins tracking-widest uppercase"
+            className="btn w-[20%] !rounded-none md:text-[1vw] text-sm py-2 px-2 md:px-4 md:w-[10%] bg-white text-black font-bold font-Poppins tracking-widest uppercase"
           >
             <button className="w-full">LIVE</button>
           </Link>
@@ -105,7 +105,7 @@ const SingleProjectPage = ({ project }) => {
         <div className="md:w-[40%] text-[1.5vw] flex flex-col gap-[50px] md:sticky md:top-[100px] h-fit">
           {/* Key Highlights */}
           <div className="flex flex-col gap-[20px]">
-            <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] dark:text-white text-main-dark">
+            <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] text-white">
               Key Highlights:
             </h2>
             <div className="flex flex-wrap md:gap-5 gap-3 justify-between">
@@ -125,14 +125,14 @@ const SingleProjectPage = ({ project }) => {
           {/* Technologies */}
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-col gap-[20px]">
-              <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] dark:text-white text-main-dark">
+              <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] text-white">
                 Technologies:
               </h2>
               <div className="flex gap-[2px] flex-wrap w-full">
                 {project.technologies.map((tech, i) => {
                   return (
                     <React.Fragment key={tech}>
-                      <span className="font-Poppins text-lg tracking-wide dark:text-white text-main-dark">
+                      <span className="font-Poppins text-lg tracking-wide text-white">
                         {tech}
                       </span>
                       {i < project.technologies.length - 1 && (
@@ -147,14 +147,14 @@ const SingleProjectPage = ({ project }) => {
 
           {/* Services */}
           <div className="flex flex-col gap-[20px]">
-            <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] dark:text-white text-main-dark">
+            <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] text-white">
               Services:
             </h2>
             <div className="flex gap-[2px] flex-wrap w-full">
               {project.services_offered?.map((item, i) => {
                 return (
                   <React.Fragment key={item}>
-                    <span className="font-Poppins text-lg tracking-wide dark:text-white text-main-dark">
+                    <span className="font-Poppins text-lg tracking-wide text-white">
                       {item}
                     </span>
                     {i < project.services_offered.length - 1 && (
@@ -169,19 +169,19 @@ const SingleProjectPage = ({ project }) => {
           {/* Stats */}
           {project.stats && (
             <div className="flex flex-col gap-[20px]">
-              <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] dark:text-white text-main-dark">
+              <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] text-white">
                 Project Stats:
               </h2>
               <div className="grid grid-cols-2 gap-4">
                 {Object.entries(project.stats).map(([key, value]) => (
                   <div
                     key={key}
-                    className="bg-primary/10 dark:bg-dark-gray p-4 rounded-lg"
+                    className="bg-dark-gray p-4 rounded-lg"
                   >
                     <div className="text-2xl md:text-3xl font-[BelfastMedium] font-bold text-primary mb-1">
                       {value}
                     </div>
-                    <div className="text-sm font-Poppins text-gray dark:text-gray-400 capitalize">
+                    <div className="text-sm font-Poppins text-gray-400 capitalize">
                       {key.replace(/([A-Z])/g, " $1").trim()}
                     </div>
                   </div>
@@ -192,20 +192,20 @@ const SingleProjectPage = ({ project }) => {
 
           {/* Introduction */}
           <div className="flex flex-col gap-[20px]">
-            <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] dark:text-white text-main-dark">
+            <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] text-white">
               Introduction:
             </h2>
-            <p className="md:text-lg text-base tracking-wide font-Poppins opacity-100 text-justify dark:text-gray-300 text-gray">
+            <p className="md:text-lg text-base tracking-wide font-Poppins opacity-100 text-justify text-gray-300">
               {project.introduction}
             </p>
           </div>
 
           {/* Solution */}
           <div className="flex flex-col gap-[20px]">
-            <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] dark:text-white text-main-dark">
+            <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] text-white">
               Solution:
             </h2>
-            <p className="md:text-lg text-base tracking-wide font-Poppins opacity-100 text-justify dark:text-gray-300 text-gray">
+            <p className="md:text-lg text-base tracking-wide font-Poppins opacity-100 text-justify text-gray-300">
               {project.solution_offered}
             </p>
           </div>
@@ -213,20 +213,20 @@ const SingleProjectPage = ({ project }) => {
           {/* Features */}
           {project.features && project.features.length > 0 && (
             <div className="flex flex-col gap-[20px]">
-              <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] dark:text-white text-main-dark">
+              <h2 className="md:text-4xl text-[5.4vw] font-[BelfastMedium] text-white">
                 Key Features:
               </h2>
               <div className="grid grid-cols-1 gap-3">
                 {project.features.map((feature, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-3 p-3 bg-white dark:bg-dark-gray rounded-lg"
+                    className="flex items-center gap-3 p-3 bg-dark-gray rounded-lg"
                   >
                     <Icon
                       icon="mdi:check-circle"
                       className="text-primary text-xl flex-shrink-0"
                     />
-                    <span className="font-Poppins text-base dark:text-white text-main-dark">
+                    <span className="font-Poppins text-base text-white">
                       {feature}
                     </span>
                   </div>
@@ -281,16 +281,16 @@ const SingleProjectPage = ({ project }) => {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={openContactModal}
-                    className="w-full cursor-pointer bg-gradient-to-br from-primary/20 to-secondary/20 dark:from-primary/30 dark:to-secondary/30 border-2 border-primary/50 dark:border-primary/70 rounded-md p-8 md:p-12 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-primary/20"
+                    className="w-full cursor-pointer bg-gradient-to-br from-primary/30 to-secondary/30 border-2 border-primary/70 rounded-md p-8 md:p-12 flex flex-col items-center justify-center gap-4 transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-primary/20"
                   >
                     <Icon
                       icon="mdi:lock"
                       className="text-primary text-5xl md:text-6xl mb-2"
                     />
-                    <h3 className="text-xl md:text-2xl font-[BelfastMedium] text-primary dark:text-white uppercase tracking-wider text-center">
+                    <h3 className="text-xl md:text-2xl font-[BelfastMedium] text-white uppercase tracking-wider text-center">
                       Contact us for full overview
                     </h3>
-                    <p className="text-sm md:text-base font-Poppins text-gray dark:text-gray-300 text-center">
+                    <p className="text-sm md:text-base font-Poppins text-gray-300 text-center">
                       Get access to all project images and detailed information
                     </p>
                     <motion.button

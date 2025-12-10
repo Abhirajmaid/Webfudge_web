@@ -342,7 +342,7 @@ const LeadFormModal = ({ visible, onClose }) => {
                     <button
                       type="submit"
                       disabled={loader}
-                      className={`flex-1 font-[BelfastMedium] text-sm !rounded-3xl font-bold btn shadow-md bg-white hover:bg-primary dark:text-black text-black hover:dark:text-white hover:text-white !px-7 !py-4 transition-all ${
+                      className={`flex-1 font-[BelfastMedium] text-sm !rounded-3xl font-bold btn shadow-md bg-white hover:bg-primary text-black hover:text-white !px-7 !py-4 transition-all ${
                         loader ? "opacity-50 cursor-not-allowed" : ""
                       }`}
                       style={{ pointerEvents: loader ? "none" : "auto" }}

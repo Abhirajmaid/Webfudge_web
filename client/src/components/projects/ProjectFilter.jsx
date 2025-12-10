@@ -17,14 +17,14 @@ const ProjectFilter = ({ activeCategory, onFilterChange }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => onFilterChange(category === "All" ? null : category)}
-            className={`
+              className={`
               px-4 md:px-6 py-2 md:py-3 rounded-full font-Poppins text-sm md:text-base
               transition-all duration-300
               ${
                 (activeCategory === null && category === "All") ||
                 activeCategory === category
                   ? "bg-primary text-white shadow-lg shadow-primary/50"
-                  : "bg-white dark:bg-dark-gray border-2 border-gray/30 dark:border-gray/50 text-gray dark:text-gray-300 hover:border-primary hover:text-primary dark:hover:text-primary"
+                  : "bg-dark-gray border-2 border-gray/50 text-gray-300 hover:border-primary hover:text-primary"
               }
             `}
           >

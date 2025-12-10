@@ -44,7 +44,7 @@ html {
 }
 
 body {
-  @apply bg-main-bg text-main-dark dark:bg-main-dark dark:text-white;
+  @apply bg-main-dark text-white;
   font-family: BelfastGrotesk;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -70,11 +70,11 @@ footer a:hover {
 }
 
 .card {
-  @apply p-4 bg-white border rounded-lg dark:bg-card-dark dark:border-dark;
+  @apply p-4 bg-card-dark border-dark border rounded-lg;
 }
 
 .card-bordered {
-  @apply border dark:border-dark;
+  @apply border border-dark;
 }
 
 .btn {
@@ -90,7 +90,7 @@ footer a:hover {
 }
 
 .icon-box {
-  @apply grid flex-shrink-0 rounded-full w-12 h-12 place-items-center hover:bg-slate-200 dark:hover:bg-hover-color-dark transition-a sm:cursor-pointer;
+  @apply grid flex-shrink-0 rounded-full w-12 h-12 place-items-center hover:bg-hover-color-dark transition-a sm:cursor-pointer;
 }
 
 .border {
@@ -98,7 +98,7 @@ footer a:hover {
 }
 
 .input {
-  @apply border !border-slate-300 dark:!border-dark bg-transparent px-4 py-[0.35rem] outline-none focus:!border-primary;
+  @apply border !border-dark bg-transparent px-4 py-[0.35rem] outline-none focus:!border-primary;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

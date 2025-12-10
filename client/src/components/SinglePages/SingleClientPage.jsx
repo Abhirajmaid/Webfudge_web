@@ -38,7 +38,7 @@ const SingleClientPage = ({ client, id }) => {
           <Link
             href={client.link}
             target="_blank"
-            className="btn w-[20%] !rounded-none md:text-[1vw] text-sm py-2 px-2  md:px-4 md:w-[10%] dark:bg-white bg-black text-white dark:text-black font-bold font-Poppins tracking-widest uppercase"
+            className="btn w-[20%] !rounded-none md:text-[1vw] text-sm py-2 px-2  md:px-4 md:w-[10%] bg-white text-black font-bold font-Poppins tracking-widest uppercase"
           >
             <button className="w-full">LIVE</button>
           </Link>
