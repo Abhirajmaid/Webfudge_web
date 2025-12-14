@@ -57,7 +57,6 @@ const Navbar = ({ isShowMode }) => {
     },
   };
 
-
   //Nav bg
   const [navBg, setNavBg] = useState(false);
 
@@ -160,7 +159,7 @@ const Navbar = ({ isShowMode }) => {
 
           <div className="space-x-2 flex-align-center">
             <button
-              className="md:block hidden md:text-sm text-xs !rounded-3xl md:font-bold md:text-inherit btn md:w-fit bg-white text-black shadow-md hover:scale-105 md:!px-7 !px-3 !py-3 hover:bg-white hover:text-black"
+              className="md:block hidden md:text-sm text-xs !rounded-3xl md:font-bold md:text-inherit btn md:w-fit bg-white !text-black shadow-md hover:scale-105 md:!px-7 !px-3 !py-3 hover:bg-white hover:text-black ml-6"
               onClick={openModal}
             >
               Start New Project!

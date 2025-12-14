@@ -26,7 +26,7 @@ module.exports = {
         secondary: "#470049",
         secondaryPurple: "#CF57BB",
         "hero-dark": "#0D0D0D",
-        "main-dark": "#1e0219",
+        "main-dark": "#170113",
         "card-dark": "#362536",
         "dark-gray": "#242424",
         "dark-light": "#292929",
