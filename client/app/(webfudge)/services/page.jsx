@@ -39,7 +39,7 @@ export default function ServicesPage() {
         transition={{ duration: 0.7 }}
       >
         <motion.h1
-          className="md:text-[6vw] text-[8vw] tracking-tighter uppercase font-[BelfastMedium] dark:text-white text-main-dark mb-6"
+          className="md:text-[6vw] text-[8vw] tracking-tighter uppercase font-[BelfastMedium] text-white mb-6"
           variants={{
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0 },
@@ -52,7 +52,7 @@ export default function ServicesPage() {
           <span className="text-[#D71EB9] md:!text-[8vw] !text-[10vw]">.</span>
         </motion.h1>
         <motion.p
-          className="font-Poppins md:text-[1.5vw] text-lg text-gray dark:text-gray-300 max-w-3xl"
+          className="font-Poppins md:text-[1.5vw] text-lg text-gray max-w-3xl"
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
@@ -78,10 +78,10 @@ export default function ServicesPage() {
         animate={mainControls}
         transition={{ duration: 0.7, delay: 0.6 }}
       >
-        <div className="bg-dark-gray rounded-3xl md:rounded-[40px] p-3 md:p-4 mb-6">
+        <div className="bg-[#F5F5F7] rounded-3xl md:rounded-[40px] p-3 md:p-4 mb-6">
           <div className="grid md:grid-cols-2 gap-3 md:gap-4">
             {/* Design Section */}
-            <div className="p-4 py-4 bg-[#F5F5F7] dark:bg-gray-800 rounded-[30px]">
+            <div className="p-4 py-4 bg-white rounded-[30px]">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-[BelfastMedium] text-black md:text-[3vw] text-[6vw] font-bold">
                   Design
@@ -107,9 +107,9 @@ export default function ServicesPage() {
                     <Link
                       key={service.id}
                       href={`/services/${service.slug}`}
-                      className="flex items-center justify-between py-4 px-4 md:py-6 border-b-2 dark:border-black last:border-b-0 group cursor-pointer group hover:opacity-80 transition-opacity hover:bg-[#dadada] dark:hover:bg-gray-700"
+                      className="flex items-center justify-between py-4 px-4 md:py-6 border-b-2 border-gray-200 last:border-b-0 group cursor-pointer group hover:opacity-80 transition-opacity hover:bg-[#dadada]"
                     >
-                      <span className="font-Poppins text-gray-600 dark:text-black md:text-[1.5vw] text-sm group-hover:scale-[1.02] transition-all duration-300">
+                      <span className="font-Poppins text-black md:text-[1.5vw] text-sm group-hover:scale-[1.02] transition-all duration-300">
                         {service.title}
                       </span>
                       <motion.div
@@ -141,7 +141,7 @@ export default function ServicesPage() {
                   ))
                 ) : (
                   <div className="py-4 px-4 md:py-6">
-                    <span className="font-Poppins text-gray-600 dark:text-black md:text-[1.5vw] text-sm">
+                    <span className="font-Poppins text-gray-600 md:text-[1.5vw] text-sm">
                       UI/UX Design
                     </span>
                   </div>
@@ -150,7 +150,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Development Section */}
-            <div className="p-4 py-4 bg-[#F5F5F7] dark:bg-gray-800 rounded-[30px]">
+            <div className="p-4 py-4 bg-white rounded-[30px]">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-[BelfastMedium] text-black md:text-[3vw] text-[6vw] font-bold">
                   Development
@@ -176,9 +176,9 @@ export default function ServicesPage() {
                     <Link
                       key={service.id}
                       href={`/services/${service.slug}`}
-                      className="flex items-center justify-between py-4 px-4 md:py-6 border-b-2 border-gray-300 dark:border-black last:border-b-0 group cursor-pointer group hover:opacity-80 transition-opacity hover:bg-[#dadada] dark:hover:bg-gray-700"
+                      className="flex items-center justify-between py-4 px-4 md:py-6 border-b-2 border-gray-200 last:border-b-0 group cursor-pointer group hover:opacity-80 transition-opacity hover:bg-[#dadada]"
                     >
-                      <span className="font-Poppins text-gray-600 dark:text-black md:text-[1.5vw] text-sm group-hover:scale-[1.02] transition-all duration-300">
+                      <span className="font-Poppins text-black md:text-[1.5vw] text-sm group-hover:scale-[1.02] transition-all duration-300">
                         {service.title}
                       </span>
                       <motion.div
@@ -210,7 +210,7 @@ export default function ServicesPage() {
                   ))
                 ) : (
                   <div className="py-4 px-4 md:py-6">
-                    <span className="font-Poppins text-gray-600 dark:text-black md:text-[1.5vw] text-sm">
+                    <span className="font-Poppins text-gray-600 md:text-[1.5vw] text-sm">
                       Coming Soon
                     </span>
                   </div>
@@ -239,7 +239,7 @@ export default function ServicesPage() {
           </div>
           <button
             onClick={openModal}
-            className="bg-white hover:bg-primary text-black font-[BelfastMedium] font-bold px-5 md:px-6 py-2 md:py-3 rounded-xl md:rounded-2xl transition-colors uppercase text-xs md:text-sm whitespace-nowrap"
+            className="bg-white hover:bg-primary text-black hover:text-white font-[BelfastMedium] font-bold px-5 md:px-6 py-2 md:py-3 rounded-xl md:rounded-2xl transition-colors uppercase text-xs md:text-sm whitespace-nowrap"
           >
             BOOK A CALL
           </button>
@@ -249,11 +249,6 @@ export default function ServicesPage() {
       {/* Testimonials Section */}
       <div className="md:my-20 my-12">
         <Testimonial />
-      </div>
-
-      {/* CTA Marquee */}
-      <div className="md:my-20 my-12">
-        <InfiniteMarquee txt="Let's Discuss" url="/contact-us" />
       </div>
     </div>
   );
